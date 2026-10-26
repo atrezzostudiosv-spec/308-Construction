@@ -1396,3 +1396,109 @@ html.js-motion .about-v3:not(.hidden-page) [data-reveal] {
       linear-gradient(0deg,rgba(7,16,20,.45),transparent 55%);
   }
 }
+
+
+/* ===== ABOUT / PUBLISHED FIGURES + COMPLETE CLIENT ROSTER =====
+   Source-attributed, static numbers (no count-up suggesting data verification).
+   Premium teal editorial band; accessible natural vertical flow. */
+.about-v3 .ab-statistics {
+  position:relative;
+  background:#0d606a;
+  color:#fff;
+  padding:clamp(82px,10vw,153px) 0 clamp(70px,8vw,125px);
+}
+.about-v3 .ab-statistics .ab-overline {color:#c7f1ef;}
+.about-v3 .ab-statistics-top {display:grid;grid-template-columns:1fr .9fr;column-gap:clamp(35px,6vw,100px);align-items:end;}
+.about-v3 .ab-statistics-top>.ab-overline {grid-column:1/-1;}
+.about-v3 .ab-statistics-top h2 {
+  margin:20px 0 0;
+  color:#fff;
+  font:900 clamp(70px,9.2vw,150px)/.88 "Barlow Condensed",sans-serif;
+  letter-spacing:-.024em;
+}
+.about-v3 .ab-statistics-top h2 span {color:#B1F3ED;}
+.about-v3 .ab-statistics-top>p {
+  margin-bottom:9px;
+  max-width:390px;
+  color:#e3f0ef;
+  font:400 clamp(15px,1.3vw,19px)/1.7 Inter,sans-serif;
+}
+.about-v3 .ab-statistics-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  margin-top:clamp(55px,7vw,110px);
+  border-top:1px solid rgba(255,255,255,.42);
+  border-bottom:1px solid rgba(255,255,255,.42);
+}
+.about-v3 .ab-stat {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  min-width:0;
+  padding:clamp(29px,4vw,56px) clamp(18px,4vw,64px) clamp(35px,5vw,70px);
+}
+.about-v3 .ab-stat:first-child {padding-left:0;border-right:1px solid rgba(255,255,255,.35);}
+.about-v3 .ab-stat-id {font:700 10px/1.5 Inter,sans-serif;letter-spacing:.14em;color:#d7efee;}
+.about-v3 .ab-stat>strong {
+  display:block;
+  width:100%;
+  margin:clamp(37px,5vw,80px) 0 12px;
+  color:#fff;
+  font:900 clamp(100px,12vw,191px)/.85 "Barlow Condensed",sans-serif;
+  letter-spacing:-.035em;
+  white-space:nowrap;
+}
+.about-v3 .ab-stat-caption {color:#e1f5f3;font:700 clamp(14px,1.45vw,21px)/1.4 Inter,sans-serif;letter-spacing:.06em;}
+.about-v3 .ab-stats-source {
+  margin:23px 0 0;
+  max-width:850px;
+  color:#d8eded;
+  font:400 12px/1.65 Inter,sans-serif;
+}
+/* Expanded client typography: roster not pseudo-logo testimonials. */
+.about-v3 .ab-clients {background:#F3F2EF;}
+.about-v3 .ab-clients-list {grid-template-columns:repeat(3,minmax(0,1fr));column-gap:clamp(20px,3vw,56px);}
+.about-v3 .ab-client {min-width:0;min-height:108px;gap:14px;padding:23px 0;}
+.about-v3 .ab-client strong {
+  min-width:0;
+  overflow-wrap:break-word;
+  font:700 clamp(13px,1.15vw,17px)/1.5 Inter,sans-serif;
+  letter-spacing:0;
+}
+.about-v3 .ab-client span {min-width:24px;padding-top:3px;}
+.about-v3 .ab-clients-note {
+  margin:25px 0 0;
+  font:400 12px/1.6 Inter,sans-serif;
+  color:#536164;
+}
+@media(max-width:1100px) {
+  .about-v3 .ab-statistics-grid {margin-top:60px;}
+  .about-v3 .ab-stat>strong {font-size:clamp(93px,12.7vw,151px);}
+  .about-v3 .ab-clients-list {grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media(max-width:767px) {
+  .about-v3 .ab-statistics {padding:85px 0 82px;}
+  .about-v3 .ab-statistics-top {display:block;}
+  .about-v3 .ab-statistics-top h2 {font-size:clamp(75px,14vw,105px);}
+  .about-v3 .ab-statistics-top>p {margin:25px 0 0;font-size:15px;}
+  .about-v3 .ab-statistics-grid {grid-template-columns:1fr;margin-top:46px;}
+  .about-v3 .ab-stat,.about-v3 .ab-stat:first-child {padding:33px 0 37px;border:0;}
+  .about-v3 .ab-stat:first-child {border-bottom:1px solid rgba(255,255,255,.42);}
+  .about-v3 .ab-stat>strong {font-size:clamp(118px,26vw,168px);margin:29px 0 10px;}
+  .about-v3 .ab-stat-caption {font-size:15px;}
+  .about-v3 .ab-stats-source {font-size:11px;}
+  .about-v3 .ab-clients h2 {font-size:clamp(49px,9.5vw,73px);line-height:.96;overflow-wrap:normal;}
+  .about-v3 .ab-clients-head {gap:22px;}
+  .about-v3 .ab-clients-list {grid-template-columns:1fr;}
+  .about-v3 .ab-client {min-height:0;padding:19px 0;}
+  .about-v3 .ab-client strong {font-size:15px;}
+}
+@media(max-width:375px) {
+  .about-v3 .ab-stat>strong {font-size:clamp(100px,25vw,122px);}
+  .about-v3 .ab-statistics-top h2 {font-size:73px;}
+  .about-v3 .ab-clients h2 {font-size:45px;}
+}
+@media(prefers-reduced-motion:reduce) {
+  .about-v3 .ab-statistics *,
+  .about-v3 .ab-clients-list * {animation:none!important;}
+}
