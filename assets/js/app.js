@@ -391,7 +391,7 @@ function initCareersApplication() {
     link.addEventListener('click', () => {
       const title = link.closest('.career-role')?.querySelector('.career-role-heading strong')?.textContent?.trim();
       if (!title || !position) return;
-      const available = [...position.options].find(option => option.textContent.trim() === title);
+      const available = [...position.options].find(option => option.textContent.trim().toLowerCase() === title.toLowerCase());
       if (available) {
         position.value = available.value;
         setStatus('Position selected: ' + title + '. Complete the application details below.');
