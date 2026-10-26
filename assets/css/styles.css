@@ -401,3 +401,74 @@ html.js-motion .services-v2 .sv-reveal-image[data-reveal].is-revealed img {clip-
   .home-v2 .chapter-full .chapter-background img {transition:none!important;}
   .home-v2 .hero-photo .hero-bg-video {display:none!important;}
 }
+
+/* === HOME SERVICE SCENES 2.0 — continuous architectural scroll sequence ===
+   Normal document scrolling always works, including with reduced motion. */
+.home-v2 .editorial-services {padding-bottom:0;}
+.home-v2 .home-service-sequence {position:relative;isolation:isolate;width:100%;margin:0;}
+.home-v2 .home-service-sequence .chapter-row.chapter-full {
+  width:100%;
+  max-width:none;
+  margin:0;
+  min-height:clamp(630px,90svh,960px);
+  padding-inline:max(26px,calc((100% - 1380px)/2));
+  padding-block:clamp(90px,9vw,145px);
+}
+.home-v2 .home-service-sequence .chapter-full .chapter-background,
+.home-v2 .home-service-sequence .chapter-full .chapter-background-shade {
+  pointer-events:none;
+}
+.home-v2 .home-service-sequence .chapter-full .chapter-stage {pointer-events:auto;}
+.home-v2 .home-service-sequence .chapter-full .chapter-copy .architectural-link:focus-visible {
+  outline:3px solid #fff;
+  outline-offset:7px;
+}
+.home-v2 .home-service-sequence .chapter-full .chapter-background img {
+  will-change:auto;
+}
+
+/* Sticky scenes only on desktops with genuine hover support.
+   As each scene enters, it overlays the previous one; no scroll lock or snap. */
+@media (min-width:1024px) and (min-height:700px) and (hover:hover) and (prefers-reduced-motion:no-preference) {
+  .home-v2 .home-service-sequence .chapter-row.chapter-full {
+    position:sticky;
+    top:0;
+    height:100svh;
+    min-height:0;
+    overflow:hidden;
+    margin:0;
+  }
+  .home-v2 .home-service-sequence .chapter-full-1 {z-index:1;}
+  .home-v2 .home-service-sequence .chapter-full-2 {z-index:2;}
+  .home-v2 .home-service-sequence .chapter-full-3 {z-index:3;}
+  .home-v2 .home-service-sequence .chapter-row.chapter-full + .chapter-row.chapter-full {
+    border-top:0;
+  }
+  /* JS only adjusts a small mask on incoming photographs, not clickable content. */
+  html.scene-motion .home-v2 .home-service-sequence .chapter-full-2 .chapter-background img,
+  html.scene-motion .home-v2 .home-service-sequence .chapter-full-3 .chapter-background img {
+    clip-path:inset(0 var(--scene-mask,0%) 0 0);
+    transform:scale(var(--scene-scale,1.015));
+    transition:none;
+  }
+  html.scene-motion .home-v2 .home-service-sequence .chapter-full-1 .chapter-background img {
+    transform:scale(var(--scene-scale,1.015));
+    transition:none;
+  }
+}
+/* Mobile and tablets: strong full-width images, straightforward vertical scroll. */
+@media (max-width:1023px), (max-height:699px), (hover:none) {
+  .home-v2 .home-service-sequence .chapter-row.chapter-full {position:relative;top:auto;height:auto;}
+}
+@media (max-width:767px) {
+  .home-v2 .home-service-sequence .chapter-row.chapter-full {padding:86px 22px;min-height:620px;}
+  .home-v2 .home-service-sequence .chapter-row.chapter-full:last-child {padding-bottom:86px;}
+}
+@media (max-width:420px) {
+  .home-v2 .home-service-sequence .chapter-row.chapter-full {padding:70px 20px;min-height:580px;}
+  .home-v2 .home-service-sequence .chapter-row.chapter-full:last-child {padding-bottom:70px;}
+}
+@media (prefers-reduced-motion:reduce) {
+  .home-v2 .home-service-sequence .chapter-row.chapter-full {position:relative!important;top:auto!important;height:auto!important;}
+  .home-v2 .home-service-sequence .chapter-full .chapter-background img {clip-path:none!important;transform:none!important;transition:none!important;}
+}
