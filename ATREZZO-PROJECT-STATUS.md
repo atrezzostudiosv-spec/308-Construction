@@ -11,7 +11,7 @@ Updated: 2026-10-26. Public repository is an **unofficial design demo**.
 | Baseline code import | CLOSED | Five files committed on main; HTML, CSS and JS fetched back and checked structurally (not browser-tested) |
 | Cinematic home redesign | IN VALIDATION | Cinematic hero, three editorial service chapters, four-project asymmetrical portfolio, clients, CTA; structural checks passed, visual sign-off pending |
 | Inner-page redesign | IN PROCESS | Home, Services, Projects, About and Careers implemented (visual QA pending); Contact still pending |
-| Assistant and form behavior | IN VALIDATION | Scripted assistant only; submission is explicitly disabled |
+| Assistant and form behavior | IN VALIDATION | Scripted assistant; Careers form now includes local attachments/validation but sends no data until employer-approved secure endpoint is configured |
 | Responsive/accessibility/functionality | IN VALIDATION | CSS breakpoints, JS syntax, HTML structural balance and Services anchor structure checked; visual checks at 375/768/1024/1440 and interactive testing still pending |
 | GitHub Pages preview | IN VALIDATION | Pages configured from main/root per connected GitHub Settings tab; public site browser tab observed, latest deployment not visually rechecked |
 | Client publication | BLOCKED | Requires client consent, assets and QA |
@@ -221,3 +221,16 @@ Concentrated follow-up corrections before closing the Home:
 - Responsive CSS for desktop, <=1100px, <=767px and <=375px. Accessible keyboard focus, native toggles, visible text without a reveal observer, reduced-motion fallback. Existing shared JS and other page content left untouched; query version `20261026-careers-01`.
 - **VERIFIED IN SOURCE:** 10 page views, one Careers H1, exactly 3 roles and 3 native summaries, no duplicate IDs/undefined SPA targets, no fake form, mailto/official links present, 3 Pexels source IDs, responsive CSS, balanced HTML tags/CSS braces, JS parses. Home scenes (3), Services scenes (3), Projects detailed galleries (4) and About stats preserved.
 - **NOT VERIFIED:** live CDN photo loading/crops, actual browser layout and taps at 375/768/1024/1440px, external link click behavior, external application form success, full a11y/performance. Do not mark Careers **CERRADA** until visual approval and essential browser QA.
+
+## Careers 3.1 — onsite application UI & people-led imagery — 2026-10-26
+
+**Implemented in GitHub; interface ready; real application receipt BLOCKED pending employer-approved secure endpoint and privacy requirements. Visual QA EN VALIDACIÓN.**
+
+- Replaced links sending visitors to the original Careers page with **in-site application anchors**. Three position buttons preselect the respective official role; footer CTA opens the native application section.
+- Created branded complete application form: required given name/family name/email/phone/role/CV document and confirmation checkbox; optional availability date, city/state, professional profile URL, experience notes and cover-letter upload. Fully labeled, keyboard reachable, file input zones support clicking/drag-and-drop and responsive stacking.
+- CV and cover-letter types restricted to PDF, DOC, DOCX, **10 MB max each** in client-side validation. File choices remain local until authorized endpoint is connected. Javascript checks fields and files and shows transparent success/error/status; does not fabricate submission success. `data-submission-endpoint=""` keeps network transmission disabled on this unofficial public demo.
+- No photo ID, SSN, passports or sensitive identity documentation collected in preview. Official form asks for photo identification: **data-governance/privacy/recipient authorization unresolved**. When approved, employer-owned/authorized verified Formspree endpoint with upload-capable plan or equivalent secure service must be configured and tested, including server validation, retention policy and required notices. Only then can the send button become active.
+- Replaced three Careers illustrations with Pexels photo IDs `544971` (hero; construction professionals on site), `8470033` (intro; people reviewing plans), `8961029` (application panel; mixed team on site). Appropriate to a US-context construction design; do not claim the models are American nationals or actual 308 staff. Source URLs recorded in `MEDIA-SOURCES.md`.
+- Mobile, tablet and desktop form CSS, accessible focus, reduced-motion handling, stack-safe media overlays and panel typography implemented. Query asset version `20261026-careers-form-02`. Other ten-page routing and previously approved views preserved.
+- **Source QA:** form markup, custom file validation, native controls, role preselection, inactive endpoint gate, original 3 job details, no outbound Careers-page link, no duplicate IDs, balanced HTML/CSS, JS parses.
+- **NO COMPROBADO:** browser-side drag/drop interaction, actual CDN photo rendering/crop, responsive screenshots at 375/768/1024/1440, accessibility testing and server end-to-end upload (blocked until endpoint exists). Do not mark Careers complete/closed or accepting candidates while network submission is unavailable.
