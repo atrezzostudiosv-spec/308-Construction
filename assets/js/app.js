@@ -191,7 +191,7 @@ function handleAssistantSubmit(e) {
   const pageId = new URLSearchParams(location.search).get('view') || 'home';
   navigateTo(document.getElementById('page-' + pageId) ? pageId : 'home', false);
 });
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
   const pageId = new URLSearchParams(location.search).get('view') || 'home';
   navigateTo(document.getElementById('page-' + pageId) ? pageId : 'home', false);
 });
@@ -558,7 +558,7 @@ function initContactInquiryForm() {
  if(!allowed){report('This design-preview receiving service is not configured. Email atrezzostudiosv@gmail.com directly.','error');if(button)button.disabled=true;return;}
  form.addEventListener('submit',async event=>{
    event.preventDefault();
-   if(!form.reportValidity()){report('Complete your name, a valid email address and your message.','error');return;}
+   if(!form.reportValidity()){report('Complete your name, a valid email address, your message and the recipient acknowledgment.','error');return;}
    if(form.querySelector('[name="_honey"]')?.value)return;
    if(typeof fetch!=='function'||typeof FormData==='undefined'){
      report('This browser cannot send this form. Email atrezzostudiosv@gmail.com directly.','error');return;
