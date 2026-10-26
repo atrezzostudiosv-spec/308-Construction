@@ -1133,7 +1133,7 @@ html.js-motion .portfolio-page [data-reveal].is-revealed,html.js-motion .portfol
 /* ===== ABOUT 3.0 — EDITORIAL COMPANY PORTRAIT =====
    Unique light split-hero, confident editorial data, source-grounded claims.
    Never substitute illustrative photography for real staff, works or offices. */
-.about-v3 {--ab-ink:#151A1D;--ab-paper:#F3F2EF;--ab-teal:#116B76;--ab-tint:#67CCD2;--ab-pale:#dce7e5;background:var(--ab-paper);overflow:clip;}
+.about-v3 {--ab-ink:#151A1D;--ab-paper:#F3F2EF;--ab-teal:#116B76;--ab-tint:#67CCD2;--ab-pale:#dce7e5;background:var(--ab-paper);overflow:visible;min-height:0;}
 .about-v3 .ab-frame {width:min(calc(100% - 90px),1380px);margin-inline:auto;}
 .about-v3 .ab-overline {display:block;color:var(--ab-teal);font:700 11px/1.5 Inter,sans-serif;letter-spacing:.17em;text-transform:uppercase;}
 .about-v3 .ab-hero {min-height:clamp(660px,88svh,920px);display:grid;grid-template-columns:56% 44%;background:var(--ab-paper);color:var(--ab-ink);}
@@ -1220,7 +1220,7 @@ html.js-motion .portfolio-page [data-reveal].is-revealed,html.js-motion .portfol
 .about-v3 .ab-media-disclosure {background:#151A1D;color:#b4c1c3;padding:0 30px 23px;text-align:center;font:400 10px/1.6 Inter,sans-serif;}
 .about-v3 a:focus-visible,.about-v3 button:focus-visible {outline:3px solid #67CCD2;outline-offset:5px;}
 /* Respect motion and avoid hiding content when JavaScript is unavailable. */
-html.js-motion .about-v3 [data-reveal] {opacity:0;transform:translateY(20px);transition:opacity .84s cubic-bezier(.16,1,.3,1),transform .84s cubic-bezier(.16,1,.3,1);}
+html.js-motion .about-v3 [data-reveal] {opacity:1;transform:none;transition:opacity .84s cubic-bezier(.16,1,.3,1),transform .84s cubic-bezier(.16,1,.3,1);}
 html.js-motion .about-v3 [data-reveal].is-revealed {opacity:1;transform:translateY(0);}
 @media(max-width:1100px) {
   .about-v3 .ab-frame {width:calc(100% - 60px);}
@@ -1290,4 +1290,39 @@ html.js-motion .about-v3 [data-reveal].is-revealed {opacity:1;transform:translat
 @media(prefers-reduced-motion:reduce) {
   html.js-motion .about-v3 [data-reveal] {opacity:1!important;transform:none!important;transition:none!important;}
   .about-v3 .ab-hero-link,.about-v3 .ab-service-row,.about-v3 .ab-service-arrow {transition:none!important;}
+}
+
+/* ===== ABOUT VISIBILITY HOTFIX · 2026-10-26 =====
+   Do not clip the About page or depend on one-shot observers to show content.
+   All sections remain in normal document flow when About is the active route. */
+.about-v3:not(.hidden-page) {
+  display:block;
+  height:auto;
+  min-height:0;
+  max-height:none;
+  overflow:visible;
+  transform:none;
+}
+.about-v3:not(.hidden-page) > .ab-profile,
+.about-v3:not(.hidden-page) > .ab-photographic,
+.about-v3:not(.hidden-page) > .ab-capabilities,
+.about-v3:not(.hidden-page) > .ab-markets,
+.about-v3:not(.hidden-page) > .ab-clients,
+.about-v3:not(.hidden-page) > .ab-statement,
+.about-v3:not(.hidden-page) > .ab-contact {
+  display:block;
+  position:relative;
+  visibility:visible;
+  opacity:1;
+  height:auto;
+}
+.about-v3:not(.hidden-page) > .ab-photographic {height:clamp(450px,58vw,760px);}
+.about-v3:not(.hidden-page) [data-reveal],
+html.js-motion .about-v3:not(.hidden-page) [data-reveal] {
+  visibility:visible;
+  opacity:1;
+  transform:none;
+}
+@media(max-width:767px){
+  .about-v3:not(.hidden-page) > .ab-photographic {height:clamp(340px,89vw,570px);}
 }
