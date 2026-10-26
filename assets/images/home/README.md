@@ -1,17 +1,16 @@
-# Home service imagery — client-supplied files (pending binary upload)
+# Home service scenes — 308 Construction design demo
 
-This folder is reserved for the six WebP assets supplied by the project owner on 2026-10-26. **The image binaries have NOT been uploaded through the GitHub connector.** Never link to absent files from Home.
+Six original client-supplied WebP assets uploaded and integrated on **2026-10-26**.
 
-| Chapter | Desktop | Mobile |
+| Scene | Desktop, 2048 × 1152 | Mobile, 941 × 1672 |
 |---|---|---|
 | 01 / Preconstruction Planning | `preconstruction-desktop.webp` | `preconstruction-mobile.webp` |
 | 02 / Construction | `construction-desktop.webp` | `construction-mobile.webp` |
 | 03 / Construction Management | `management-desktop.webp` | `management-mobile.webp` |
 
-- Desktop sources: 2048 × 1152 WebP. Mobile sources: 941 × 1672 WebP.
-- Use the original client-provided bytes; do not replace with unrelated stock photography or invent photo attribution.
-- Integrate inside the existing `.chapter-background` for each `[data-scene="1"]`, `[data-scene="2"]`, and `[data-scene="3"]` as a `<picture>` with a mobile `<source media="(max-width:767px)">` and desktop `<img>`. Preserve `.chapter-background-shade`, `.chapter-stage`, `.chapter-copy`, service links, animations and reduced-motion rules.
-- Use `object-fit:cover` and inspect the subject's position across 375, 768, 1024 and 1440px.
-- Images are illustrative, not evidence of actual 308 Construction jobsites, clients or employees.
+Images are served locally from `./assets/images/home/`, unmodified from the uploaded originals. The Home `[data-scene="1"]`, `[data-scene="2"]` and `[data-scene="3"]` background containers use `<picture>` with `(max-width:767px)` mobile source and standard desktop fallback.
 
-**Gate:** upload all six binary WebPs first, verify their GitHub raw URLs, then edit Home. The production preview is deliberately unchanged until this gate passes.
+- Preserved scene text, internal service CTA, gradient overlay, existing scroll animation and reduced-motion behavior.
+- CSS makes `<picture>` fill the existing `.chapter-background` without changing scene sizing.
+- Photographs are **illustrative client-provided visuals**. They must not be labeled as 308 Construction staff or completed projects.
+- Source code & Git object checks: **VERIFIED**. Actual deployed responsive image rendering/cropping at 375, 768, 1024 and 1440 px: **NOT YET VERIFIED**.
