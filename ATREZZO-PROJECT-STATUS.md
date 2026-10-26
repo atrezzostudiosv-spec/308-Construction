@@ -108,3 +108,12 @@ Concentrated follow-up corrections before closing the Home:
 - CSS/JS cache versioned as `20261026-portfolio-02`.
 - **Static verification complete:** ten page views preserved, four project links resolve to existing view IDs, one featured tile, all media IDs/sources, HTML tag balance, CSS brace balance and JavaScript syntax, CSS breakpoint/focus/reduced-motion selectors.
 - **NOT CHECKED:** actual image loading, layout screenshots at 375/768/1024/1440px, dynamic hover/tap navigation, mobile text overflow, visual appearance on GitHub Pages. Obtain browser review before closing Home.
+
+## Home final QA gate — 2026-10-26
+
+**VISUAL DIRECTION APPROVED by user. FINAL QA: EN VALIDACIÓN, not CERRADA.**
+
+- Ran a source-level audit across current Home HTML/CSS/JS and recorded the detailed evidence/test matrix in [ATREZZO-HOME-QA.md](./ATREZZO-HOME-QA.md).
+- **VERIFICADO:** all 10 page views and internal navigation references resolve, no duplicated IDs, all Home sections/3 service chapters/4 Portfolio tiles preserved, `h1` per view, source file syntactic checks, responsive and reduced-motion CSS paths, independent-design/media disclosures, representative static color contrasts, original third-party media source listings.
+- **NO COMPROBADO:** published site at exact 375/768/1024/1440px, dynamic scroll pinning/zoom, live clicks, video/photo HTTP success, actual visual contrast over photos, PageSpeed/console/accessibility. Live website browsing/rendering from this environment was unavailable.
+- Do not repeat approved design work or mark Home QA as closed until these live tests are completed and passed. No new layout changes made in this QA pass.
