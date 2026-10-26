@@ -2223,3 +2223,35 @@ html.js-motion .about-v3:not(.hidden-page) [data-reveal] {
     object-position:center center;
   }
 }
+
+
+/* 2026-10-26 / SITE QA: contiguous Projects dropdown and keyboard/touch access. */
+#projectsNavGroup {display:inline-flex;align-items:center;gap:2px;isolation:isolate;}
+#projectsNavGroup .projects-nav-trigger {display:inline-grid;place-items:center;width:26px;height:34px;color:#cdd3d4;cursor:pointer;border-radius:4px;background:transparent;transition:color .2s,background .2s;}
+#projectsNavGroup .projects-nav-trigger:hover,#projectsNavGroup .projects-nav-trigger:focus-visible {color:#7ddce2;background:rgba(255,255,255,.09);}
+#projectsNavGroup .projects-dropdown {top:calc(100% - 1px);margin-top:0!important;z-index:60;visibility:hidden;opacity:0;pointer-events:none;transform:translateY(3px);transition:opacity .23s ease,transform .23s ease,visibility .23s;}
+#projectsNavGroup:hover .projects-dropdown,#projectsNavGroup:focus-within .projects-dropdown,#projectsNavGroup.is-open .projects-dropdown {visibility:visible;opacity:1;pointer-events:auto;transform:translateY(0);}
+#projectsNavGroup .projects-dropdown a:focus-visible {background:#14525a;color:#fff;outline:2px solid #8ee9ee;outline-offset:-1px;}
+#projectsNavGroup .projects-dropdown a {min-height:42px;display:flex;align-items:center;}
+#projectsNavGroup:focus-within .projects-nav-trigger svg,#projectsNavGroup.is-open .projects-nav-trigger svg {transform:rotate(180deg);}
+#projectsNavGroup .projects-nav-trigger svg {transition:transform .2s;}
+nav .nav-link[aria-current="page"] {color:#62cbd4;}
+body.mobile-menu-open {overflow:hidden;}
+#mobileMenu a:focus-visible,#mobileMenu button:focus-visible {outline:3px solid #83e1e5;outline-offset:4px;}
+
+/* Contact intake: off-screen spam trap and clear response states. */
+.ct-form .form-honeypot {position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important;}
+.ct-form-status[data-state="error"] {color:#a13a36;}
+.ct-form-status[data-state="success"] {color:#116B76;}
+
+/* Elegant scroll entrances only where the prior design lacked motion. */
+@media(prefers-reduced-motion:no-preference) {
+ .premium-reveal {opacity:0;transform:translate3d(0,26px,0);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1);will-change:opacity,transform;}
+ .premium-reveal.is-visible {opacity:1;transform:translate3d(0,0,0);will-change:auto;}
+ .ct-method:nth-child(2),.career-role:nth-child(2) {transition-delay:90ms;}
+ .ct-method:nth-child(3),.career-role:nth-child(3) {transition-delay:170ms;}
+}
+@media(prefers-reduced-motion:reduce) {
+ .premium-reveal {opacity:1!important;transform:none!important;transition:none!important;}
+ #projectsNavGroup .projects-dropdown,#projectsNavGroup .projects-nav-trigger svg {transition:none!important;}
+}
