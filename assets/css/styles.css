@@ -1326,3 +1326,23 @@ html.js-motion .about-v3:not(.hidden-page) [data-reveal] {
 @media(max-width:767px){
   .about-v3:not(.hidden-page) > .ab-photographic {height:clamp(340px,89vw,570px);}
 }
+
+
+/* ===== ABOUT REFINEMENT · FINISHED ARCHITECTURE / 2026-10-26 =====
+   Gallery-like finished space, restrained cinematic grade, no false project attribution. */
+.about-v3 .ab-profile-intro h2 {scroll-margin-top:110px;}
+.about-v3 .ab-photographic {isolation:isolate;background:#222c2e;}
+.about-v3 .ab-photographic img {
+  object-position:50% 52%;
+  filter:saturate(.84) contrast(1.07) brightness(.86);
+}
+.about-v3 .ab-photographic::after {
+  content:"";
+  position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(11,18,22,.22),transparent 30%,rgba(10,18,21,.37) 100%);
+}
+.about-v3 .ab-photographic figcaption {z-index:1;}
+@media(max-width:767px) {
+  .about-v3 .ab-photographic img {object-position:center 50%;}
+  .about-v3 .ab-profile-intro h2 {scroll-margin-top:90px;}
+}
