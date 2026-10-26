@@ -40,15 +40,9 @@
         }
     </script>
 
-    <link rel="stylesheet" href="./assets/css/styles.css?v=20261026-home-scenes-05"/>
+    <link rel="stylesheet" href="./assets/css/styles.css?v=20261026-portfolio-01"/>
 </head>
 <body class="antialiased selection:bg-brand-teal selection:text-white">
-
-    <!-- DEMO DISCLAIMER HEADER BAR -->
-    <div class="demo-ribbon text-center py-1.5 px-4 text-[11px] font-mono tracking-wider text-brand-teal uppercase flex items-center justify-center gap-2 relative z-50">
-        <i data-lucide="info" class="w-3.5 h-3.5"></i>
-        <span>Website Design Concept — Unofficial Demo | Concept imagery — not actual project photography</span>
-    </div>
 
     <!-- MAIN HEADER & NAVIGATION -->
     <header class="sticky top-0 z-40 px-4 md:px-10 py-4 bg-brand-dark/90 backdrop-blur-md border-b border-white/10 flex items-center justify-between transition-all" id="siteHeader">
@@ -165,14 +159,14 @@
         <p class="editorial-copy">The company describes solutions and customer service as priorities.</p>
         <button type="button" onclick="navigateTo('about')" class="architectural-link">ABOUT 308 CONSTRUCTION <i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></button>
       </div>
-      <div class="feature-photo image-mask" data-reveal><img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1700&q=82" alt="Illustrative contemporary architectural exterior" loading="lazy" decoding="async"/><span class="image-note">ILLUSTRATIVE ARCHITECTURE / DEMO</span></div>
+      <div class="feature-photo image-mask" data-reveal><img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1700&q=82" alt="Illustrative contemporary architectural exterior" loading="lazy" decoding="async"/></div>
     </div>
   </div>
   <div class="editorial-services dark-panel">
     <div class="wide-frame">
       <div class="editorial-section-head" data-reveal>
         <div><span class="fine-label teal-label">02 / WHAT WE DO</span><h2 class="font-display large-editorial-title">THREE CORE<br><span>SERVICES.</span></h2></div>
-        <p class="editorial-copy">The three service areas published on the original 308 Construction website.</p>
+        <p class="editorial-copy">Preconstruction planning, construction and construction management.</p>
       </div>
     </div>
     <div class="home-service-sequence" data-scene-sequence role="group" aria-label="Three 308 Construction service chapters">
@@ -188,7 +182,7 @@
    <p class="editorial-copy">Design and construction feedback before work begins to help clients develop efficient, functional plans.</p>
    <button type="button" onclick="navigateTo('services')" class="architectural-link">EXAMINE SERVICE <i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></button>
   </div>
-    <span class="chapter-photo-note">ILLUSTRATIVE PHOTO / UNOFFICIAL DEMO</span>
+    
   </div>
 </div>
  <div class="chapter-row chapter-full chapter-full-2" data-scene="2" aria-label="CONSTRUCTION">
@@ -203,7 +197,7 @@
    <p class="editorial-copy">Ground-up construction and renovations for interior and exterior projects, from initial concepts or completed construction documents.</p>
    <button type="button" onclick="navigateTo('services')" class="architectural-link">EXAMINE SERVICE <i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></button>
   </div>
-    <span class="chapter-photo-note">ILLUSTRATIVE PHOTO / UNOFFICIAL DEMO</span>
+    
   </div>
 </div>
  <div class="chapter-row chapter-full chapter-full-3" data-scene="3" aria-label="CONSTRUCTION MANAGEMENT">
@@ -218,40 +212,92 @@
    <p class="editorial-copy">Support with architectural drawings, permitting, labor coordination and the logistics needed to deliver a construction project.</p>
    <button type="button" onclick="navigateTo('services')" class="architectural-link">EXAMINE SERVICE <i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></button>
   </div>
-    <span class="chapter-photo-note">ILLUSTRATIVE PHOTO / UNOFFICIAL DEMO</span>
+    
   </div>
 </div>
     </div>
   </div>
-  <div class="editorial-portfolio pale-panel">
+  <div class="editorial-portfolio pale-panel" id="home-portfolio">
     <div class="wide-frame">
-      <div class="editorial-section-head" data-reveal>
-        <div><span class="fine-label teal-label">03 / SELECTED WORK</span><h2 class="font-display large-editorial-title">THE PROJECT<br><span>PORTFOLIO.</span></h2></div>
-        <div><p class="editorial-copy">Four projects documented on the original website, illustrated here with example photography rather than real project images.</p><button type="button" onclick="navigateTo('projects')" class="architectural-link">VIEW ALL PROJECTS <i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></button></div>
+      <div class="editorial-section-head portfolio-section-head" data-reveal>
+        <div>
+          <span class="fine-label teal-label">03 / SELECTED WORK</span>
+          <h2 class="font-display large-editorial-title">THE PROJECT<br><span>PORTFOLIO.</span></h2>
+        </div>
+        <div class="portfolio-section-intro">
+          <p class="editorial-copy">Four documented projects spanning campus renovations, athletic facilities and technical construction.</p>
+          <a href="?view=projects" onclick="navigateTo('projects');return false;" class="architectural-link">VIEW ALL PROJECTS <i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></a>
+        </div>
       </div>
-      <div class="editorial-project-grid">
- <button type="button" onclick="navigateTo('unt')" class="editorial-project wide" data-reveal aria-label="Read UNT MATTHEWS HALL project details">
-  <div class="project-image image-mask"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=82" alt="Illustrative contemporary office space, not the actual UNT Matthews Hall project" loading="lazy" decoding="async"/><span class="image-note">CONCEPT IMAGE — NOT ACTUAL PROJECT PHOTOGRAPHY</span><span class="project-floating-arrow"><i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></span></div>
-  <div class="project-legend"><div><span class="fine-label">01 / HIGHER EDUCATION</span><h3 class="font-display">UNT MATTHEWS HALL</h3><p>Office, restroom, lighting and finish renovations.</p></div><i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></div>
- </button>
- <button type="button" onclick="navigateTo('twu')" class="editorial-project tall" data-reveal aria-label="Read TWU OLD MAIN project details">
-  <div class="project-image image-mask"><img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=82" alt="Illustrative historic-style interior, not the actual TWU Old Main project" loading="lazy" decoding="async"/><span class="image-note">CONCEPT IMAGE — NOT ACTUAL PROJECT PHOTOGRAPHY</span><span class="project-floating-arrow"><i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></span></div>
-  <div class="project-legend"><div><span class="fine-label">02 / UNIVERSITY REPAIRS</span><h3 class="font-display">TWU OLD MAIN</h3><p>Plaster repair, painting and skylight glass work.</p></div><i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></div>
- </button>
- <button type="button" onclick="navigateTo('plano')" class="editorial-project tall" data-reveal aria-label="Read PLANO ISD BLEACHERS project details">
-  <div class="project-image image-mask"><img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1400&q=82" alt="Illustrative sports architecture, not an actual Plano ISD project photo" loading="lazy" decoding="async"/><span class="image-note">CONCEPT IMAGE — NOT ACTUAL PROJECT PHOTOGRAPHY</span><span class="project-floating-arrow"><i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></span></div>
-  <div class="project-legend"><div><span class="fine-label">03 / ATHLETIC FACILITIES</span><h3 class="font-display">PLANO ISD BLEACHERS</h3><p>Electrical, concrete paving and bleacher work across six sites.</p></div><i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></div>
- </button>
- <button type="button" onclick="navigateTo('mep')" class="editorial-project wide" data-reveal aria-label="Read MEP PROJECTS project details">
-  <div class="project-image image-mask"><img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1400&q=82" alt="Illustrative technical equipment, not actual MEP project photography" loading="lazy" decoding="async"/><span class="image-note">CONCEPT IMAGE — NOT ACTUAL PROJECT PHOTOGRAPHY</span><span class="project-floating-arrow"><i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></span></div>
-  <div class="project-legend"><div><span class="fine-label">04 / MEP & INDUSTRIAL</span><h3 class="font-display">MEP PROJECTS</h3><p>Published work includes generator troubleshooting and data-center drain pans.</p></div><i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></div>
- </button></div>
+      <div class="editorial-project-grid portfolio-grid" aria-label="Selected construction projects">
+        <a href="?view=unt" onclick="navigateTo('unt');return false;" class="editorial-project portfolio-tile portfolio-featured" data-reveal aria-label="Explore UNT MATTHEWS HALL project">
+          <span class="portfolio-tile-media" aria-hidden="true">
+            <img src="https://images.pexels.com/photos/36363659/pexels-photo-36363659.jpeg?auto=compress&cs=tinysrgb&w=1400" srcset="https://images.pexels.com/photos/36363659/pexels-photo-36363659.jpeg?auto=compress&cs=tinysrgb&w=500 500w, https://images.pexels.com/photos/36363659/pexels-photo-36363659.jpeg?auto=compress&cs=tinysrgb&w=900 900w, https://images.pexels.com/photos/36363659/pexels-photo-36363659.jpeg?auto=compress&cs=tinysrgb&w=1400 1400w, https://images.pexels.com/photos/36363659/pexels-photo-36363659.jpeg?auto=compress&cs=tinysrgb&w=1900 1900w" sizes="(min-width: 1200px) 58vw, (min-width: 768px) 92vw, 100vw" alt="" loading="lazy" decoding="async"/>
+          </span>
+          <span class="portfolio-tile-shade" aria-hidden="true"></span>
+          <span class="portfolio-tile-top">
+            <span class="fine-label">01 / HIGHER EDUCATION</span>
+            <span class="portfolio-tile-arrow" aria-hidden="true"><i data-lucide="arrow-up-right"></i></span>
+          </span>
+          <span class="portfolio-tile-content">
+            <h3 class="font-display portfolio-tile-title">UNT MATTHEWS HALL</h3>
+            <span class="portfolio-tile-description">Office, restroom, lighting and finish renovations.</span>
+            <span class="portfolio-tile-cta">VIEW PROJECT <i data-lucide="arrow-right" aria-hidden="true"></i></span>
+          </span>
+        </a>
+        <a href="?view=twu" onclick="navigateTo('twu');return false;" class="editorial-project portfolio-tile portfolio-secondary" data-reveal aria-label="Explore TWU OLD MAIN project">
+          <span class="portfolio-tile-media" aria-hidden="true">
+            <img src="https://images.pexels.com/photos/31398713/pexels-photo-31398713.jpeg?auto=compress&cs=tinysrgb&w=1400" srcset="https://images.pexels.com/photos/31398713/pexels-photo-31398713.jpeg?auto=compress&cs=tinysrgb&w=500 500w, https://images.pexels.com/photos/31398713/pexels-photo-31398713.jpeg?auto=compress&cs=tinysrgb&w=900 900w, https://images.pexels.com/photos/31398713/pexels-photo-31398713.jpeg?auto=compress&cs=tinysrgb&w=1400 1400w, https://images.pexels.com/photos/31398713/pexels-photo-31398713.jpeg?auto=compress&cs=tinysrgb&w=1900 1900w" sizes="(min-width: 1200px) 42vw, (min-width: 768px) 48vw, 100vw" alt="" loading="lazy" decoding="async"/>
+          </span>
+          <span class="portfolio-tile-shade" aria-hidden="true"></span>
+          <span class="portfolio-tile-top">
+            <span class="fine-label">02 / UNIVERSITY REPAIRS</span>
+            <span class="portfolio-tile-arrow" aria-hidden="true"><i data-lucide="arrow-up-right"></i></span>
+          </span>
+          <span class="portfolio-tile-content">
+            <h3 class="font-display portfolio-tile-title">TWU OLD MAIN</h3>
+            <span class="portfolio-tile-description">Plaster repair, painting and skylight glass work.</span>
+            <span class="portfolio-tile-cta">VIEW PROJECT <i data-lucide="arrow-right" aria-hidden="true"></i></span>
+          </span>
+        </a>
+        <a href="?view=plano" onclick="navigateTo('plano');return false;" class="editorial-project portfolio-tile portfolio-secondary" data-reveal aria-label="Explore PLANO ISD BLEACHERS project">
+          <span class="portfolio-tile-media" aria-hidden="true">
+            <img src="https://images.pexels.com/photos/14663065/pexels-photo-14663065.jpeg?auto=compress&cs=tinysrgb&w=1400" srcset="https://images.pexels.com/photos/14663065/pexels-photo-14663065.jpeg?auto=compress&cs=tinysrgb&w=500 500w, https://images.pexels.com/photos/14663065/pexels-photo-14663065.jpeg?auto=compress&cs=tinysrgb&w=900 900w, https://images.pexels.com/photos/14663065/pexels-photo-14663065.jpeg?auto=compress&cs=tinysrgb&w=1400 1400w, https://images.pexels.com/photos/14663065/pexels-photo-14663065.jpeg?auto=compress&cs=tinysrgb&w=1900 1900w" sizes="(min-width: 1200px) 42vw, (min-width: 768px) 48vw, 100vw" alt="" loading="lazy" decoding="async"/>
+          </span>
+          <span class="portfolio-tile-shade" aria-hidden="true"></span>
+          <span class="portfolio-tile-top">
+            <span class="fine-label">03 / ATHLETIC FACILITIES</span>
+            <span class="portfolio-tile-arrow" aria-hidden="true"><i data-lucide="arrow-up-right"></i></span>
+          </span>
+          <span class="portfolio-tile-content">
+            <h3 class="font-display portfolio-tile-title">PLANO ISD BLEACHERS</h3>
+            <span class="portfolio-tile-description">Electrical, concrete paving and bleacher work across six sites.</span>
+            <span class="portfolio-tile-cta">VIEW PROJECT <i data-lucide="arrow-right" aria-hidden="true"></i></span>
+          </span>
+        </a>
+        <a href="?view=mep" onclick="navigateTo('mep');return false;" class="editorial-project portfolio-tile portfolio-secondary" data-reveal aria-label="Explore MEP PROJECTS project">
+          <span class="portfolio-tile-media" aria-hidden="true">
+            <img src="https://images.pexels.com/photos/38217230/pexels-photo-38217230.jpeg?auto=compress&cs=tinysrgb&w=1400" srcset="https://images.pexels.com/photos/38217230/pexels-photo-38217230.jpeg?auto=compress&cs=tinysrgb&w=500 500w, https://images.pexels.com/photos/38217230/pexels-photo-38217230.jpeg?auto=compress&cs=tinysrgb&w=900 900w, https://images.pexels.com/photos/38217230/pexels-photo-38217230.jpeg?auto=compress&cs=tinysrgb&w=1400 1400w, https://images.pexels.com/photos/38217230/pexels-photo-38217230.jpeg?auto=compress&cs=tinysrgb&w=1900 1900w" sizes="(min-width: 1200px) 42vw, (min-width: 768px) 48vw, 100vw" alt="" loading="lazy" decoding="async"/>
+          </span>
+          <span class="portfolio-tile-shade" aria-hidden="true"></span>
+          <span class="portfolio-tile-top">
+            <span class="fine-label">04 / MEP & INDUSTRIAL</span>
+            <span class="portfolio-tile-arrow" aria-hidden="true"><i data-lucide="arrow-up-right"></i></span>
+          </span>
+          <span class="portfolio-tile-content">
+            <h3 class="font-display portfolio-tile-title">MEP PROJECTS</h3>
+            <span class="portfolio-tile-description">Published work includes generator troubleshooting and data-center drain pans.</span>
+            <span class="portfolio-tile-cta">VIEW PROJECT <i data-lucide="arrow-right" aria-hidden="true"></i></span>
+          </span>
+        </a>
+      </div>
+      <p class="portfolio-media-note">Photographs are illustrative and do not depict the featured project sites.</p>
     </div>
   </div>
   <div class="editorial-clients dark-panel">
     <div class="clients-photo" aria-hidden="true"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=82" alt="" loading="lazy" decoding="async"/></div>
     <div class="wide-frame relative">
-      <div data-reveal><span class="fine-label teal-label">04 / ORIGINAL WEBSITE CLIENT LIST</span><h2 class="font-display large-editorial-title">PUBLICLY LISTED<br><span>CLIENTS.</span></h2><p class="editorial-copy">These organizations appear on the original 308 Construction website. The background image is illustrative.</p></div>
+      <div data-reveal><span class="fine-label teal-label">04 / ORIGINAL WEBSITE CLIENT LIST</span><h2 class="font-display large-editorial-title">PUBLICLY LISTED<br><span>CLIENTS.</span></h2><p class="editorial-copy">Organizations publicly listed by 308 Construction.</p></div>
       <div class="client-typographic-grid" data-reveal>
        <span>University of North Texas</span><span>Texas Woman's University</span><span>Plano ISD</span><span>City of Denton</span><span>Northwest ISD</span><span>Town of Addison</span>
       </div>
@@ -267,7 +313,7 @@
         <button type="button" onclick="navigateTo('contact')" class="architectural-button button-accent">CONTACT THE OFFICE <i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></button>
         <a href="tel:9403874002" class="architectural-button button-outline">940-387-4002 <i data-lucide="phone" class="w-4 h-4"></i></a>
       </div>
-      <p class="demo-caption">Unofficial design concept · Images are illustrative, not actual project photography.</p>
+      
     </div>
   </div>
 </section>
@@ -1009,16 +1055,15 @@
             </div>
 
             <div>
-                <h4 class="font-mono text-white uppercase tracking-wider mb-4 text-[11px]">Demo Notice</h4>
+                <h4 class="font-mono text-white uppercase tracking-wider mb-4 text-[11px]">About This Design</h4>
                 <p class="text-[11px] text-gray-500 leading-relaxed">
-                    Website Design Concept — Unofficial Demo.<br/>
-                    Concept imagery — not actual project photography.
+                    Independent website design concept, not the official company website.
                 </p>
             </div>
         </div>
 
         <div class="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] font-mono">
-            <span>308 Construction, LLC · Unofficial website design concept</span>
+            <span>308 Construction, LLC · Independent design concept</span>
             <span>Argyle, Texas</span>
         </div>
     </footer>
@@ -1068,6 +1113,6 @@
     </div>
 
     <!-- JAVASCRIPT LOGIC FOR MULTI-PAGE & INTERACTION -->
-    <script src="./assets/js/app.js?v=20261026-home-scenes-05" defer></script>
+    <script src="./assets/js/app.js?v=20261026-portfolio-01" defer></script>
 </body>
 </html>
