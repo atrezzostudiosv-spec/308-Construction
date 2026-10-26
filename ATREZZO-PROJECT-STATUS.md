@@ -272,3 +272,13 @@ Concentrated follow-up corrections before closing the Home:
 - Created GitHub `assets/images/home/README.md` documenting exact expected image names, original dimensions, illustration disclaimer, and the safe `<picture>` responsive integration method.
 - Deliberately **did not update Home src/srcset** to non-existent assets, avoiding broken or blank Home service scenes.
 - **NEXT GATE**: securely upload those six binary WebPs to `assets/images/home/` using a binary-capable GitHub workflow, verify all six raw asset URLs, then replace exactly the three `.chapter-background` sources and run mobile + desktop QA. No other page, text, scene animation or media source should change. Pending upload is **BLOCKED**, not COMPLETE.
+
+## Home service images deployed from user-provided WebPs — 2026-10-26
+
+**ASSETS UPLOADED · HTML/CSS IMPLEMENTED · VISUAL QA EN VALIDACIÓN.**
+
+- Previous **BINARY UPLOAD BLOCKED** gate is **RESOLVED**. Using a safe binary transport and Git Git-object workflow, uploaded the six original files into `assets/images/home/` in GitHub commit `aa811a0f5089b3eb2993bd71b58a469d839c8cae` without editing/re-encoding the image bytes.
+- Verified GitHub directory listing shows all six paths and the expected bytes (146246, 198774, 123954, 205154, 113622, 159424 respectively).
+- Home scenes 01/02/03 now each use a responsive `<picture>` element pointing to local desktop and mobile asset. Mobile source is selected at 767px and below. Existing scene overlay, texts, links, image animations and all other sections remain unchanged. Added minimal scoped picture fill/position CSS. Cache version `20261026-home-images-01`.
+- Images are user-supplied **illustrative visuals**, not actual 308 Construction workers or projects. Detailed local asset mapping in `assets/images/home/README.md` and attribution/change history in `MEDIA-SOURCES.md`.
+- **VERIFIED:** all six GitHub blob objects and paths, sizes; HTML structure / three responsive pictures; CSS brace balance / unchanged previous styles. **NOT VERIFIED:** final public GitHub Pages deployment state, visual desktop and mobile cropping/contrast, real scroll animations across viewport sizes. Do not mark full QA closed based solely on source checks.
