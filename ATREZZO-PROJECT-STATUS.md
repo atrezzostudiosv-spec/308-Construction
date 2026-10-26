@@ -10,7 +10,7 @@ Updated: 2026-10-26. Public repository is an **unofficial design demo**.
 | Gemini prototype review | CLOSED | Original HTML reviewed; factual and structural faults identified |
 | Baseline code import | CLOSED | Five files committed on main; HTML, CSS and JS fetched back and checked structurally (not browser-tested) |
 | Cinematic home redesign | IN VALIDATION | Cinematic hero, three editorial service chapters, four-project asymmetrical portfolio, clients, CTA; structural checks passed, visual sign-off pending |
-| Inner-page redesign | IN PROCESS | Services and Projects implemented; About 3.0 implemented and in validation; Careers and Contact still pending |
+| Inner-page redesign | IN PROCESS | Home, Services, Projects, About and Careers implemented (visual QA pending); Contact still pending |
 | Assistant and form behavior | IN VALIDATION | Scripted assistant only; submission is explicitly disabled |
 | Responsive/accessibility/functionality | IN VALIDATION | CSS breakpoints, JS syntax, HTML structural balance and Services anchor structure checked; visual checks at 375/768/1024/1440 and interactive testing still pending |
 | GitHub Pages preview | IN VALIDATION | Pages configured from main/root per connected GitHub Settings tab; public site browser tab observed, latest deployment not visually rechecked |
@@ -19,7 +19,7 @@ Updated: 2026-10-26. Public repository is an **unofficial design demo**.
 ## Outstanding decisions
 - Original logo and verified public contacts retained. Original logo currently served remotely from Wix.
 - Replace all illustrative project imagery with client-approved assets only after approval.
-- Careers uses a company name requiring verification.
+- Careers source uses both "308 Construction" (main website) and "308 Solutions Group" (role descriptions); legal identity/relationship not confirmed. The original naming distinction is disclosed.
 - No official claims, case-study photographs, or live forms should be inferred from this prototype.
 - Keep approved components fixed during subsequent phases unless a genuine defect is found.
 
@@ -208,3 +208,16 @@ Concentrated follow-up corrections before closing the Home:
 - Renumbered subsequent `OUR APPROACH` and `CONNECT WITH 308` sections 05 and 06, and bumped asset versions to `20261026-about-trust-05`.
 - **SOURCE-CODE CHECKS:** no modifications outside About HTML + appended About CSS except asset version links; ten routes, all previously approved Home/Services/Projects scenes, existing About images, text and contact CTA unchanged; balanced HTML/CSS, no duplicate IDs, user source labels/counts verified. No JavaScript counter required.
 - **NO COMPROBADO:** actual browser rendering/cropping, visual responsive at 375/768/1024/1440px, external asset delivery, accessibility and performance. User visual approval and QA still required before marking About closed.
+
+## Careers 3.0 — three published roles and authentic application routes — 2026-10-26
+
+**IMPLEMENTED IN GITHUB; STATUS: EN VALIDACIÓN (device/live review pending).**
+
+- **Fact check (https://www.308gc.com/careers, consulted 2026-10-26):** official page lists exactly three current openings, **Plumber**, **Apprentice Plumber**, **Admin. / Personal Assistant**. License/experience/communication requirements and published job responsibilities incorporated without expanding role scope or inventing compensation, benefits or hiring promises.
+- Naming discrepancy **308 Solutions Group** on original role descriptions vs **308 Construction** elsewhere not resolved; short source note retained visibly on Careers rather than asserting a corporate relationship.
+- Replaced old generic Careers section and fake non-submitting form with a finished editorial page: cinematic construction/planning hero; warm introduction with an authentic illustration; three **native HTML details/summary** job rows that expand to requirements and published descriptions; photo-backed final application CTA.
+- **Real application actions:** source-based `mailto:Main@308gc.com` referencing cover letter + résumé from main-site Employment section, plus an external link to `https://www.308gc.com/careers` to use the official application form. The independent design demo does **not** collect, store or submit resumes, personally identifiable details or photo ID.
+- Three Pexels photo assets (3680959, 8961152, 1216589), **illustrative only**, credited in `MEDIA-SOURCES.md`; photos must not be represented as actual employees, projects or offices.
+- Responsive CSS for desktop, <=1100px, <=767px and <=375px. Accessible keyboard focus, native toggles, visible text without a reveal observer, reduced-motion fallback. Existing shared JS and other page content left untouched; query version `20261026-careers-01`.
+- **VERIFIED IN SOURCE:** 10 page views, one Careers H1, exactly 3 roles and 3 native summaries, no duplicate IDs/undefined SPA targets, no fake form, mailto/official links present, 3 Pexels source IDs, responsive CSS, balanced HTML tags/CSS braces, JS parses. Home scenes (3), Services scenes (3), Projects detailed galleries (4) and About stats preserved.
+- **NOT VERIFIED:** live CDN photo loading/crops, actual browser layout and taps at 375/768/1024/1440px, external link click behavior, external application form success, full a11y/performance. Do not mark Careers **CERRADA** until visual approval and essential browser QA.
