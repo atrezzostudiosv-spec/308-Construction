@@ -158,3 +158,57 @@ function initHomeConstructionVideo() {
   });
 }
 document.addEventListener('DOMContentLoaded', initHomeConstructionVideo);
+
+
+/* Home service chapters: scroll-driven image masks on supported desktop only.
+   Native scrolling is preserved; stage links remain always interactive. */
+function initHomeServiceSequence() {
+  const home = document.getElementById('page-home');
+  const sequence = home?.querySelector('[data-scene-sequence]');
+  if (!home || !sequence || !window.matchMedia || !window.requestAnimationFrame) return;
+
+  const scenes = Array.from(sequence.querySelectorAll('[data-scene]'));
+  if (scenes.length !== 3) return;
+  const canAnimate = window.matchMedia('(min-width: 1024px) and (min-height: 700px) and (hover: hover) and (prefers-reduced-motion: no-preference)');
+  let frameRequested = false;
+
+  function paintScenes() {
+    frameRequested = false;
+    if (!canAnimate.matches || home.classList.contains('hidden-page')) return;
+
+    const viewportHeight = window.innerHeight || 800;
+    for (let index = 0; index < scenes.length; index++) {
+      const scene = scenes[index];
+      const top = scene.getBoundingClientRect().top;
+      const arrival = Math.max(0, Math.min(1, (viewportHeight - top) / (viewportHeight * 0.92)));
+      const mask = index === 0 ? 0 : Math.round((1 - arrival) * 30);
+      const scale = 1.015 + (1 - arrival) * 0.025;
+      scene.style.setProperty('--scene-mask', mask + '%');
+      scene.style.setProperty('--scene-scale', scale.toFixed(3));
+    }
+  }
+
+  function schedulePaint() {
+    if (!canAnimate.matches || frameRequested) return;
+    frameRequested = true;
+    window.requestAnimationFrame(paintScenes);
+  }
+
+  function syncMode() {
+    document.documentElement.classList.toggle('scene-motion', canAnimate.matches);
+    if (!canAnimate.matches) {
+      scenes.forEach(scene => {
+        scene.style.removeProperty('--scene-mask');
+        scene.style.removeProperty('--scene-scale');
+      });
+    } else schedulePaint();
+  }
+
+  window.addEventListener('scroll', schedulePaint, {passive:true});
+  window.addEventListener('resize', schedulePaint, {passive:true});
+  window.addEventListener('popstate', schedulePaint);
+  if (typeof canAnimate.addEventListener === 'function') canAnimate.addEventListener('change', syncMode);
+  else if (typeof canAnimate.addListener === 'function') canAnimate.addListener(syncMode);
+  syncMode();
+}
+document.addEventListener('DOMContentLoaded', initHomeServiceSequence);
