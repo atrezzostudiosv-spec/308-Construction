@@ -162,3 +162,13 @@ Pexels usage terms: https://www.pexels.com/license/ .
 **Technical / transmission constraint:** Static GitHub Pages does not receive server-side submissions. In the absence of an authorized endpoint (`data-submission-endpoint=""`), the Contact form validates required name/email/message and opens a **mailto draft** addressed to verified `Main@308gc.com`; it does not silently send or claim successful delivery. The form shows this limitation to visitors. Optionally, a verified employer-authorized Formspree endpoint could be configured after the owner approves data handling, notices and recipient; only then may server-side submission occur. Do not imply an actual message was received until the service returns success and live test evidence exists. Contact form does not ask for uploads or sensitive identifiers.
 
 Google Maps link uses a search query for the exact officially listed corporate-office street address, rather than claiming the illustration depicts the address. Loading of remote Pexels photos, responsive crops, map click behavior, mail-app behavior, a11y and real outbound form delivery remain **NOT CHECKED** in a deployed browser.
+
+## Home user-supplied service chapter images — 2026-10-26
+
+**6 user-provided original WebP images were uploaded by 308 Construction demo production to the GitHub repository `assets/images/home/`.** Each desktop file is 2048 × 1152; each mobile file is 941 × 1672. These replace only the **three Home service chapter backgrounds** (not Services or other photo sections):
+
+- Planning: `preconstruction-desktop.webp` and `preconstruction-mobile.webp`
+- Construction: `construction-desktop.webp` and `construction-mobile.webp`
+- Construction Management: `management-desktop.webp` and `management-mobile.webp`
+
+**Media rights/identity:** supplied by the project user; do not claim they are actual 308 staff, actual jobsites or documented completed projects. The three previous Pexels chapter backgrounds (**7937752**, **33689718**, **32716845**) are no longer used as the Home service chapter image sources; their old entries in this record remain for audit trail, and any other photo usages outside these scenes are unchanged. Six files uploaded without recompression. Desktop/mobile selected with semantic `<picture>`/media sources. Image rendering at live breakpoints remains pending.
