@@ -11,6 +11,14 @@
             const target = document.getElementById(`page-${pageId}`);
             if (target) {
                 target.classList.remove('hidden-page');
+                // Do not keep the decorative hero video playing behind other views.
+                const heroVideo = document.querySelector('.home-v2 .hero-bg-video');
+                if (heroVideo && heroVideo.querySelector('source')?.src) {
+                  if (pageId === 'home' && !document.hidden) {
+                    const playback = heroVideo.play();
+                    if (playback && typeof playback.catch === 'function') playback.catch(() => {});
+                  } else heroVideo.pause();
+                }
                 if (updateHistory) history.pushState({pageId}, '', pageId === 'home' ? location.pathname : location.pathname + '?view=' + encodeURIComponent(pageId));
                 window.scrollTo({ top: 0, behavior: 'auto' });
             }
