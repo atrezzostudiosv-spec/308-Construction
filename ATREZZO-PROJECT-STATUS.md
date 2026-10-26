@@ -263,3 +263,12 @@ Concentrated follow-up corrections before closing the Home:
 **Code verifications:** 11 SPA views, `page-policy` route, persistent footer link, 6 source-grounded document sections and anchors, no duplicate DOM IDs, balanced HTML/CSS, all existing Home/Services/Projects/About/Careers/Contact unchanged except cache version. **NOT VERIFIED:** actual deployed rendering, mobile screenshots, focus navigation in real browser and legal/privacy approval.
 
 **Publication gate:** The reference page must be rewritten and approved by the actual data controller/company legal representative after production integrations, third-party scripts, applicant data handling and retention are decided. Keep `noindex` for independent demo and do not present this as an official corporate privacy policy.
+
+## Home client image replacement — 2026-10-26 (BINARY UPLOAD BLOCKED)
+
+- Six user-supplied WebPs reviewed and validated: three 2048x1152 desktop + three 941x1672 mobile, corresponding to Planning, Construction and Construction Management. Photo subjects and left-side copy negative space match the approved visual direction.
+- Original image files are included without recompression in a validated local ZIP artifact `308_construction_home_desktop_mobile_images.zip` (six WebPs, `assets/images/home/` folder).
+- The available GitHub connector can create/update text files and git blobs from inline base64 but cannot directly consume the user's uploaded WebP binary file references or container paths. The current runtime also cannot authenticate a direct `git push`. Consequently the six actual images **have not been committed**.
+- Created GitHub `assets/images/home/README.md` documenting exact expected image names, original dimensions, illustration disclaimer, and the safe `<picture>` responsive integration method.
+- Deliberately **did not update Home src/srcset** to non-existent assets, avoiding broken or blank Home service scenes.
+- **NEXT GATE**: securely upload those six binary WebPs to `assets/images/home/` using a binary-capable GitHub workflow, verify all six raw asset URLs, then replace exactly the three `.chapter-background` sources and run mobile + desktop QA. No other page, text, scene animation or media source should change. Pending upload is **BLOCKED**, not COMPLETE.
