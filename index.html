@@ -40,7 +40,7 @@
         }
     </script>
 
-    <link rel="stylesheet" href="./assets/css/styles.css?v=20261026-about-trust-05"/>
+    <link rel="stylesheet" href="./assets/css/styles.css?v=20261026-careers-01"/>
 </head>
 <body class="antialiased selection:bg-brand-teal selection:text-white">
 
@@ -774,44 +774,58 @@
         <!-- =================================================================== -->
         <!-- 09 — CAREERS PAGE -->
         <!-- =================================================================== -->
-        <section id="page-careers" class="page-view hidden-page">
-            <div class="py-16 px-6 md:px-16 bg-brand-dark border-b border-white/10">
-                <div class="max-w-7xl mx-auto">
-                    <span class="text-brand-teal font-display font-bold uppercase tracking-widest text-sm">Employment</span>
-                    <h1 class="font-display text-5xl md:text-7xl font-black uppercase text-white mt-1">Careers at 308</h1>
-                    <p class="text-gray-300 max-w-2xl text-sm md:text-base mt-4">Join our team of construction professionals in North Texas.</p>
-                </div>
-            </div>
-
-            <div class="py-20 px-6 md:px-16 bg-brand-dark">
-                <div class="max-w-4xl mx-auto space-y-8">
-                    <div class="p-8 bg-brand-gray/20 rounded-lg border border-white/10 space-y-4">
-                        <h2 class="font-display text-3xl font-bold uppercase text-white">Join Our Field & Project Operations</h2>
-                        <p class="text-gray-300 text-sm leading-relaxed">
-                            For employment inquiries, the original website asks applicants to send a cover letter and resume to Main@308gc.com.
-                        </p>
-                        <div class="p-4 bg-brand-teal/10 border border-brand-teal/30 rounded text-xs font-mono text-brand-teal">
-                            Open positions and the relationship between 308 Construction and the name "308 Solutions Group" used on the original Careers page require confirmation.
-                        </div>
-                    </div>
-
-                    <div class="p-8 bg-brand-dark border border-white/10 rounded-lg space-y-4">
-                        <h3 class="font-display text-xl font-bold uppercase text-white">Submit General Employment Inquiry</h3>
-                        <form onsubmit="handleDemoSubmit(event, 'Careers Form')" class="space-y-4">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <input type="text" required placeholder="Full Name" class="w-full bg-brand-gray/30 border border-white/15 rounded p-3 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-brand-teal"/>
-                                <input type="email" required placeholder="Email Address" class="w-full bg-brand-gray/30 border border-white/15 rounded p-3 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-brand-teal"/>
-                            </div>
-                            <input type="text" placeholder="Specialty / Area of Expertise (e.g. Superintendent, Project Manager)" class="w-full bg-brand-gray/30 border border-white/15 rounded p-3 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-brand-teal"/>
-                            <textarea rows="3" placeholder="Brief statement of experience..." class="w-full bg-brand-gray/30 border border-white/15 rounded p-3 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-brand-teal"></textarea>
-                            <button type="submit" class="px-6 py-3 bg-brand-teal hover:bg-brand-accent text-white font-display font-bold text-xs uppercase tracking-wider rounded transition-colors">
-                                Preview Career Inquiry — Not Sent
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <section id="page-careers" class="page-view hidden-page careers-v3">
+  <!-- Careers fact source: https://www.308gc.com/careers ; stock media is illustrative -->
+  <header class="career-hero">
+    <div class="career-hero-media" aria-hidden="true"><img src="https://images.pexels.com/photos/3680959/pexels-photo-3680959.jpeg?auto=compress&cs=tinysrgb&w=1500" srcset="https://images.pexels.com/photos/3680959/pexels-photo-3680959.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/3680959/pexels-photo-3680959.jpeg?auto=compress&cs=tinysrgb&w=960 960w, https://images.pexels.com/photos/3680959/pexels-photo-3680959.jpeg?auto=compress&cs=tinysrgb&w=1500 1500w, https://images.pexels.com/photos/3680959/pexels-photo-3680959.jpeg?auto=compress&cs=tinysrgb&w=2200 2200w" sizes="100vw" alt="" loading="lazy" decoding="async"/><span class="career-hero-scrim"></span></div>
+    <div class="career-frame career-hero-inner">
+      <div class="career-hero-strap"><span>308 CONSTRUCTION / CAREERS</span><span>EMPLOYMENT / ARGYLE, TEXAS</span></div>
+      <div class="career-hero-main">
+        <span class="career-eyebrow">CAREER INFORMATION / PUBLISHED OPENINGS</span>
+        <h1 class="font-display">JOIN THE<br><span>TEAM.</span></h1>
+        <p>Explore the positions on the official 308gc.com Careers page and learn how to submit an employment inquiry.</p>
+        <a class="career-hero-button" href="#career-openings">EXPLORE OPEN POSITIONS <i data-lucide="arrow-down-right" aria-hidden="true"></i></a>
+      </div>
+      <div class="career-hero-foot"><span>POSITIONS LISTED BY 308GC.COM</span><span>SCROLL TO EXPLORE <i data-lucide="arrow-down-right" aria-hidden="true"></i></span></div>
+    </div>
+  </header>
+  <section class="career-intro" aria-labelledby="career-intro-title">
+    <div class="career-frame career-intro-grid">
+      <div class="career-intro-copy">
+        <span class="career-eyebrow career-ink-eyebrow">01 / CAREER OPPORTUNITIES</span>
+        <h2 id="career-intro-title" class="font-display">FIND YOUR<br><span>NEXT ROLE.</span></h2>
+        <p>The original Careers page lists opportunities in plumbing and administrative support. Review the descriptions and stated requirements before applying.</p>
+        <div class="career-source-note"><span>ABOUT THE ORIGINAL LISTINGS</span><p>The original Careers page uses the name “308 Solutions Group” in its descriptions. The relationship between that name and 308 Construction is not explained there.</p></div>
+      </div>
+      <figure class="career-intro-photo"><img src="https://images.pexels.com/photos/8961152/pexels-photo-8961152.jpeg?auto=compress&cs=tinysrgb&w=1500" srcset="https://images.pexels.com/photos/8961152/pexels-photo-8961152.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/8961152/pexels-photo-8961152.jpeg?auto=compress&cs=tinysrgb&w=960 960w, https://images.pexels.com/photos/8961152/pexels-photo-8961152.jpeg?auto=compress&cs=tinysrgb&w=1500 1500w, https://images.pexels.com/photos/8961152/pexels-photo-8961152.jpeg?auto=compress&cs=tinysrgb&w=2200 2200w" sizes="(min-width:768px) 46vw, 100vw" alt="Two construction professionals reviewing plans at a worksite, illustrative stock photo" loading="lazy" decoding="async"/><figcaption>CONSTRUCTION WORK / ILLUSTRATIVE PHOTOGRAPHY</figcaption></figure>
+    </div>
+  </section>
+  <section class="career-openings" id="career-openings" aria-labelledby="career-openings-title">
+    <div class="career-frame">
+      <div class="career-openings-head"><div><span class="career-eyebrow career-ink-eyebrow">02 / LISTED OPPORTUNITIES</span><h2 class="font-display" id="career-openings-title">CURRENT<br><span>OPENINGS.</span></h2></div><p>Three roles appear on the original Careers page. Expand a position to read its requirements and the published work description.</p></div>
+      <div class="career-openings-list"><details id="career-plumber" class="career-role"><summary class="career-role-summary"><span class="career-role-index">01</span><span class="career-role-heading"><strong class="font-display">PLUMBER</strong><span class="career-role-category">LICENSED PLUMBING</span></span><span class="career-role-expand" aria-hidden="true"><i data-lucide="plus"></i></span></summary><div class="career-role-detail"><div class="career-role-facts"><div><span>REQUIREMENTS</span><p>A current, valid Tradesman, Journeyman or Master Plumbing License.</p></div><div><span>PUBLISHED ROLE DESCRIPTION</span><p>The published job description covers installation, repair and maintenance of residential and commercial plumbing systems, compliance with local plumbing codes and customer service.</p></div></div><div class="career-role-bottom"><span>ARGYLE, TX</span><a href="https://www.308gc.com/careers" target="_blank" rel="noopener noreferrer">SEE OFFICIAL LISTING <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div></div></details>
+<details id="career-apprentice" class="career-role"><summary class="career-role-summary"><span class="career-role-index">02</span><span class="career-role-heading"><strong class="font-display">APPRENTICE PLUMBER</strong><span class="career-role-category">PLUMBING APPRENTICESHIP</span></span><span class="career-role-expand" aria-hidden="true"><i data-lucide="plus"></i></span></summary><div class="career-role-detail"><div class="career-role-facts"><div><span>REQUIREMENTS</span><p>An Apprentice license and/or one year of plumbing experience.</p></div><div><span>PUBLISHED ROLE DESCRIPTION</span><p>The published job description covers assistance with plumbing installations, repairs and maintenance, learning to read blueprints and schematics and guidance from experienced professionals.</p></div></div><div class="career-role-bottom"><span>LOCATION NOT LISTED</span><a href="https://www.308gc.com/careers" target="_blank" rel="noopener noreferrer">SEE OFFICIAL LISTING <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div></div></details>
+<details id="career-assistant" class="career-role"><summary class="career-role-summary"><span class="career-role-index">03</span><span class="career-role-heading"><strong class="font-display">ADMIN. / PERSONAL ASSISTANT</strong><span class="career-role-category">ADMINISTRATIVE SUPPORT</span></span><span class="career-role-expand" aria-hidden="true"><i data-lucide="plus"></i></span></summary><div class="career-role-detail"><div class="career-role-facts"><div><span>REQUIREMENTS</span><p>Well-organized, with effective verbal and electronic communication.</p></div><div><span>PUBLISHED ROLE DESCRIPTION</span><p>The published job description covers scheduling, correspondence, arranging meetings and general office administrative tasks, with attention to detail and an ability to handle multiple tasks.</p></div></div><div class="career-role-bottom"><span>LOCATION NOT LISTED</span><a href="https://www.308gc.com/careers" target="_blank" rel="noopener noreferrer">SEE OFFICIAL LISTING <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div></div></details></div>
+      <div class="career-openings-footer"><span>SOURCE / 308GC.COM/CAREERS</span><a href="https://www.308gc.com/careers" target="_blank" rel="noopener noreferrer">VIEW OFFICIAL CAREERS PAGE <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div>
+    </div>
+  </section>
+  <section class="career-apply" aria-labelledby="career-apply-title">
+    <div class="career-apply-media" aria-hidden="true"><img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1500" srcset="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=960 960w, https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1500 1500w, https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=2200 2200w" sizes="100vw" alt="" loading="lazy" decoding="async"/><span class="career-apply-scrim"></span></div>
+    <div class="career-frame career-apply-main">
+      <div class="career-apply-top"><span class="career-eyebrow">03 / APPLICATION</span><span>308 CONSTRUCTION / EMPLOYMENT</span></div>
+      <div class="career-apply-grid">
+        <div><h2 id="career-apply-title" class="font-display">READY TO<br><span>APPLY?</span></h2></div>
+        <div class="career-apply-side">
+          <p>For employment with 308 Construction, its main website directs applicants to email a cover letter and résumé to <strong>Main@308gc.com</strong>.</p>
+          <a class="career-action career-action-primary" href="mailto:Main@308gc.com?subject=Employment%20Inquiry%20-%20308%20Construction">EMAIL YOUR APPLICATION <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+          <a class="career-action career-action-outline" href="https://www.308gc.com/careers" target="_blank" rel="noopener noreferrer">OFFICIAL APPLICATION PAGE <i data-lucide="external-link" aria-hidden="true"></i></a>
+          <p class="career-apply-footnote">This independent design preview does not collect, store or submit applications. The original Careers page has its own application form.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <p class="career-photo-disclosure">Careers photographs are illustrative stock imagery, not 308 Construction employees or actual worksites.</p>
+</section>
 
         <!-- =================================================================== -->
         <!-- 10 — CONTACT PAGE -->
@@ -998,6 +1012,6 @@
     </div>
 
     <!-- JAVASCRIPT LOGIC FOR MULTI-PAGE & INTERACTION -->
-    <script src="./assets/js/app.js?v=20261026-about-trust-05" defer></script>
+    <script src="./assets/js/app.js?v=20261026-careers-01" defer></script>
 </body>
 </html>
