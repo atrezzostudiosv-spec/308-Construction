@@ -148,3 +148,17 @@ The redesign provides:
 - **Sensitive photo identification is intentionally not collected** on this unofficial demo; the original company's photo-ID requirement must be reconciled with a proper secured, employer-approved process and privacy notice before collecting any such documents.
 - If employer authorizes collection, a dedicated verified secure Formspree form endpoint (paid plan with uploads; https://help.formspree.io/articles/building-your-form/file-uploads) can be connected to the form's `data-submission-endpoint` attribute and tested end-to-end. Avoid connecting candidate PII to an independent freelancer's personal email/form account without documented employer authorization, handling/privacy arrangements and consent.
 - This is a **client-side UI complete / transmission BLOCKED** state, not a live employment application form.
+
+## Contact 3.0 — cinematic editorial contact page — 2026-10-26
+
+**Factual source:** https://www.308gc.com/ , published `CONTACT` section, inspected 2026-10-26. Verifies all of the following, verbatim or as ordinary formatting: `940-387-4002`, `Main@308gc.com`, `11835 Hilltop Rd., Argyle, TX 76226`, inquiries/questions/commendations, and existing Name/Email/Subject contact form. Business services, office opening hours and response times are **not** inferred. The new form adds optional phone and required message for clear user communication, not new business claims.
+
+**Pexels illustrative stock photography:**
+- **Cinematic hero:** SevenStorm JUHASZIMRUS, "Architectural Photography of Building", Pexels photo **425232**. https://www.pexels.com/photo/architectural-photography-of-building-425232/ . Stock architectural exterior, **not** 308's office or a project built by the company.
+- **Corporate office directions panel (illustrative facade):** Musa Nicholas, "Modern Glass Office Building Exterior", Pexels photo **33463115**. https://www.pexels.com/photo/modern-glass-office-building-exterior-33463115/ . Stock commercial building, **not** 308's office or its own project.
+
+Pexels usage terms: https://www.pexels.com/license/ .
+
+**Technical / transmission constraint:** Static GitHub Pages does not receive server-side submissions. In the absence of an authorized endpoint (`data-submission-endpoint=""`), the Contact form validates required name/email/message and opens a **mailto draft** addressed to verified `Main@308gc.com`; it does not silently send or claim successful delivery. The form shows this limitation to visitors. Optionally, a verified employer-authorized Formspree endpoint could be configured after the owner approves data handling, notices and recipient; only then may server-side submission occur. Do not imply an actual message was received until the service returns success and live test evidence exists. Contact form does not ask for uploads or sensitive identifiers.
+
+Google Maps link uses a search query for the exact officially listed corporate-office street address, rather than claiming the illustration depicts the address. Loading of remote Pexels photos, responsive crops, map click behavior, mail-app behavior, a11y and real outbound form delivery remain **NOT CHECKED** in a deployed browser.
