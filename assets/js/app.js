@@ -171,15 +171,15 @@ function initHomeServiceSequence() {
   const scenes = [...sequence.querySelectorAll('[data-scene]')];
   if (scenes.length !== 3) return;
 
-  const desktopMotion = window.matchMedia(
-    '(min-width: 1024px) and (min-height: 560px) and (hover: hover) and (prefers-reduced-motion: no-preference)'
+  const sceneMotion = window.matchMedia(
+    '(min-height: 560px) and (prefers-reduced-motion: no-preference)'
   );
   const clamp = value => Math.max(0, Math.min(1, value));
   let scheduled = false;
 
   function draw() {
     scheduled = false;
-    if (!desktopMotion.matches || home.classList.contains('hidden-page')) return;
+    if (!sceneMotion.matches || home.classList.contains('hidden-page')) return;
 
     const height = Math.max(1, window.innerHeight);
     const sequenceRect = sequence.getBoundingClientRect();
@@ -197,9 +197,15 @@ function initHomeServiceSequence() {
 
       // A small zoom-out as a photo enters, then zoom-in while pinned.
       // Range approximately 1.04–1.105, deliberately below dramatic parallax.
-      const zoom = 1.025 + (1 - entrance) * 0.045 + exit * 0.095;
-      const pan = Math.round((1 - entrance) * 12 - exit * 20);
-      const mask = index === 0 ? 0 : Math.round((1 - entrance) * 16);
+      const compact = window.innerWidth < 768;
+      // Touch screens: gentler scale and pan, with no expensive image clipping.
+      const zoom = compact
+        ? 1.045 + (1 - entrance) * 0.012 + exit * 0.06
+        : 1.025 + (1 - entrance) * 0.045 + exit * 0.095;
+      const pan = compact
+        ? Math.round((1 - entrance) * 4 - exit * 8)
+        : Math.round((1 - entrance) * 12 - exit * 20);
+      const mask = index === 0 || compact ? 0 : Math.round((1 - entrance) * 16);
 
       scene.style.setProperty('--scene-scale', zoom.toFixed(4));
       scene.style.setProperty('--scene-pan', pan + 'px');
@@ -208,14 +214,14 @@ function initHomeServiceSequence() {
   }
 
   function requestDraw() {
-    if (!desktopMotion.matches || scheduled) return;
+    if (!sceneMotion.matches || scheduled) return;
     scheduled = true;
     window.requestAnimationFrame(draw);
   }
 
   function updateMode() {
-    document.documentElement.classList.toggle('scene-motion', desktopMotion.matches);
-    if (!desktopMotion.matches) {
+    document.documentElement.classList.toggle('scene-motion', sceneMotion.matches);
+    if (!sceneMotion.matches) {
       scenes.forEach(scene => {
         scene.style.removeProperty('--scene-scale');
         scene.style.removeProperty('--scene-pan');
@@ -227,10 +233,10 @@ function initHomeServiceSequence() {
   window.addEventListener('scroll', requestDraw, {passive: true});
   window.addEventListener('resize', requestDraw, {passive: true});
   window.addEventListener('popstate', requestDraw);
-  if (typeof desktopMotion.addEventListener === 'function') {
-    desktopMotion.addEventListener('change', updateMode);
-  } else if (typeof desktopMotion.addListener === 'function') {
-    desktopMotion.addListener(updateMode);
+  if (typeof sceneMotion.addEventListener === 'function') {
+    sceneMotion.addEventListener('change', updateMode);
+  } else if (typeof sceneMotion.addListener === 'function') {
+    sceneMotion.addListener(updateMode);
   }
   updateMode();
 }
