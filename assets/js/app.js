@@ -111,7 +111,7 @@ window.addEventListener('load', () => {
 });
 /* Cinematic scene reveals: enhancement only, never required for legibility. */
 function initCinematicScenes() {
-  const items = document.querySelectorAll('.home-v2 [data-reveal], .services-v2 [data-reveal], .portfolio-page [data-reveal], .portfolio-story [data-reveal]');
+  const items = document.querySelectorAll('.home-v2 [data-reveal], .services-v2 [data-reveal], .portfolio-page [data-reveal], .portfolio-story [data-reveal], .about-v3 [data-reveal]');
   const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduced || !('IntersectionObserver' in window)) return;
   document.documentElement.classList.add('js-motion');
