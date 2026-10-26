@@ -197,3 +197,14 @@ Concentrated follow-up corrections before closing the Home:
 - The text, `CONTACT 308` route, verified telephone number and Argyle corporate office text are unchanged; this is a targeted visual edit only to the About CTA.
 - Asset cache version `20261026-about-cta-bg-04` included in HTML. Home, Services, Projects, Careers, Contact content remain unchanged.
 - **VERIFIED in source:** image link/credit, CTA nesting, correct stacking selectors, responsive mobile rule, HTML/CSS structural balance, navigation and 10 page routes. **NOT VERIFIED live:** remote Pexels CDN image render, actual visual contrast/crop at 375/768/1024/1440px, animations/clicks in deployed browser.
+
+## About verified figures + full published client list — 2026-10-26
+
+**IMPLEMENTED IN GITHUB · EN VALIDACIÓN for live visual/mobile review.**
+
+- Verified both original figures on the official public source `https://www.308gc.com/` (Projects/Clients sections, consulted 2026-10-26): **6,123 Projects Completed** and **1,865 Contractors Appointed**. They are site-published claims, *not independently audited*; preserve original labels and numerical values.
+- Added About section `03 / FIGURES PUBLISHED BY 308` between Markets and Clients. Distinct premium deep-teal section with huge static display figures, accessible labels and a modest source qualification. Kept original approved 308 palette; **did not imitate** the Wix yellow statistics strip or invent related KPIs.
+- Expanded About's `04 / PUBLISHED CLIENTS` from 8 to **23 unique names** listed as text by the original website; deduplicated the repeated Northwest ISD and Plano ISD. Kept source spelling/abbreviations where used, including UTA, UNT and TWU, without claiming photographic evidence, endorsements or unavailable client logo rights. Layout is responsive editorial typography, 3 desktop columns / 2 tablet / 1 mobile.
+- Renumbered subsequent `OUR APPROACH` and `CONNECT WITH 308` sections 05 and 06, and bumped asset versions to `20261026-about-trust-05`.
+- **SOURCE-CODE CHECKS:** no modifications outside About HTML + appended About CSS except asset version links; ten routes, all previously approved Home/Services/Projects scenes, existing About images, text and contact CTA unchanged; balanced HTML/CSS, no duplicate IDs, user source labels/counts verified. No JavaScript counter required.
+- **NO COMPROBADO:** actual browser rendering/cropping, visual responsive at 375/768/1024/1440px, external asset delivery, accessibility and performance. User visual approval and QA still required before marking About closed.
