@@ -95,3 +95,16 @@ Concentrated follow-up corrections before closing the Home:
 - Added responsive `srcset` variants to the three existing illustrative Pexels photos; updated HTML asset query versions to `20261026-home-scenes-05` to avoid stale CSS/JS on reload.
 - GitHub static checks: 10 page views, 3 chapters/photos/CTAs, balanced HTML and CSS, parseable JS, matching CSS/JS media conditions and cache-busted asset URLs.
 - **NO COMPROBADO:** real scroll animation, button click test, image load, layout or smoothness at 375, 768, 1024, 1440px on the public Pages site. Public website inaccessible to automated browser verification from this environment; requires visual review before closing Home.
+
+## Home Portfolio — architectural image-overlay gallery — 2026-10-26
+
+**IN VALIDATION — implemented, awaiting visual acceptance at mobile/tablet/desktop.**
+
+- Rebuilt **only the Home Portfolio gallery**, replacing the former staggered unequal-height grid with an editorial composition: large featured UNT Matthews Hall tile + three secondary tiles (TWU Old Main, Plano ISD Bleachers, MEP Projects).
+- Category, verified project name, published project description and View Project action appear **inside** each image, over dark legibility gradients. Every full tile is a semantic link to its existing site view (`?view=unt`, `twu`, `plano`, `mep`).
+- Four replacement Pexels photographs visually correspond to categories and are **not** actual project photography. Their source links are recorded in `MEDIA-SOURCES.md`; a single unobtrusive note appears below the gallery.
+- Refined image zoom on hover/focus, focus styles, reduced-motion support, desktop one-feature/three-side arrangement, tablet reflow and single-column mobile layouts. Original four project details and routes are retained.
+- Removed the conspicuous top demo ribbon and repetitive media/demo labels from the Home. Kept a concise independent-design notice in the global footer; non-sending forms remain explicitly identified as previews.
+- CSS/JS cache versioned as `20261026-portfolio-02`.
+- **Static verification complete:** ten page views preserved, four project links resolve to existing view IDs, one featured tile, all media IDs/sources, HTML tag balance, CSS brace balance and JavaScript syntax, CSS breakpoint/focus/reduced-motion selectors.
+- **NOT CHECKED:** actual image loading, layout screenshots at 375/768/1024/1440px, dynamic hover/tap navigation, mobile text overflow, visual appearance on GitHub Pages. Obtain browser review before closing Home.
