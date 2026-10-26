@@ -36,3 +36,14 @@ Concentrated follow-up corrections before closing the Home:
 6. **MEDIUM — Device QA:** no new browser screenshots or interactive checks at 375, 768, 1024, 1440 px in this review. Existing responsive CSS remains pending verification.
 
 **Keep locked:** approved typography, color system, Home architecture, verified service/project scope, 10-view router, ASK 308, and unofficial-demo markers.
+
+## Home visual adjustment — 2026-10-26
+
+**IN VALIDATION — implemented in GitHub, awaiting visual confirmation.**
+
+- Converted only the three **Home** service chapters (Preconstruction Planning, Construction, Construction Management) into full-width photographic scenes with dark legibility overlays. Preserved each chapter's verified copy, CTA, and typography.
+- Replaced unrelated coding imagery and the broken construction photo **within those three chapters** with Pexels illustrative photos; other page content was not redesigned.
+- Added muted decorative hero construction footage (Pexels video 853867) and a static fallback poster. The video is not preloaded on compact screens, reduced-motion configurations, or Save-Data connections; it pauses when the visitor navigates away.
+- Added `MEDIA-SOURCES.md` with specific free-media source pages and usage notes.
+- Verified GitHub file commits, ten client-side views intact, 3 Home service scenes, HTML tag balance, CSS brace balance and video script references.
+- **NOT YET VERIFIED:** actual remote video playback, photo rendering, visual responsive layouts at 375/768/1024/1440, and media loading/performance. Test on public GitHub Pages before marking as closed.
