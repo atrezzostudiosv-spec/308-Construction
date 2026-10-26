@@ -50,3 +50,20 @@ These are category-appropriate **stock photographs**, selected for the independe
 - **Closing CTA / site inspection:** Tuấn Nguyễn Văn, “Silhouetted Engineers Inspecting Construction Site”, Pexels **35564145**. https://www.pexels.com/photo/silhouetted-engineers-inspecting-construction-site-35564145/
 
 Media source pages were located through public web search. **Live image CDN response, browser cropping and rendering have not been independently verified**; examine the deployed site at 375/768/1024/1440px before accepting final media.
+
+## Projects case-study visual galleries — 2026-10-26
+
+All twelve pictures in these galleries are **Pexels stock photo illustrations** of relevant environments only. **They do not depict 308 Construction projects, client sites, project personnel, results or delivered work.** Sources confirmed through indexed Pexels photo pages; browser image delivery still needs live verification. Use with Pexels terms: https://www.pexels.com/license/ . One small collective illustration note is included on each detail page, instead of repeated labels on every picture.
+
+- **UNT / University hallway** — University Hallway; Pexels photo 12512761. https://www.pexels.com/photo/university-hallway-12512761/
+- **UNT / Contemporary office circulation** — Interior of hall of modern office; Pexels photo 7534179. https://www.pexels.com/photo/interior-of-hall-of-modern-office-7534179/
+- **UNT / Accessible restroom reference** — Modern Accessible Restroom Entrance with Bold Design; Pexels photo 33072184. https://www.pexels.com/photo/modern-accessible-restroom-entrance-with-bold-design-33072184/
+- **TWU / Historic glass-roof atrium** — The atrium of the old building has a skylight; Pexels photo 27700137. https://www.pexels.com/photo/the-atrium-of-the-old-building-has-a-skylight-27700137/
+- **TWU / Historic glass dome** — Inside view of round dome; Pexels photo 7443763. https://www.pexels.com/photo/inside-view-of-round-dome-7443763/
+- **TWU / Historic skylight** — Ornate Interior Dome Ceiling with Skylight; Pexels photo 34925709. https://www.pexels.com/photo/ornate-interior-dome-ceiling-with-skylight-34925709/
+- **Plano / Stadium facility** — An Empty Sports Stadium; Pexels photo 3571569. https://www.pexels.com/photo/an-empty-sports-stadium-3571569/
+- **Plano / Bleachers seating** — Photo of a Stadium With Empty Seats; Pexels photo 8941566. https://www.pexels.com/photo/photo-of-a-stadium-with-empty-seats-8941566/
+- **Plano / Grandstand seats** — View of Empty Bleachers; Pexels photo 20431288. https://www.pexels.com/photo/view-of-empty-bleachers-20431288/
+- **MEP / Portable generator reference** — Technicians Tinkering with a Power Generator; Pexels photo 18816918. https://www.pexels.com/photo/technicians-tinkering-with-a-power-generator-18816918/
+- **MEP / Industrial switchgear** — Industrial Electrical Control Room Interior; Pexels photo 33706880. https://www.pexels.com/photo/industrial-electrical-control-room-interior-33706880/
+- **MEP / Data center racks** — Server Racks on Data Center; Pexels photo 4508751. https://www.pexels.com/photo/server-racks-on-data-center-4508751/
