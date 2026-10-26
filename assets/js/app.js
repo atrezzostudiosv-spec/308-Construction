@@ -302,3 +302,156 @@ function initServicesScrollSequence() {
   updateMode();
 }
 document.addEventListener('DOMContentLoaded',initServicesScrollSequence);
+
+
+/* Careers application — safe client-side UX for the independent design preview.
+   Transport activates ONLY after an employer-authorized HTTPS Formspree endpoint
+   has been connected. No files leave the browser when data-submission-endpoint is empty.
+   The form intentionally does NOT collect ID or sensitive identity documents. */
+function initCareersApplication() {
+  const form = document.getElementById('career-application-form');
+  if (!form) return;
+
+  const submitButton = document.getElementById('career-form-submit');
+  const submitText = submitButton?.querySelector('span');
+  const status = document.getElementById('career-form-status');
+  const position = document.getElementById('career-position');
+  const maxBytes = 10 * 1024 * 1024;
+  const fileInputs = [...form.querySelectorAll('input[type="file"]')];
+  const endpoint = (form.dataset.submissionEndpoint || '').trim();
+  const verifiedReceiver = /^https:\/\/formspree\.io\/f\/[a-zA-Z0-9]+$/.test(endpoint);
+  const validExtension = /\.(pdf|doc|docx)$/i;
+  const allowedMimes = new Set([
+    'application/pdf',
+    'application/msword',
+    'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+    'application/octet-stream',
+    ''
+  ]);
+
+  function setStatus(message, state = '') {
+    if (!status) return;
+    status.textContent = message;
+    if (state) status.dataset.state = state;
+    else status.removeAttribute('data-state');
+  }
+  function fileValidity(input) {
+    const file = input.files && input.files[0];
+    if (!file) return input.required ? 'Please attach your résumé before continuing.' : '';
+    if (!validExtension.test(file.name) || !allowedMimes.has(file.type)) {
+      return 'Upload a PDF, DOC or DOCX document.';
+    }
+    if (file.size > maxBytes) return 'Each file must be 10 MB or smaller.';
+    if (file.size === 0) return 'The selected file is empty. Choose a different document.';
+    return '';
+  }
+  function updateFile(input) {
+    const file = input.files && input.files[0];
+    const name = document.getElementById(input.id + '-name');
+    const error = fileValidity(input);
+    if (name) {
+      name.textContent = file ? (error ? error : file.name + ' · ' + Math.max(1, Math.ceil(file.size/1024)) + ' KB') : 'NO FILE SELECTED';
+      name.style.color = error ? '#9d3838' : '';
+    }
+    // Required-file error is shown on submission; untouched inputs are not red.
+    input.setCustomValidity(file ? error : '');
+    if (file && error) setStatus(error,'error');
+    else if (file) setStatus('File selected locally. No document has been uploaded or transmitted.','');
+  }
+
+  fileInputs.forEach(input => {
+    input.addEventListener('change', () => updateFile(input));
+    const zone = input.closest('[data-career-dropzone]');
+    if (!zone) return;
+    ['dragenter','dragover'].forEach(name => zone.addEventListener(name, event => {
+      event.preventDefault();
+      zone.classList.add('is-dragover');
+    }));
+    ['dragleave','dragend'].forEach(name => zone.addEventListener(name, event => {
+      event.preventDefault();
+      if (!zone.contains(event.relatedTarget)) zone.classList.remove('is-dragover');
+    }));
+    zone.addEventListener('drop', event => {
+      event.preventDefault();
+      zone.classList.remove('is-dragover');
+      const file = event.dataTransfer?.files?.[0];
+      if (!file) return;
+      try {
+        const transfer = new DataTransfer();
+        transfer.items.add(file);
+        input.files = transfer.files;
+        updateFile(input);
+      } catch {
+        setStatus('Drag and drop is not supported by this browser. Choose a file using the upload control.','error');
+      }
+    });
+  });
+
+  document.querySelectorAll('.careers-v3 [data-career-role]').forEach(link => {
+    link.addEventListener('click', () => {
+      const title = link.closest('.career-role')?.querySelector('.career-role-heading strong')?.textContent?.trim();
+      if (!title || !position) return;
+      const available = [...position.options].find(option => option.textContent.trim() === title);
+      if (available) {
+        position.value = available.value;
+        setStatus('Position selected: ' + title + '. Complete the application details below.');
+      }
+    });
+  });
+
+  if (verifiedReceiver) {
+    if (submitText) submitText.textContent = 'SEND APPLICATION';
+    setStatus('Secure submission endpoint configured. Applications are sent only when you submit this form.');
+  } else {
+    if (submitText) submitText.textContent = 'CHECK APPLICATION · PREVIEW ONLY';
+    setStatus('Preview only: a secure company-approved receiver has not been connected. Selecting files does not upload or transmit them.');
+  }
+
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    // Clear previous errors before native validity check.
+    fileInputs.forEach(input => input.setCustomValidity(fileValidity(input)));
+    if (!form.reportValidity()) {
+      setStatus('Please complete all required fields and attach a valid résumé (PDF, DOC or DOCX, max 10 MB).','error');
+      return;
+    }
+    const error = fileInputs.map(fileValidity).find(Boolean);
+    if (error) {
+      setStatus(error,'error');
+      return;
+    }
+    if (!verifiedReceiver) {
+      setStatus('Application fields and files checked. PREVIEW ONLY: no information or attachments were transmitted. A secure, authorized submission service must be connected before this can receive applications.','');
+      return;
+    }
+    // Use FormData only when an explicit, verified receiver has been configured.
+    if (!window.fetch || !window.FormData) {
+      setStatus('Your browser does not support secure submission. Please try a current browser.','error');
+      return;
+    }
+    submitButton.disabled = true;
+    if (submitText) submitText.textContent = 'SENDING...';
+    setStatus('Sending your application securely...');
+    try {
+      const response = await fetch(endpoint, {
+        method:'POST',
+        body:new FormData(form),
+        headers:{'Accept':'application/json'}
+      });
+      if (!response.ok) throw new Error('Submission service rejected the request');
+      form.reset();
+      fileInputs.forEach(input => {
+        input.setCustomValidity('');
+        const label = document.getElementById(input.id + '-name');
+        if (label) {label.textContent = 'NO FILE SELECTED'; label.style.color = '';}
+      });
+      setStatus('Application sent successfully. Thank you for your interest.','success');
+    } catch {
+      setStatus('Application was not confirmed as sent. Please check your connection and try again. Do not assume that the files were received.','error');
+    } finally {
+      submitButton.disabled = false;
+      if (submitText) submitText.textContent = 'SEND APPLICATION';
+    }
+  });
+}
+document.addEventListener('DOMContentLoaded',initCareersApplication);
