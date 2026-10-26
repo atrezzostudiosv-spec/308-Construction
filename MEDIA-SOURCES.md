@@ -143,7 +143,7 @@ Source fields: original `https://www.308gc.com/careers` lists First name, Last n
 
 The redesign provides:
 - First/last name, email, phone (required); role dropdown restricted to the three published openings; available-start date, city/state, CV/LinkedIn URL and notes optional.
-- One résumé PDF/DOC/DOCX (required) and one cover-letter PDF/DOC/DOCX (optional); drag/drop and local file name previews; 10MB maximum per file, checked client-side.
+- One résumé PDF/DOC/DOCX (required) and one cover-letter PDF/DOC/DOCX (required, following the source's main-site Employment instructions); drag/drop and local file name previews; 10MB maximum per file, checked client-side.
 - Native field labels, accessible messages and a review state. The site has no verified employer-authorized application backend; `data-submission-endpoint=""` therefore **cannot send any files or PII**. The submit button explicitly reads `CHECK APPLICATION · PREVIEW ONLY`.
 - **Sensitive photo identification is intentionally not collected** on this unofficial demo; the original company's photo-ID requirement must be reconciled with a proper secured, employer-approved process and privacy notice before collecting any such documents.
 - If employer authorizes collection, a dedicated verified secure Formspree form endpoint (paid plan with uploads; https://help.formspree.io/articles/building-your-form/file-uploads) can be connected to the form's `data-submission-endpoint` attribute and tested end-to-end. Avoid connecting candidate PII to an independent freelancer's personal email/form account without documented employer authorization, handling/privacy arrangements and consent.
