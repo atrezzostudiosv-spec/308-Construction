@@ -172,7 +172,7 @@ function initHomeServiceSequence() {
   if (scenes.length !== 3) return;
 
   const desktopMotion = window.matchMedia(
-    '(min-width: 1024px) and (min-height: 700px) and (hover: hover) and (prefers-reduced-motion: no-preference)'
+    '(min-width: 1024px) and (min-height: 560px) and (hover: hover) and (prefers-reduced-motion: no-preference)'
   );
   const clamp = value => Math.max(0, Math.min(1, value));
   let scheduled = false;
@@ -197,9 +197,9 @@ function initHomeServiceSequence() {
 
       // A small zoom-out as a photo enters, then zoom-in while pinned.
       // Range approximately 1.04–1.105, deliberately below dramatic parallax.
-      const zoom = 1.04 + (1 - entrance) * 0.02 + exit * 0.065;
-      const pan = Math.round((1 - entrance) * 10 - exit * 14);
-      const mask = index === 0 ? 0 : Math.round((1 - entrance) * 9);
+      const zoom = 1.025 + (1 - entrance) * 0.045 + exit * 0.095;
+      const pan = Math.round((1 - entrance) * 12 - exit * 20);
+      const mask = index === 0 ? 0 : Math.round((1 - entrance) * 16);
 
       scene.style.setProperty('--scene-scale', zoom.toFixed(4));
       scene.style.setProperty('--scene-pan', pan + 'px');
