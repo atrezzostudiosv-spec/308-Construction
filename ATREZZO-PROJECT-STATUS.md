@@ -10,7 +10,7 @@ Updated: 2026-10-26. Public repository is an **unofficial design demo**.
 | Gemini prototype review | CLOSED | Original HTML reviewed; factual and structural faults identified |
 | Baseline code import | CLOSED | Five files committed on main; HTML, CSS and JS fetched back and checked structurally (not browser-tested) |
 | Cinematic home redesign | IN VALIDATION | Cinematic hero, three editorial service chapters, four-project asymmetrical portfolio, clients, CTA; structural checks passed, visual sign-off pending |
-| Inner-page redesign | IN PROCESS | Home, Services, Projects, About and Careers implemented (visual QA pending); Contact still pending |
+| Inner-page redesign | IN VALIDATION | All ten views including Contact implemented; full responsive/browser QA and sender integrations pending |
 | Assistant and form behavior | IN VALIDATION | Scripted assistant; Careers form now includes local attachments/validation but sends no data until employer-approved secure endpoint is configured |
 | Responsive/accessibility/functionality | IN VALIDATION | CSS breakpoints, JS syntax, HTML structural balance and Services anchor structure checked; visual checks at 375/768/1024/1440 and interactive testing still pending |
 | GitHub Pages preview | IN VALIDATION | Pages configured from main/root per connected GitHub Settings tab; public site browser tab observed, latest deployment not visually rechecked |
@@ -234,3 +234,15 @@ Concentrated follow-up corrections before closing the Home:
 - Mobile, tablet and desktop form CSS, accessible focus, reduced-motion handling, stack-safe media overlays and panel typography implemented. Query asset version `20261026-careers-form-02`. Other ten-page routing and previously approved views preserved.
 - **Source QA:** form markup, custom file validation, native controls, role preselection, inactive endpoint gate, original 3 job details, no outbound Careers-page link, no duplicate IDs, balanced HTML/CSS, JS parses.
 - **NO COMPROBADO:** browser-side drag/drop interaction, actual CDN photo rendering/crop, responsive screenshots at 375/768/1024/1440, accessibility testing and server end-to-end upload (blocked until endpoint exists). Do not mark Careers complete/closed or accepting candidates while network submission is unavailable.
+
+## Contact 3.0 — source-faithful architectural contact page — 2026-10-26
+
+**IMPLEMENTED IN GITHUB · EN VALIDACIÓN pending actual browser visual interaction testing.**
+
+- Compared original `https://www.308gc.com/` **Contact** section on 2026-10-26. Preserved exact public phone `940-387-4002`, email `Main@308gc.com`, office address `11835 Hilltop Rd., Argyle, TX 76226`, and purpose of inquiries/questions/commendations. No invented work areas, office hours, promised response times or other contact methods.
+- Replaced the placeholder Contact page with complete editorial architecture: full-width photographic hero with a dark high-contrast scrim and in-page CTA; three direct methods as typography-led links (call, email, office map); a bespoke two-column responsive inquiry/contact form; closing full-width finished-architecture/office directions chapter. Pexels stock **425232**, **33463115**, sourced in `MEDIA-SOURCES.md` and labeled illustration, never presented as actual 308 work or offices.
+- **Contact form:** native labeled Full Name + Email + Message (required), Phone + Subject (optional). Input length limits, browser constraint validation, accessible live status. No fabricated sector dropdown from old preview. On this static site with no company-approved form endpoint, valid input **opens an email draft** addressed to the verified main address; visitor decides whether to send. Delivery never claimed by the site, and no silent background transmission. If a verified, owner-approved Formspree endpoint is configured with required privacy policies, then after actual testing the optional server-submission path can replace mailto behavior.
+- Added scoped Contact CSS (desktop, tablet, mobile <=767px, short width <=375px), keyboard focus styles, reduced-motion accommodation and safe z-index overlays; no dependence on scroll animations for legibility. Preserved Home, Services, Projects, About, Careers and existing assistant.
+- Bumped stylesheet/script query version to `20261026-contact-01`; direct preview route `?view=contact`.
+- **SOURCE CODE VERIFIED:** contact links, form structure, DOM IDs unique, 10 client-side views, balanced div/section tags and CSS braces, JS syntax, no orphan SPA links, existing project galleries and original Careers form unchanged.
+- **NO COMPROBADO:** visible deployment/browser screenshot tests, actual mail client launch/send, source photo network load/crop, live responsive 375/768/1024/1440, phone link, maps behavior, WCAG accessibility/performance metrics, server delivery. Do not mark site production-ready without essential live QA.
