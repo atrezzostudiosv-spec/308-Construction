@@ -63,3 +63,14 @@ Concentrated follow-up corrections before closing the Home:
 - Additional Home QA: corrected small teal labels on light backgrounds, added visible focus outline for project tiles and repaired portfolio image-mask reveals with reduced-motion fallback.
 - GitHub checks: all ten page views retained; three service scenes, their three backgrounds and three CTAs present; HTML div/section balances, CSS braces and JavaScript syntax verified.
 - **Still to verify visually in the live browser:** seamless stacking on desktop, actual animation smoothness, photo rendering, button hit targets, 375/768/1024/1440 px viewports, and runtime console errors. No independent device screenshot QA was available during this code update.
+
+## Home Services — pinned scenes + scroll zoom refinement — 2026-10-26
+
+**Implemented; IN VALIDATION for real-browser interaction.** This refines the existing approved full-background service chapters only.
+
+- Desktop 1024px+ / >=700px height / hover device: three 100svh sticky chapters stack naturally. As the next chapter scrolls upward, the currently pinned image receives a very gentle scroll-linked zoom (roughly 1.04x→1.105x), with small vertical pan; the incoming image settles as it arrives.
+- Sticky ancestor overflow reset on eligible desktop sizes to ensure pinned behavior. CSS pointer-events for decorative images remain disabled; service buttons remain interactive.
+- Mobile, touch devices, short viewports and `prefers-reduced-motion`: normal scrolling, static background photos, no scroll zoom.
+- Unchanged: Hero video, copy, the three service photos, service CTA targets, independent Services page, Projects and ASK 308.
+- Verified in repository: 10 views, 3 backgrounds and 3 CTA handlers, balanced HTML/CSS, JavaScript parser, desktop sticky + mobile fallback rules.
+- **Pending:** live visual and pointer testing at 375/768/1024/1440px, smoothness/performance and public deployment propagation. The web renderer was not available for screenshot-based validation in this run.
