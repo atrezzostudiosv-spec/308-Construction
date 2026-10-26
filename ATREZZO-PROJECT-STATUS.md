@@ -9,11 +9,11 @@ Updated: 2026-10-26. Public repository is an **unofficial design demo**.
 | Brand direction | CLOSED | Industrial Architectural; teal, charcoal, Inter/Barlow Condensed |
 | Gemini prototype review | CLOSED | Original HTML reviewed; factual and structural faults identified |
 | Baseline code import | CLOSED | Five files committed on main; HTML, CSS and JS fetched back and checked structurally (not browser-tested) |
-| Cinematic home redesign | PENDING | Requires visual preview and editorial sign-off |
+| Cinematic home redesign | IN VALIDATION | Cinematic hero, three editorial service chapters, four-project asymmetrical portfolio, clients, CTA; structural checks passed, visual sign-off pending |
 | Inner-page redesign | PENDING | Requires separate visual review |
 | Assistant and form behavior | IN VALIDATION | Scripted assistant only; submission is explicitly disabled |
-| Responsive/accessibility/functionality | PENDING | No verified tests at widths 375/768/1024/1440 yet |
-| GitHub Pages preview | BLOCKED | GitHub Pages not yet confirmed enabled; user must configure Settings → Pages → main/root |
+| Responsive/accessibility/functionality | IN VALIDATION | CSS breakpoints and JS syntax/HTML tag balance verified in source; visual checks at 375/768/1024/1440 and interactivity still pending |
+| GitHub Pages preview | IN VALIDATION | Pages configured from main/root per connected GitHub Settings tab; public site browser tab observed, latest deployment not visually rechecked |
 | Client publication | BLOCKED | Requires client consent, assets and QA |
 
 ## Outstanding decisions
