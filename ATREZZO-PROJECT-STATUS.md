@@ -22,3 +22,17 @@ Updated: 2026-10-26. Public repository is an **unofficial design demo**.
 - Careers uses a company name requiring verification.
 - No official claims, case-study photographs, or live forms should be inferred from this prototype.
 - Keep approved components fixed during subsequent phases unless a genuine defect is found.
+
+## Home second review — 2026-10-26 (code + public DOM; no screenshot inspection)
+
+**Status: IN VALIDATION. No Home HTML/CSS/JS was changed in this review.**
+
+Concentrated follow-up corrections before closing the Home:
+1. **HIGH — CSS contrast:** `#38A8B3` on `#F3F2EF` is approximately 2.53:1; use a darker teal such as `#116B76` for small text on light sections. Keep existing brand accents on dark sections.
+2. **HIGH — Duplicate illustrative imagery:** construction hero repeats as Construction chapter; architectural image repeats in introduction and contact CTA; technical image repeats in management and MEP. Give each scene distinct illustrative media.
+3. **HIGH — Scroll image masks not active on most service/project images:** selectors require `.image-mask[data-reveal]`, but the attribute is on their parent `.chapter-row` or `.editorial-project`. Repair without changing layouts and retain reduced-motion behavior.
+4. **MEDIUM — Editorial copy:** reduce awkward meta-phrasing about "the original website" within customer-facing section body copy, while keeping the separate unofficial-demo and image disclaimers.
+5. **MEDIUM — Conversion:** make "Discuss Your Project" the main Home hero action; retain "Explore Projects" as secondary.
+6. **MEDIUM — Device QA:** no new browser screenshots or interactive checks at 375, 768, 1024, 1440 px in this review. Existing responsive CSS remains pending verification.
+
+**Keep locked:** approved typography, color system, Home architecture, verified service/project scope, 10-view router, ASK 308, and unofficial-demo markers.
