@@ -135,7 +135,13 @@
 
 <section id="page-home" class="page-view home-v2">
   <div class="cinematic-hero">
-    <div class="hero-photo" aria-hidden="true"><img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=2200&q=82" alt="" fetchpriority="high" decoding="async"/><div class="hero-gradient"></div></div>
+    <div class="hero-photo" aria-hidden="true">
+      <img class="hero-fallback-image" src="https://images.pexels.com/photos/32716845/pexels-photo-32716845.jpeg?auto=compress&cs=tinysrgb&w=2200" alt="" fetchpriority="high" decoding="async"/>
+      <video class="hero-bg-video" autoplay muted loop playsinline preload="none" disablepictureinpicture tabindex="-1" aria-hidden="true">
+        <source data-src="https://videos.pexels.com/video-files/853867/853867-hd_1920_1080_25fps.mp4" type="video/mp4"/>
+      </video>
+      <div class="hero-gradient"></div>
+    </div>
     <div class="cinematic-hero-content">
       <div class="hero-strap fine-label" data-reveal><span>308 CONSTRUCTION / ARGYLE, TEXAS</span><span>PLANNING · CONSTRUCTION · MANAGEMENT</span></div>
       <div class="hero-center">
@@ -169,33 +175,51 @@
         <p class="editorial-copy">The three service areas published on the original 308 Construction website.</p>
       </div>
       
- <div class="chapter-row " data-reveal>
-  <div class="chapter-image image-mask"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=82" alt="Illustrative building plans and architectural design workspace" loading="lazy" decoding="async"/><span class="image-note">ILLUSTRATIVE IMAGE / DEMO</span></div>
-  <div class="chapter-copy">
+ <div class="chapter-row chapter-full chapter-full-1" data-reveal aria-label="PRECONSTRUCTION PLANNING">
+  <div class="chapter-background" aria-hidden="true">
+      <img src="https://images.pexels.com/photos/7937752/pexels-photo-7937752.jpeg?auto=compress&cs=tinysrgb&w=2200" alt="" loading="lazy" decoding="async"/>
+      <div class="chapter-background-shade"></div>
+    </div>
+  <div class="chapter-stage">
+    <div class="chapter-copy">
    <span class="fine-label">01 / PLANNING</span>
    <h3 class="font-display chapter-heading">PRECONSTRUCTION<br>PLANNING.</h3>
    <p class="editorial-copy">Design and construction feedback before work begins to help clients develop efficient, functional plans.</p>
    <button type="button" onclick="navigateTo('services')" class="architectural-link">EXAMINE SERVICE <i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></button>
   </div>
- </div>
- <div class="chapter-row chapter-reverse" data-reveal>
-  <div class="chapter-image image-mask"><img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=2200&q=82" alt="Illustrative large-scale construction site" loading="lazy" decoding="async"/><span class="image-note">ILLUSTRATIVE IMAGE / DEMO</span></div>
-  <div class="chapter-copy">
+    <span class="chapter-photo-note">ILLUSTRATIVE PHOTO / UNOFFICIAL DEMO</span>
+  </div>
+</div>
+ <div class="chapter-row chapter-full chapter-full-2" data-reveal aria-label="CONSTRUCTION">
+  <div class="chapter-background" aria-hidden="true">
+      <img src="https://images.pexels.com/photos/33689718/pexels-photo-33689718.jpeg?auto=compress&cs=tinysrgb&w=2200" alt="" loading="lazy" decoding="async"/>
+      <div class="chapter-background-shade"></div>
+    </div>
+  <div class="chapter-stage">
+    <div class="chapter-copy">
    <span class="fine-label">02 / EXECUTION</span>
    <h3 class="font-display chapter-heading">CONSTRUCTION.</h3>
    <p class="editorial-copy">Ground-up construction and renovations for interior and exterior projects, from initial concepts or completed construction documents.</p>
    <button type="button" onclick="navigateTo('services')" class="architectural-link">EXAMINE SERVICE <i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></button>
   </div>
- </div>
- <div class="chapter-row " data-reveal>
-  <div class="chapter-image image-mask"><img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1400&q=82" alt="Illustrative construction technical equipment" loading="lazy" decoding="async"/><span class="image-note">ILLUSTRATIVE IMAGE / DEMO</span></div>
-  <div class="chapter-copy">
+    <span class="chapter-photo-note">ILLUSTRATIVE PHOTO / UNOFFICIAL DEMO</span>
+  </div>
+</div>
+ <div class="chapter-row chapter-full chapter-full-3" data-reveal aria-label="CONSTRUCTION MANAGEMENT">
+  <div class="chapter-background" aria-hidden="true">
+      <img src="https://images.pexels.com/photos/32716845/pexels-photo-32716845.jpeg?auto=compress&cs=tinysrgb&w=2200" alt="" loading="lazy" decoding="async"/>
+      <div class="chapter-background-shade"></div>
+    </div>
+  <div class="chapter-stage">
+    <div class="chapter-copy">
    <span class="fine-label">03 / COORDINATION</span>
    <h3 class="font-display chapter-heading">CONSTRUCTION<br>MANAGEMENT.</h3>
    <p class="editorial-copy">Support with architectural drawings, permitting, labor coordination and the logistics needed to deliver a construction project.</p>
    <button type="button" onclick="navigateTo('services')" class="architectural-link">EXAMINE SERVICE <i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></button>
   </div>
- </div>
+    <span class="chapter-photo-note">ILLUSTRATIVE PHOTO / UNOFFICIAL DEMO</span>
+  </div>
+</div>
     </div>
   </div>
   <div class="editorial-portfolio pale-panel">
