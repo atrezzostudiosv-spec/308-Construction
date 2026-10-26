@@ -74,3 +74,12 @@ Concentrated follow-up corrections before closing the Home:
 - Unchanged: Hero video, copy, the three service photos, service CTA targets, independent Services page, Projects and ASK 308.
 - Verified in repository: 10 views, 3 backgrounds and 3 CTA handlers, balanced HTML/CSS, JavaScript parser, desktop sticky + mobile fallback rules.
 - **Pending:** live visual and pointer testing at 375/768/1024/1440px, smoothness/performance and public deployment propagation. The web renderer was not available for screenshot-based validation in this run.
+
+## Home Services — visibility fix (desktop breakpoint + cache) — 2026-10-26
+
+**Status: IN VALIDATION — GitHub changes saved; external Pages/browser animation not directly tested.**
+- User reported no visible change after pinned zoom deployment.
+- Root causes detected in source: scene CSS and JS unnecessarily required at least 700px of usable viewport height, silently disabling laptop-height desktop animation; HTML referenced unversioned local CSS and JS assets susceptible to client caching.
+- Updated both media conditions to support desktop viewports >=560px high, provided tighter typography/padding at 560–760px, raised the scroll-linked zoom strength modestly, and versioned both asset URLs (`20261026-home-scenes-04`).
+- Retained original content and photo assets, scroll-driven natural sticky stacking, three CTA links, mobile/touch and reduced-motion fallbacks, and all separate page views.
+- **Verify next:** opening a fresh URL with `?v=20261026-home-scenes-04`, observing the pinned sequence and image zoom on a desktop browser, and checking buttons at desktop/mobile widths. Only mark closed after visual acceptance.
