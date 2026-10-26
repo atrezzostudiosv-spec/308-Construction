@@ -1,0 +1,70 @@
+body {
+            background-color: #151A1D;
+            color: #F3F2EF;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Architectural Scrollbar */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #151A1D;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #157C88;
+            border-radius: 2px;
+        }
+
+        /* Scrims & Architectural Overlays */
+        .scrim-dark {
+            background: linear-gradient(180deg, rgba(21,26,29,0.85) 0%, rgba(21,26,29,0.4) 50%, rgba(21,26,29,0.95) 100%);
+        }
+        .scrim-teal {
+            background: radial-gradient(circle at center, rgba(21,124,136,0.15) 0%, rgba(21,26,29,0.95) 100%);
+        }
+
+        /* Grid Background Pattern */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+
+        /* Smooth Page Transition */
+        .page-view {
+            transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+        }
+        .page-view.hidden-page {
+            display: none !important;
+            opacity: 0;
+            transform: translateY(12px);
+        }
+
+        /* Image Mask Animations */
+        .mask-reveal {
+            position: relative;
+            overflow: hidden;
+        }
+        .mask-reveal img {
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .mask-reveal:hover img {
+            transform: scale(1.04);
+        }
+
+        /* Disclaimer ribbon */
+        .demo-ribbon {
+            background: rgba(21, 124, 136, 0.2);
+            border-bottom: 1px solid rgba(21, 124, 136, 0.4);
+        }
+/* Editorial refinements and reduced motion */
+html { scroll-behavior: smooth; }
+.page-view:focus { outline: none; }
+img { display: block; }
+button, a { -webkit-tap-highlight-color: transparent; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
