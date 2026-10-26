@@ -96,7 +96,7 @@ function handleAssistantSubmit(e) {
         // Handle Demo Form Submissions
         function handleDemoSubmit(e, formName) {
             e.preventDefault();
-            alert(`DEMO ONLY: ${formName} was not sent. No information has been stored or transmitted.`);
+            alert(`Preview only: ${formName} was not sent. No information has been stored or transmitted.`);
             e.target.reset();
         }
 
