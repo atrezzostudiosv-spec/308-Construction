@@ -187,3 +187,13 @@ Concentrated follow-up corrections before closing the Home:
 4. Kept Home, Services, Projects and other About factual content intact; changed only About HTML, About-specific CSS styling and its photo source documentation. CSS/JS URLs cache-busted as `20261026-about-refine-03`.
 5. **VERIFIED IN SOURCE:** 10 SPA pages, no duplicated IDs, correct in-page About anchor, no redundant services rows in About, 3 original Home scenes, 3 original Services scenes, 4 Projects image galleries and balanced HTML/CSS.
 6. **NOT CHECKED:** actual image render/crop or performance, click behavior in deployed browser, and responsive screenshots at 375, 768, 1024 and 1440. Await user visual confirmation before closing About.
+
+## About cinematic contact background — 2026-10-26
+
+**IMPLEMENTED · EN VALIDACIÓN (visual browser QA still pending).** Added an illustrative, full-width photo background to the final `ABOUT / CONNECT WITH 308` CTA, per user screenshot/request. The source is a finished commercial lobby with windows (Pexels photo **32674962**); full credit and non-attribution rule documented in `MEDIA-SOURCES.md`.
+
+- Contact CTA hero photo is an HTML `img` with responsive `srcset`, `sizes=100vw`, lazy loading and decoding async. Decorative `alt=""` inside `aria-hidden` container. No claim that this photo is a 308 Construction project.
+- Dark gradient/photo grade on background `z-index:0`, scrim `z-index:1`, contact content `z-index:2` to keep headline, buttons, phone and address readable. Stronger uniform overlay on mobile.
+- The text, `CONTACT 308` route, verified telephone number and Argyle corporate office text are unchanged; this is a targeted visual edit only to the About CTA.
+- Asset cache version `20261026-about-cta-bg-04` included in HTML. Home, Services, Projects, Careers, Contact content remain unchanged.
+- **VERIFIED in source:** image link/credit, CTA nesting, correct stacking selectors, responsive mobile rule, HTML/CSS structural balance, navigation and 10 page routes. **NOT VERIFIED live:** remote Pexels CDN image render, actual visual contrast/crop at 375/768/1024/1440px, animations/clicks in deployed browser.
