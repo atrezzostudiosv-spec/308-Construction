@@ -172,3 +172,10 @@ Google Maps link uses a search query for the exact officially listed corporate-o
 - Construction Management: `management-desktop.webp` and `management-mobile.webp`
 
 **Media rights/identity:** supplied by the project user; do not claim they are actual 308 staff, actual jobsites or documented completed projects. The three previous Pexels chapter backgrounds (**7937752**, **33689718**, **32716845**) are no longer used as the Home service chapter image sources; their old entries in this record remain for audit trail, and any other photo usages outside these scenes are unchanged. Six files uploaded without recompression. Desktop/mobile selected with semantic `<picture>`/media sources. Image rendering at live breakpoints remains pending.
+
+## Services intro — user-supplied architectural illustration — 2026-10-26
+
+- Services page, `OUR APPROACH / 308 CONSTRUCTION` → `THREE CORE SERVICES`: replaced the previous Pexels photo 465118 with a user-provided architectural interior image depicting two helmeted professionals reviewing plans in a modern atrium.
+- Local asset: `assets/images/services/three-core-services-architecture.webp` (1374 × 1145 px, quality-preserving WebP optimization of the supplied PNG).
+- This remains **illustrative imagery**; not identified as an actual 308 Construction project, worker, office, or documented site. The original section text, three jump links and figcaption remain unchanged.
+- Browser image load, crop and responsive appearance at 375/768/1024/1440 px remain **NOT VERIFIED** pending live QA.
