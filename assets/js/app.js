@@ -1,5 +1,5 @@
 // Initialize Lucide icons
-        lucide.createIcons();
+        if (window.lucide?.createIcons) window.lucide.createIcons();
 
         // Multi-page Router Function
         function navigateTo(pageId, updateHistory = true) {
@@ -101,3 +101,20 @@ window.addEventListener('load', () => {
   const pageId = new URLSearchParams(location.search).get('view') || 'home';
   navigateTo(document.getElementById('page-' + pageId) ? pageId : 'home', false);
 });
+/* Cinematic scene reveals: enhancement only, never required for legibility. */
+function initCinematicScenes() {
+  const items = document.querySelectorAll('.home-v2 [data-reveal]');
+  const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduced || !('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('js-motion');
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-revealed');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  items.forEach(el => observer.observe(el));
+}
+document.addEventListener('DOMContentLoaded', initCinematicScenes);
