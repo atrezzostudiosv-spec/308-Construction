@@ -5,7 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
     <title>308 Construction — Turn-Key Construction Solutions with Accuracy</title>
     <meta name="description" content="308 Construction provides preconstruction planning, construction and construction management in the DFW Metroplex and for clients across the country."/>
-    <meta name="robots" content="noindex, nofollow"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="theme-color" content="#151A1D"/>
+    <link rel="canonical" href="https://atrezzostudiosv-spec.github.io/308-Construction/"/>
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="308 Construction — Independent Design Concept"/>
+    <meta property="og:title" content="308 Construction | Planning, Construction & Management"/>
+    <meta property="og:description" content="Explore a design preview of 308 Construction's published services and selected projects in the DFW Metroplex."/>
+    <meta property="og:url" content="https://atrezzostudiosv-spec.github.io/308-Construction/"/>
+    <meta property="og:image" content="https://images.pexels.com/photos/32716845/pexels-photo-32716845.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=630"/>
+    <meta property="og:image:secure_url" content="https://images.pexels.com/photos/32716845/pexels-photo-32716845.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=630"/>
+    <meta property="og:image:type" content="image/jpeg"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta property="og:image:alt" content="Illustrative construction photograph — independent 308 Construction website concept"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="308 Construction | Planning, Construction & Management"/>
+    <meta name="twitter:description" content="Independent design preview showcasing 308 Construction services and selected projects."/>
+    <meta name="twitter:image" content="https://images.pexels.com/photos/32716845/pexels-photo-32716845.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=630"/>
+    <meta name="twitter:image:alt" content="Illustrative commercial construction scene"/>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -40,38 +59,39 @@
         }
     </script>
 
-    <link rel="stylesheet" href="./assets/css/styles.css?v=20261026-home-images-01"/>
+    <link rel="stylesheet" href="./assets/css/styles.css?v=20261026-site-audit-01"/>
 </head>
 <body class="antialiased selection:bg-brand-teal selection:text-white">
 
     <!-- MAIN HEADER & NAVIGATION -->
     <header class="sticky top-0 z-40 px-4 md:px-10 py-4 bg-brand-dark/90 backdrop-blur-md border-b border-white/10 flex items-center justify-between transition-all" id="siteHeader">
         <!-- Brand Logo -->
-        <a href="#" onclick="navigateTo('home'); return false;" class="flex items-center gap-3 group">
+        <a href="./" onclick="navigateTo('home'); return false;" class="flex items-center gap-3 group">
             <span class="inline-flex items-center bg-brand-light px-3 py-2 rounded-sm"><img src="https://static.wixstatic.com/media/2e093d_f486ae8559264d4cba594e8305ec3b84~mv2.png/v1/fill/w_600%2Ch_117%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/2e093d_f486ae8559264d4cba594e8305ec3b84~mv2.png" alt="308 Construction — official logo" class="w-[176px] sm:w-[210px] h-auto" width="210" height="41"/></span>
         </a>
 
         <!-- Desktop Navigation Menu -->
         <nav class="hidden lg:flex items-center gap-8 text-xs font-semibold tracking-wider uppercase text-gray-300">
-            <a href="#" onclick="navigateTo('home'); return false;" class="nav-link hover:text-brand-teal transition-colors" data-page="home">Home</a>
-            <a href="#" onclick="navigateTo('services'); return false;" class="nav-link hover:text-brand-teal transition-colors" data-page="services">Services</a>
+            <a href="./" onclick="navigateTo('home'); return false;" class="nav-link hover:text-brand-teal transition-colors" data-page="home">Home</a>
+            <a href="?view=services" onclick="navigateTo('services'); return false;" class="nav-link hover:text-brand-teal transition-colors" data-page="services">Services</a>
             
             <!-- Projects Dropdown Anchor -->
-            <div class="relative group">
-                <a href="#" onclick="navigateTo('projects'); return false;" class="nav-link hover:text-brand-teal transition-colors inline-flex items-center gap-1" data-page="projects">
-                    Projects <i data-lucide="chevron-down" class="w-3 h-3"></i>
+            <div class="projects-nav-group relative group" id="projectsNavGroup">
+                <a href="?view=projects" onclick="navigateTo('projects'); return false;" class="nav-link hover:text-brand-teal transition-colors inline-flex items-center gap-1" data-page="projects">
+                    Projects
                 </a>
-                <div class="absolute top-full left-0 mt-2 w-72 bg-brand-dark border border-white/15 rounded-lg shadow-2xl p-2 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all transform group-hover:translate-y-0 translate-y-2">
-                    <a href="#" onclick="navigateTo('unt'); return false;" class="block p-2.5 text-xs rounded hover:bg-brand-teal/20 hover:text-white text-gray-300">UNT Matthews Hall</a>
-                    <a href="#" onclick="navigateTo('twu'); return false;" class="block p-2.5 text-xs rounded hover:bg-brand-teal/20 hover:text-white text-gray-300">TWU Old Main Skylight</a>
-                    <a href="#" onclick="navigateTo('plano'); return false;" class="block p-2.5 text-xs rounded hover:bg-brand-teal/20 hover:text-white text-gray-300">Plano ISD Bleacher Upgrades</a>
-                    <a href="#" onclick="navigateTo('mep'); return false;" class="block p-2.5 text-xs rounded hover:bg-brand-teal/20 hover:text-white text-gray-300">MEP Technical Projects</a>
+                <button type="button" id="projectsNavToggle" class="projects-nav-trigger" aria-label="Show project pages" aria-haspopup="true" aria-controls="projectsSubmenu" aria-expanded="false"><i data-lucide="chevron-down" class="w-3 h-3"></i></button>
+                <div id="projectsSubmenu" class="projects-dropdown absolute top-full left-0 w-72 bg-brand-dark border border-white/15 rounded-lg shadow-2xl p-2 opacity-0 pointer-events-none transition-all transform translate-y-2" aria-label="Individual project pages">
+                    <a href="?view=unt" onclick="navigateTo('unt'); return false;" class="block p-2.5 text-xs rounded hover:bg-brand-teal/20 hover:text-white text-gray-300">UNT Matthews Hall</a>
+                    <a href="?view=twu" onclick="navigateTo('twu'); return false;" class="block p-2.5 text-xs rounded hover:bg-brand-teal/20 hover:text-white text-gray-300">TWU Old Main Skylight</a>
+                    <a href="?view=plano" onclick="navigateTo('plano'); return false;" class="block p-2.5 text-xs rounded hover:bg-brand-teal/20 hover:text-white text-gray-300">Plano ISD Bleacher Upgrades</a>
+                    <a href="?view=mep" onclick="navigateTo('mep'); return false;" class="block p-2.5 text-xs rounded hover:bg-brand-teal/20 hover:text-white text-gray-300">MEP Technical Projects</a>
                 </div>
             </div>
 
-            <a href="#" onclick="navigateTo('about'); return false;" class="nav-link hover:text-brand-teal transition-colors" data-page="about">About</a>
-            <a href="#" onclick="navigateTo('careers'); return false;" class="nav-link hover:text-brand-teal transition-colors" data-page="careers">Careers</a>
-            <a href="#" onclick="navigateTo('contact'); return false;" class="nav-link hover:text-brand-teal transition-colors" data-page="contact">Contact</a>
+            <a href="?view=about" onclick="navigateTo('about'); return false;" class="nav-link hover:text-brand-teal transition-colors" data-page="about">About</a>
+            <a href="?view=careers" onclick="navigateTo('careers'); return false;" class="nav-link hover:text-brand-teal transition-colors" data-page="careers">Careers</a>
+            <a href="?view=contact" onclick="navigateTo('contact'); return false;" class="nav-link hover:text-brand-teal transition-colors" data-page="contact">Contact</a>
         </nav>
 
         <!-- Action CTAs -->
@@ -83,34 +103,34 @@
             <button onclick="navigateTo('contact')" class="hidden md:inline-flex px-5 py-2 rounded bg-brand-teal hover:bg-brand-accent text-white font-display font-semibold text-sm uppercase tracking-wider transition-colors shadow-md">
                 Inquire Project
             </button>
-            <button onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded bg-brand-dark border border-white/10 text-white hover:border-brand-teal transition-colors">
+            <button type="button" id="mobileMenuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileMenu" onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded bg-brand-dark border border-white/10 text-white hover:border-brand-teal transition-colors">
                 <i data-lucide="menu" class="w-5 h-5"></i>
             </button>
         </div>
     </header>
 
     <!-- MOBILE NAVIGATION OVERLAY -->
-    <div id="mobileMenu" class="fixed inset-0 z-50 bg-brand-dark/98 backdrop-blur-2xl hidden flex-col justify-between p-6 overflow-y-auto">
+    <div id="mobileMenu" role="dialog" aria-modal="true" aria-label="Site navigation" class="fixed inset-0 z-50 bg-brand-dark/98 backdrop-blur-2xl hidden flex-col justify-between p-6 overflow-y-auto">
         <div class="flex items-center justify-between border-b border-white/10 pb-4">
             <span class="font-display font-bold text-xl tracking-wider text-white">308 NAVIGATION</span>
-            <button onclick="toggleMobileMenu()" class="p-2 rounded border border-white/10 text-gray-300">
+            <button type="button" aria-label="Close navigation" onclick="toggleMobileMenu()" class="p-2 rounded border border-white/10 text-gray-300">
                 <i data-lucide="x" class="w-6 h-6"></i>
             </button>
         </div>
 
         <nav class="flex flex-col gap-4 my-8 text-lg font-display uppercase tracking-widest">
-            <a href="#" onclick="navigateTo('home'); toggleMobileMenu();" class="py-2 border-b border-white/5 hover:text-brand-teal">01 / Home</a>
-            <a href="#" onclick="navigateTo('services'); toggleMobileMenu();" class="py-2 border-b border-white/5 hover:text-brand-teal">02 / Services</a>
-            <a href="#" onclick="navigateTo('projects'); toggleMobileMenu();" class="py-2 border-b border-white/5 hover:text-brand-teal">03 / Projects Portfolio</a>
+            <a href="./" onclick="navigateTo('home'); toggleMobileMenu(); return false;" class="py-2 border-b border-white/5 hover:text-brand-teal">01 / Home</a>
+            <a href="?view=services" onclick="navigateTo('services'); toggleMobileMenu(); return false;" class="py-2 border-b border-white/5 hover:text-brand-teal">02 / Services</a>
+            <a href="?view=projects" onclick="navigateTo('projects'); toggleMobileMenu(); return false;" class="py-2 border-b border-white/5 hover:text-brand-teal">03 / Projects Portfolio</a>
             <div class="pl-4 space-y-2 text-xs font-sans capitalize text-gray-400">
-                <a href="#" onclick="navigateTo('unt'); toggleMobileMenu();" class="block py-1 hover:text-white">• UNT Matthews Hall</a>
-                <a href="#" onclick="navigateTo('twu'); toggleMobileMenu();" class="block py-1 hover:text-white">• TWU Old Main</a>
-                <a href="#" onclick="navigateTo('plano'); toggleMobileMenu();" class="block py-1 hover:text-white">• Plano ISD Upgrades</a>
-                <a href="#" onclick="navigateTo('mep'); toggleMobileMenu();" class="block py-1 hover:text-white">• MEP Projects</a>
+                <a href="?view=unt" onclick="navigateTo('unt'); toggleMobileMenu(); return false;" class="block py-1 hover:text-white">• UNT Matthews Hall</a>
+                <a href="?view=twu" onclick="navigateTo('twu'); toggleMobileMenu(); return false;" class="block py-1 hover:text-white">• TWU Old Main</a>
+                <a href="?view=plano" onclick="navigateTo('plano'); toggleMobileMenu(); return false;" class="block py-1 hover:text-white">• Plano ISD Upgrades</a>
+                <a href="?view=mep" onclick="navigateTo('mep'); toggleMobileMenu(); return false;" class="block py-1 hover:text-white">• MEP Projects</a>
             </div>
-            <a href="#" onclick="navigateTo('about'); toggleMobileMenu();" class="py-2 border-b border-white/5 hover:text-brand-teal">04 / About Firm</a>
-            <a href="#" onclick="navigateTo('careers'); toggleMobileMenu();" class="py-2 border-b border-white/5 hover:text-brand-teal">05 / Careers</a>
-            <a href="#" onclick="navigateTo('contact'); toggleMobileMenu();" class="py-2 hover:text-brand-teal">06 / Contact Us</a>
+            <a href="?view=about" onclick="navigateTo('about'); toggleMobileMenu(); return false;" class="py-2 border-b border-white/5 hover:text-brand-teal">04 / About Firm</a>
+            <a href="?view=careers" onclick="navigateTo('careers'); toggleMobileMenu(); return false;" class="py-2 border-b border-white/5 hover:text-brand-teal">05 / Careers</a>
+            <a href="?view=contact" onclick="navigateTo('contact'); toggleMobileMenu(); return false;" class="py-2 hover:text-brand-teal">06 / Contact Us</a>
         </nav>
 
         <div class="border-t border-white/10 pt-4 flex flex-col gap-3 text-xs font-mono text-gray-400">
@@ -892,15 +912,15 @@
     </div>
   </div></section>
   <section class="ct-inquiry" aria-labelledby="ct-inquiry-title"><div class="ct-frame ct-inquiry-grid">
-    <div class="ct-inquiry-intro"><span class="ct-eyebrow ct-eyebrow-dark">02 / YOUR INQUIRY</span><h2 id="ct-inquiry-title" class="font-display">START THE<br><span>CONVERSATION.</span></h2><p>Prepare a message about your question or project. In this preview the form opens an email draft for you to review and send.</p>
+    <div class="ct-inquiry-intro" data-premium-reveal><span class="ct-eyebrow ct-eyebrow-dark">02 / YOUR INQUIRY</span><h2 id="ct-inquiry-title" class="font-display">START THE<br><span>CONVERSATION.</span></h2><p>This is an independent design preview. Messages from this form go to Atrezzo Studios, not 308 Construction. For official inquiries contact Main@308gc.com.</p>
       <div class="ct-inquiry-guidance"><span>CONTACT DETAILS</span><a href="tel:9403874002">940-387-4002 <i data-lucide="arrow-up-right" aria-hidden="true"></i></a><a href="mailto:Main@308gc.com">Main@308gc.com <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div>
     </div>
-    <div class="ct-form-shell"><form id="contact-inquiry-form" class="ct-form" method="post" data-submission-endpoint="" novalidate>
+    <div class="ct-form-shell" data-premium-reveal><form id="contact-inquiry-form" class="ct-form" action="https://formsubmit.co/atrezzostudiosv@gmail.com" method="post" data-submission-endpoint="https://formsubmit.co/ajax/atrezzostudiosv@gmail.com" novalidate><input type="hidden" name="_subject" value="308 Construction independent demo — contact inquiry"/><input type="hidden" name="_template" value="table"/><input type="text" name="_honey" tabindex="-1" autocomplete="off" class="form-honeypot" aria-hidden="true"/>
       <div class="ct-form-heading"><strong>YOUR MESSAGE</strong><span>* REQUIRED</span></div>
       <div class="ct-form-row"><label class="ct-field" for="ct-name"><span>FULL NAME <b>*</b></span><input id="ct-name" name="name" type="text" autocomplete="name" maxlength="200" placeholder="Your full name" required/></label><label class="ct-field" for="ct-email"><span>EMAIL ADDRESS <b>*</b></span><input id="ct-email" name="email" type="email" autocomplete="email" maxlength="200" placeholder="name@example.com" required/></label></div>
       <div class="ct-form-row"><label class="ct-field" for="ct-phone"><span>PHONE NUMBER</span><input id="ct-phone" name="phone" type="tel" autocomplete="tel" maxlength="200" placeholder="Phone (optional)"/></label><label class="ct-field" for="ct-subject"><span>SUBJECT</span><input id="ct-subject" name="subject" type="text" autocomplete="off" maxlength="200" placeholder="What is your inquiry about?"/></label></div>
       <label class="ct-field ct-field-message" for="ct-message"><span>MESSAGE <b>*</b></span><textarea id="ct-message" name="message" rows="6" maxlength="3000" required placeholder="Tell us about your inquiry..."></textarea></label>
-      <div class="ct-form-bottom"><p id="ct-form-explanation">This independent preview opens an email draft instead of submitting to a server. Your email application must be used to send it.</p><button type="submit" class="ct-form-button" id="ct-submit"><span>OPEN EMAIL DRAFT</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></button><p class="ct-form-status" id="ct-form-status" role="status" aria-live="polite">Complete the required fields to prepare an email.</p></div>
+      <div class="ct-form-bottom"><p id="ct-form-explanation">Your message is sent to Atrezzo Studios using FormSubmit. The receiver must activate email delivery. This is not the official 308 Construction contact form.</p><button type="submit" class="ct-form-button" id="ct-submit"><span>SUBMIT TO ATREZZO</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></button><p class="ct-form-status" id="ct-form-status" role="status" aria-live="polite">Complete the required fields. Delivery requires an activated recipient email.</p></div>
     </form></div>
   </div></section>
   <section class="ct-location" aria-labelledby="ct-location-title">
@@ -917,7 +937,7 @@
 <a href="#policy-third-party">04 / EXTERNAL SERVICES</a>
 <a href="#policy-pending">05 / PENDING CONFIRMATION</a>
 <a href="#policy-questions">06 / QUESTIONS & CONTACT</a><p>For this demo only. Not the privacy notice of the original 308gc.com website.</p></nav><article class="policy-article"><section id="policy-scope" class="policy-chapter"><span class="policy-chapter-number">01 / REFERENCE STATUS</span><h2 class="font-display">ABOUT THIS REFERENCE</h2><p>This page describes the present behavior of an independent 308 Construction website design preview, not the official company website. It is a <strong>reference draft, not an approved or legally operative privacy policy</strong> of 308 Construction.</p><p>Business privacy practices, legal responsibility and processing arrangements cannot be inferred from a web design. They require confirmation by the company before public adoption.</p></section>
-<section id="policy-contact" class="policy-chapter"><span class="policy-chapter-number">02 / CONTACT INQUIRIES</span><h2 class="font-display">CONTACT FORM</h2><p>The demo Contact form asks for a name, email address and message. Phone and subject are optional. Input is validated in the visitor's browser.</p><p><strong>Current behavior:</strong> with no connected receiving endpoint, submitting valid fields opens a prepared email draft addressed to <a href="mailto:Main@308gc.com">Main@308gc.com</a>. The visitor must send the message through their own mail application. The demo does not store, transmit or confirm receipt of a contact-form submission.</p><p>Email providers and recipients handle sent messages under their own systems; those practices are not established by this preview.</p></section>
+<section id="policy-contact" class="policy-chapter"><span class="policy-chapter-number">02 / CONTACT INQUIRIES</span><h2 class="font-display">CONTACT FORM</h2><p>The demo Contact form asks for a name, email address and message. Phone and subject are optional. Input is validated in the visitor's browser.</p><p><strong>Current behavior:</strong> submitted information is directed to Atrezzo Studios via FormSubmit, a third-party form receiver. This independent website preview is not the official 308 Construction inquiry channel. The destination inbox must be activated by its owner, and a form-service response does not establish inbox delivery. Do not include sensitive information.</p><p>FormSubmit processes submissions under its own privacy and retention terms. The demo owner must verify inbox activation, delivery and privacy obligations before promoting this form. For official business inquiries write to <a href="mailto:Main@308gc.com">Main@308gc.com</a>.</p></section>
 <section id="policy-careers" class="policy-chapter"><span class="policy-chapter-number">03 / EMPLOYMENT APPLICATIONS</span><h2 class="font-display">CAREERS & FILES</h2><p>The Careers application asks for applicant contact details, position selection, a résumé and a cover letter. It also offers optional availability, city/state, professional profile and experience fields. PDF, DOC and DOCX uploads are checked locally for format and size.</p><p><strong>Current behavior:</strong> its application receiver is not configured, so selected documents are not submitted to this demo. The preview does not request identification documents such as passports, photo ID or Social Security numbers.</p><p>Secure transmission, storage, retention and the final application process must be approved before accepting actual candidatures.</p></section>
 <section id="policy-third-party" class="policy-chapter"><span class="policy-chapter-number">04 / HOSTING & RESOURCES</span><h2 class="font-display">EXTERNAL SERVICES</h2><p>This preview is served through GitHub Pages. Pages request assets from third parties, including fonts, scripts, photographs and the published company logo. Following map, email, telephone or external links may also involve other providers.</p><p>Those providers may receive technical request information under their own terms. Cookies, traffic analytics and third-party tracking have <strong>not been fully audited</strong> for this demo. No unsupported claim is made about the official company's data practices.</p><p>The on-page assistant currently returns predefined answers rather than submitting questions to a live customer-support service.</p></section>
 <section id="policy-pending" class="policy-chapter"><span class="policy-chapter-number">05 / REQUIRED BEFORE APPROVAL</span><h2 class="font-display">PENDING CONFIRMATION</h2><p>Before an official privacy notice can be published, an authorized company representative must verify:</p><ul><li>Responsible legal entity and privacy contact.</li><li>Purpose and lawful basis for inquiry and recruitment data.</li><li>Recipients, processors, hosting and international transfers.</li><li>Retention, deletion and applicant-document security.</li><li>Cookies, analytics and visitor choices.</li><li>Applicable privacy rights and request procedures.</li><li>Security testing, live form endpoints and final legal approval.</li></ul><p><strong>No official policy is being asserted by listing these unresolved items.</strong></p></section>
@@ -941,11 +961,11 @@
             <div>
                 <h4 class="font-mono text-white uppercase tracking-wider mb-4 text-[11px]">Quick Navigation</h4>
                 <ul class="space-y-2 font-mono text-[11px]">
-                    <li><a href="#" onclick="navigateTo('home'); return false;" class="hover:text-brand-teal">Home</a></li>
-                    <li><a href="#" onclick="navigateTo('services'); return false;" class="hover:text-brand-teal">Services</a></li>
-                    <li><a href="#" onclick="navigateTo('projects'); return false;" class="hover:text-brand-teal">Projects Portfolio</a></li>
-                    <li><a href="#" onclick="navigateTo('about'); return false;" class="hover:text-brand-teal">About Firm</a></li>
-                    <li><a href="#" onclick="navigateTo('careers'); return false;" class="hover:text-brand-teal">Careers</a></li>
+                    <li><a href="./" onclick="navigateTo('home'); return false;" class="hover:text-brand-teal">Home</a></li>
+                    <li><a href="?view=services" onclick="navigateTo('services'); return false;" class="hover:text-brand-teal">Services</a></li>
+                    <li><a href="?view=projects" onclick="navigateTo('projects'); return false;" class="hover:text-brand-teal">Projects Portfolio</a></li>
+                    <li><a href="?view=about" onclick="navigateTo('about'); return false;" class="hover:text-brand-teal">About Firm</a></li>
+                    <li><a href="?view=careers" onclick="navigateTo('careers'); return false;" class="hover:text-brand-teal">Careers</a></li>
                 </ul>
             </div>
 
@@ -1019,6 +1039,6 @@
     </div>
 
     <!-- JAVASCRIPT LOGIC FOR MULTI-PAGE & INTERACTION -->
-    <script src="./assets/js/app.js?v=20261026-home-images-01" defer></script>
+    <script src="./assets/js/app.js?v=20261026-site-audit-01" defer></script>
 </body>
 </html>
