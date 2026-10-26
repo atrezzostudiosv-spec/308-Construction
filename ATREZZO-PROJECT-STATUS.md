@@ -10,7 +10,7 @@ Updated: 2026-10-26. Public repository is an **unofficial design demo**.
 | Gemini prototype review | CLOSED | Original HTML reviewed; factual and structural faults identified |
 | Baseline code import | CLOSED | Five files committed on main; HTML, CSS and JS fetched back and checked structurally (not browser-tested) |
 | Cinematic home redesign | IN VALIDATION | Cinematic hero, three editorial service chapters, four-project asymmetrical portfolio, clients, CTA; structural checks passed, visual sign-off pending |
-| Inner-page redesign | IN VALIDATION | All ten views including Contact implemented; full responsive/browser QA and sender integrations pending |
+| Inner-page redesign | IN VALIDATION | All eleven views including Contact and the Privacy Policy reference implemented; full responsive/browser QA and sender integrations pending |
 | Assistant and form behavior | IN VALIDATION | Scripted assistant; Careers form now includes local attachments/validation but sends no data until employer-approved secure endpoint is configured |
 | Responsive/accessibility/functionality | IN VALIDATION | CSS breakpoints, JS syntax, HTML structural balance and Services anchor structure checked; visual checks at 375/768/1024/1440 and interactive testing still pending |
 | GitHub Pages preview | IN VALIDATION | Pages configured from main/root per connected GitHub Settings tab; public site browser tab observed, latest deployment not visually rechecked |
@@ -246,3 +246,20 @@ Concentrated follow-up corrections before closing the Home:
 - Bumped stylesheet/script query version to `20261026-contact-01`; direct preview route `?view=contact`.
 - **SOURCE CODE VERIFIED:** contact links, form structure, DOM IDs unique, 10 client-side views, balanced div/section tags and CSS braces, JS syntax, no orphan SPA links, existing project galleries and original Careers form unchanged.
 - **NO COMPROBADO:** visible deployment/browser screenshot tests, actual mail client launch/send, source photo network load/crop, live responsive 375/768/1024/1440, phone link, maps behavior, WCAG accessibility/performance metrics, server delivery. Do not mark site production-ready without essential live QA.
+
+## Privacy Policy reference page and footer link — 2026-10-26
+
+**IMPLEMENTED · EN VALIDACIÓN.** Added an **11th SPA view** at `?view=policy` and a persistent footer link labelled **Privacy Policy (Reference)**. This is a reference draft, explicitly not an official or legally operative privacy policy adopted by 308 Construction.
+
+**Source check:** The original site `https://www.308gc.com/`, inspected 2026-10-26, lists company contact details and an employment/contact intake but **does not publish an identifiable Privacy Policy link or text** in its accessible menu/footer. No company privacy practices are assumed. Claims about live demo functionality are grounded in the deployed source code:
+- Contact form currently uses a local `mailto:` draft when no secure service endpoint is configured; no website transmission is claimed.
+- Careers form can select PDF/DOC/DOCX files locally; upload endpoint is empty; files are not submitted.
+- Third-party GitHub Pages hosting, CDN scripts/fonts/images and outgoing links are mentioned without making untested cookie/tracking assertions. Predefined assistant responses described as such.
+- Named business contact and office address are verified against original site but not called a designated privacy officer/contact.
+- Draft separates facts about the preview from **[PENDING CONFIRMATION]** for controller, legal basis, recipients, retention, security, cookies, visitor rights and company/legal approval. No fabricated collection/retention rules.
+
+**Visual:** Scoped editorial minimal presentation, large Barlow Condensed hierarchy, Inter reading type, contrasting paper/charcoal/teal, sticky table of contents on desktop and normal-flow index on mobile, responsive widths 375/768/1024/1440 intended, reduced-motion/focus rules. No illustrative photos or unnecessary claims.
+
+**Code verifications:** 11 SPA views, `page-policy` route, persistent footer link, 6 source-grounded document sections and anchors, no duplicate DOM IDs, balanced HTML/CSS, all existing Home/Services/Projects/About/Careers/Contact unchanged except cache version. **NOT VERIFIED:** actual deployed rendering, mobile screenshots, focus navigation in real browser and legal/privacy approval.
+
+**Publication gate:** The reference page must be rewritten and approved by the actual data controller/company legal representative after production integrations, third-party scripts, applicant data handling and retention are decided. Keep `noindex` for independent demo and do not present this as an official corporate privacy policy.
