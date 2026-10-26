@@ -430,6 +430,14 @@ html.js-motion .services-v2 .sv-reveal-image[data-reveal].is-revealed img {clip-
 /* Sticky scenes only on desktops with genuine hover support.
    As each scene enters, it overlays the previous one; no scroll lock or snap. */
 @media (min-width:1024px) and (min-height:700px) and (hover:hover) and (prefers-reduced-motion:no-preference) {
+  /* Sticky must not inherit an overflow-clip ancestor on desktop. */
+  .home-v2 {overflow:visible;}
+  .home-v2 .editorial-services,
+  .home-v2 .home-service-sequence {overflow:visible;}
+  .home-v2 .home-service-sequence .chapter-background img {
+    will-change:transform;
+    backface-visibility:hidden;
+  }
   .home-v2 .home-service-sequence .chapter-row.chapter-full {
     position:sticky;
     top:0;
@@ -448,11 +456,11 @@ html.js-motion .services-v2 .sv-reveal-image[data-reveal].is-revealed img {clip-
   html.scene-motion .home-v2 .home-service-sequence .chapter-full-2 .chapter-background img,
   html.scene-motion .home-v2 .home-service-sequence .chapter-full-3 .chapter-background img {
     clip-path:inset(0 var(--scene-mask,0%) 0 0);
-    transform:scale(var(--scene-scale,1.015));
+    transform:translate3d(0,var(--scene-pan,0px),0) scale(var(--scene-scale,1.04));
     transition:none;
   }
   html.scene-motion .home-v2 .home-service-sequence .chapter-full-1 .chapter-background img {
-    transform:scale(var(--scene-scale,1.015));
+    transform:translate3d(0,var(--scene-pan,0px),0) scale(var(--scene-scale,1.04));
     transition:none;
   }
 }
