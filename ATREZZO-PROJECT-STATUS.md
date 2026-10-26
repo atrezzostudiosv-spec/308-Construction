@@ -176,3 +176,14 @@ Concentrated follow-up corrections before closing the Home:
 - Bumped CSS/JS query string to `20261026-about-fix-02` to invalidate cached styles.
 - **Verified in code:** About contains every section; 10 site routes present; Home 3 scenes, Services 3 scenes and Projects 4 galleries retained; HTML tag counts and CSS brace count balanced.
 - **NO COMPROBADO:** browser screenshots, real GitHub Pages deployment state, whether the original symptom reproduces in Chrome/Safari on 375/768/1024/1440 widths. Mark About **EN VALIDACIÓN** until user confirms correct display. Do not claim the rendering problem was visually tested.
+
+## About refinement — completed space and meaningful content — 2026-10-26
+
+**IMPLEMENTED IN GITHUB · EN VALIDACIÓN.** Responds to two user-reviewed About screenshots.
+
+1. Replaced the full-width unfinished construction photo directly after the About profile with Pexels **32967976**, a finished, daylight-filled modern commercial atrium (cinematic CSS tonal grade). This is **illustrative photography only**, not a 308 Construction project, office or client site. Updated `MEDIA-SOURCES.md` with the actual photo source.
+2. **Removed** the About page's redundant "THREE CORE SERVICES" rows, which the user found repetitive and not usefully linked. The three confirmed services remain intact on their separate Services view; no new information or claims added to pad About. The About layout now runs: split Hero → Company Experience → Finished Architecture interlude → Markets → Published Clients → Customer Service statement → verified Contact.
+3. Replaced hero's cross-page `EXPLORE OUR SERVICES` link with the in-page anchor `ABOUT THE COMPANY` pointing to the real `#ab-profile-title` heading. This gives a meaningful destination on the same page. Adjusted labels 02–05 to reflect the removed section.
+4. Kept Home, Services, Projects and other About factual content intact; changed only About HTML, About-specific CSS styling and its photo source documentation. CSS/JS URLs cache-busted as `20261026-about-refine-03`.
+5. **VERIFIED IN SOURCE:** 10 SPA pages, no duplicated IDs, correct in-page About anchor, no redundant services rows in About, 3 original Home scenes, 3 original Services scenes, 4 Projects image galleries and balanced HTML/CSS.
+6. **NOT CHECKED:** actual image render/crop or performance, click behavior in deployed browser, and responsive screenshots at 375, 768, 1024 and 1440. Await user visual confirmation before closing About.
