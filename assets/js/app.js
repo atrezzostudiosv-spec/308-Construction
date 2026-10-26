@@ -543,89 +543,57 @@ function initCareersApplication() {
 document.addEventListener('DOMContentLoaded',initCareersApplication);
 
 
-/* Contact form for GitHub Pages design preview.
-   No sender is configured by default: the form opens a prepared mailto: draft
-   after validation, and DOES NOT claim that a message has been sent.
-   Employer-authorized Formspree endpoint may be configured only with approval,
-   tested ownership, processing/privacy information and a verified recipient. */
+/* Contact enquiries on this design preview go to Atrezzo Studios through
+   FormSubmit. Initial recipient email confirmation is required; provider
+   acceptance alone is not proof of inbox delivery. */
 function initContactInquiryForm() {
-  const form = document.getElementById('contact-inquiry-form');
-  if (!form) return;
-  const status = document.getElementById('ct-form-status');
-  const explanation = document.getElementById('ct-form-explanation');
-  const button = document.getElementById('ct-submit');
-  const buttonText = button?.querySelector('span');
-  const endpoint = (form.dataset.submissionEndpoint || '').trim();
-  const verifiedEndpoint = /^https:\/\/formspree\.io\/f\/[a-zA-Z0-9]+$/.test(endpoint);
-
-  function report(message, type = '') {
-    if (!status) return;
-    status.textContent = message;
-    if (type) status.dataset.state = type;
-    else status.removeAttribute('data-state');
-  }
-
-  if (verifiedEndpoint) {
-    if (buttonText) buttonText.textContent = 'SEND MESSAGE';
-    if (explanation) explanation.textContent = 'Your message is submitted to the configured contact-form service when you press Send Message.';
-    report('Complete the required fields to send your inquiry.');
-  } else {
-    if (buttonText) buttonText.textContent = 'OPEN EMAIL DRAFT';
-    report('Complete the required fields to prepare an email for your review. This website does not send it.');
-  }
-
-  form.addEventListener('submit', async event => {
-    event.preventDefault();
-    if (!form.reportValidity()) {
-      report('Please complete your name, a valid email address and your message.', 'error');
-      return;
-    }
-    const name = form.querySelector('#ct-name')?.value.trim() || '';
-    const email = form.querySelector('#ct-email')?.value.trim() || '';
-    const phone = form.querySelector('#ct-phone')?.value.trim() || '';
-    const subject = form.querySelector('#ct-subject')?.value.trim() || '308 Construction Inquiry';
-    const message = form.querySelector('#ct-message')?.value.trim() || '';
-    if (!name || !email || !message) {
-      report('Please complete your name, a valid email address and your message.', 'error');
-      return;
-    }
-
-    if (!verifiedEndpoint) {
-      const body = ['Name: ' + name, 'Email: ' + email, phone ? 'Phone: ' + phone : '', '', 'Message:', message]
-        .filter((line, index) => line !== '' || index === 3)
-        .join('\n');
-      const draft = 'mailto:Main@308gc.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-      if (draft.length > 2400) {
-        report('Your message is too long for a reliable email draft. Please shorten it or email Main@308gc.com directly.', 'error');
-        return;
-      }
-      report('Opening a prepared email draft. Review it and press Send in your email application. No delivery is confirmed by this website.');
-      window.location.href = draft;
-      return;
-    }
-
-    if (!window.fetch || !window.FormData) {
-      report('The browser does not support this submission method. Please contact Main@308gc.com.', 'error');
-      return;
-    }
-    button.disabled = true;
-    if (buttonText) buttonText.textContent = 'SENDING...';
-    report('Submitting your message...');
-    try {
-      const response = await fetch(endpoint, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { Accept: 'application/json' }
-      });
-      if (!response.ok) throw new Error('Form endpoint rejected the inquiry');
-      form.reset();
-      report('Your message was accepted by the configured form service.', 'success');
-    } catch {
-      report('The message was not confirmed as sent. Please try again or contact Main@308gc.com directly.', 'error');
-    } finally {
-      button.disabled = false;
-      if (buttonText) buttonText.textContent = 'SEND MESSAGE';
-    }
-  });
+ const form=document.getElementById('contact-inquiry-form');
+ if(!form)return;
+ const status=document.getElementById('ct-form-status');
+ const button=document.getElementById('ct-submit');
+ const label=button?.querySelector('span');
+ const endpoint=(form.dataset.submissionEndpoint||'').trim();
+ const allowed=endpoint==='https://formsubmit.co/ajax/atrezzostudiosv@gmail.com';
+ const report=(message,state='')=>{if(status){status.textContent=message;status.dataset.state=state;}};
+ if(!allowed){report('This design-preview receiving service is not configured. Email atrezzostudiosv@gmail.com directly.','error');if(button)button.disabled=true;return;}
+ form.addEventListener('submit',async event=>{
+   event.preventDefault();
+   if(!form.reportValidity()){report('Complete your name, a valid email address and your message.','error');return;}
+   if(form.querySelector('[name="_honey"]')?.value)return;
+   if(typeof fetch!=='function'||typeof FormData==='undefined'){
+     report('This browser cannot send this form. Email atrezzostudiosv@gmail.com directly.','error');return;
+   }
+   button.disabled=true;
+   if(label)label.textContent='SUBMITTING...';
+   report('Sending your inquiry to the independent design-demo receiver...');
+   try{
+     const response=await fetch(endpoint,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+     if(!response.ok)throw Error('Form service declined request');
+     const result=await response.json().catch(()=>null);
+     if(result && (result.success===false || result.success==='false'))throw Error('Form service declined request');
+     form.reset();
+     report('The form service accepted your inquiry for Atrezzo Studios. Inbox delivery requires activation and remains unverified.','success');
+   }catch{
+     report('The provider could not confirm your message. Please retry or email atrezzostudiosv@gmail.com directly.','error');
+   }finally{
+     button.disabled=false;
+     if(label)label.textContent='SUBMIT TO ATREZZO';
+   }
+ });
 }
-document.addEventListener('DOMContentLoaded', initContactInquiryForm);
+document.addEventListener('DOMContentLoaded',initContactInquiryForm);
+
+/* Gentle entrance movement on static interior pages; motion is optional
+   and does not gate content without IntersectionObserver. */
+function initPremiumReveals() {
+ if(!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ const nodes=document.querySelectorAll('.ct-method, .ct-inquiry-intro, .ct-form-shell, .ct-location-photo, .ct-location-copy, .career-role, .career-application-heading, .career-application-aside, .policy-chapter');
+ nodes.forEach(node=>node.classList.add('premium-reveal'));
+ const observer=new IntersectionObserver((entries,obs)=>{
+   entries.forEach(entry=>{
+     if(entry.isIntersecting){entry.target.classList.add('is-visible');obs.unobserve(entry.target);}
+   });
+ },{threshold:0.05,rootMargin:'0px 0px -5% 0px'});
+ nodes.forEach(node=>observer.observe(node));
+}
+document.addEventListener('DOMContentLoaded',initPremiumReveals);
