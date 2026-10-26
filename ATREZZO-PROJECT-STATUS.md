@@ -165,3 +165,14 @@ Concentrated follow-up corrections before closing the Home:
 - Added About-specific CSS with architectural grid, non-card client roster, editorial services rows, accessible contrast and focus states; mobile layouts/scroll at 375, 768, 1024 and 1440 target widths; CSS motion-reduction fallback. Added `.about-v3 [data-reveal]` to the existing shared IntersectionObserver. Asset query versions updated to `20261026-about-01`.
 - **VERIFIED IN GITHUB SOURCE:** all ten page-view IDs intact, exactly one H1 per view, no duplicate IDs or broken `navigateTo` targets, three About services, five markets, eight source-listed clients and three sourced images; CSS brackets/HTML tags balanced and JS parses. Previously approved Home, Services, Projects and Careers/Contact **content unchanged** except shared CSS/JS asset versions. Light paper #F3F2EF vs accent dark teal #116B76 has calculated 5.54:1 contrast for text.
 - **NO COMPROBADO:** public site's real image loads/crops, layout screenshots at 375/768/1024/1440px, keyboard/focus order in browser, live navigation and animations, full WCAG 2.2 AA audit and performance. User should visually approve prior to closing About.
+
+## About continuity hotfix — 2026-10-26
+
+**User-reported defect: About appears to stop immediately below the hero. Corrective code committed; live visual acceptance pending.**
+
+- About source HTML already contained all sections after Hero: Company Profile (45+ staff experience), architectural interlude, Services, Markets, Clients, Customer Service statement and Contact CTA. The report points to a rendering/visibility failure, not missing page content.
+- The About wrapper used `overflow:clip` and the new About `[data-reveal]` selectors started at `opacity:0` in JS-enhanced mode. Unlike ordinary content, such blocks can stay blank if the one-shot IntersectionObserver doesn't reveal them after SPA navigation. **Both were removed as prerequisites for visibility** on About only.
+- Added an About-only CSS visibility guard on the active `page-about` to keep all post-hero sections in normal vertical document flow, with explicit visible content and responsive figure sizing. No changes to Home/Services/Projects DOM or effects.
+- Bumped CSS/JS query string to `20261026-about-fix-02` to invalidate cached styles.
+- **Verified in code:** About contains every section; 10 site routes present; Home 3 scenes, Services 3 scenes and Projects 4 galleries retained; HTML tag counts and CSS brace count balanced.
+- **NO COMPROBADO:** browser screenshots, real GitHub Pages deployment state, whether the original symptom reproduces in Chrome/Safari on 375/768/1024/1440 widths. Mark About **EN VALIDACIÓN** until user confirms correct display. Do not claim the rendering problem was visually tested.
