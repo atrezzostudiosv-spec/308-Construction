@@ -51,3 +51,15 @@ Concentrated follow-up corrections before closing the Home:
 ## Hero CTA pointer fix — 2026-10-26
 
 **IN VALIDATION — pushed to GitHub, live click test pending.** Fixed CSS layering after adding the decorative construction video: hero background at z-index 0 with pointer-events disabled, hero content at z-index 3, gradient pointer-events disabled. Both original `Explore Projects` and `Discuss Your Project` button handlers remain unchanged. Verified the updated CSS and button markup in GitHub. No HTML, JS, or other-page design changes.
+
+## Home Services cinematic scroll sequence — 2026-10-26
+
+**Status: IN VALIDATION (implementation complete; visual/device QA not independently verified).**
+
+- Reorganized only the three Home service chapters into a full-width sequence outside the text grid.
+- Desktop (1024+ px, minimum viewport height 700 px, hover device): native CSS sticky stacking and gently progressive image masks tied to scroll position through passive events + requestAnimationFrame. No scroll-jacking, forced snapping or scroll blocking.
+- Mobile/touch/short viewport and reduced-motion: static full-bleed image sections in normal vertical flow, no sticky/mask animation.
+- Kept the three original photos, titles, service descriptions and `EXAMINE SERVICE` actions. Preserved the Home hero video, navigation, dedicated Services page, four project pages and ASK 308.
+- Additional Home QA: corrected small teal labels on light backgrounds, added visible focus outline for project tiles and repaired portfolio image-mask reveals with reduced-motion fallback.
+- GitHub checks: all ten page views retained; three service scenes, their three backgrounds and three CTAs present; HTML div/section balances, CSS braces and JavaScript syntax verified.
+- **Still to verify visually in the live browser:** seamless stacking on desktop, actual animation smoothness, photo rendering, button hit targets, 375/768/1024/1440 px viewports, and runtime console errors. No independent device screenshot QA was available during this code update.
