@@ -250,71 +250,148 @@
         <!-- =================================================================== -->
         <!-- 02 — SERVICES PAGE -->
         <!-- =================================================================== -->
-        <section id="page-services" class="page-view hidden-page">
-            <div class="py-16 px-6 md:px-16 bg-brand-dark border-b border-white/10">
-                <div class="max-w-7xl mx-auto">
-                    <span class="text-brand-teal font-display font-bold uppercase tracking-widest text-sm">Capabilities</span>
-                    <h1 class="font-display text-5xl md:text-7xl font-black uppercase text-white mt-1">Our Core Services</h1>
-                    <p class="text-gray-300 max-w-2xl text-sm md:text-base mt-4">Preconstruction planning, construction and construction management services as described on the original 308 Construction website.</p>
-                </div>
-            </div>
+        <section id="page-services" class="page-view hidden-page services-v2">
+  <!-- IMMERSIVE SERVICES HERO -->
+  <div class="sv-hero">
+    <div class="sv-hero-media" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=2100&q=82" alt="" decoding="async" fetchpriority="low"/>
+      <div class="sv-hero-shade"></div>
+    </div>
+    <div class="sv-frame sv-hero-content">
+      <div class="sv-hero-topline" data-reveal>
+        <span>308 CONSTRUCTION / SERVICES</span>
+        <span class="sv-label-right">PRECONSTRUCTION <b>•</b> CONSTRUCTION <b>•</b> MANAGEMENT</span>
+      </div>
+      <div class="sv-hero-main">
+        <span class="sv-overline" data-reveal>01 — 03 / WHAT WE DO</span>
+        <h1 class="font-display sv-hero-title uppercase" data-reveal>THE WORK<br><span>BEHIND</span><br>THE WORK.</h1>
+        <p class="sv-hero-lead" data-reveal>From early planning through construction and project coordination, 308 Construction offers three core services.</p>
+        <div class="sv-hero-actions" data-reveal>
+          <a href="#sv-preconstruction" class="sv-btn sv-btn-primary">EXPLORE OUR SERVICES <i data-lucide="arrow-down-right" class="w-4 h-4"></i></a>
+          <button onclick="navigateTo('contact')" type="button" class="sv-btn sv-btn-glass">DISCUSS A PROJECT <i data-lucide="arrow-up-right" class="w-4 h-4"></i></button>
+        </div>
+      </div>
+      <div class="sv-hero-bottom" data-reveal>
+        <span>DFW METROPLEX & CLIENTS ACROSS THE COUNTRY</span>
+        <span>SCROLL TO EXPLORE ↓</span>
+      </div>
+    </div>
+  </div>
 
-            <div class="py-20 px-6 md:px-16 bg-brand-dark space-y-24">
-                <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    <div class="lg:col-span-6 space-y-4">
-                        <span class="font-mono text-xs text-brand-teal uppercase tracking-widest">Service Phase 01</span>
-                        <h2 class="font-display text-4xl font-bold uppercase text-white">Preconstruction Planning</h2>
-                        <p class="text-gray-300 text-sm leading-relaxed">
-                            Accurate preconstruction sets the foundation for success. 308 Construction can provide design and construction feedback before the work begins, helping make construction plans efficient and functional.
-                        </p>
-                        <ul class="text-xs font-mono text-gray-400 space-y-2 pt-2">
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-teal"></i> Design and construction feedback</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-teal"></i> Efficient, functional construction plans</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-teal"></i> Preconstruction assistance</li>
-                        </ul>
-                    </div>
-                    <div class="lg:col-span-6 mask-reveal rounded-lg border border-white/10 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80" class="w-full h-80 object-cover" alt="Preconstruction Planning Blueprint Review" loading="lazy"/>
-                    </div>
-                </div>
+  <!-- INTRO, PURPOSEFUL IMAGE + SIMPLE SERVICE INDEX -->
+  <div class="sv-intro">
+    <div class="sv-frame sv-intro-grid">
+      <div class="sv-intro-copy" data-reveal>
+        <span class="sv-overline sv-teal">01 / OUR APPROACH</span>
+        <h2 class="font-display sv-heading sv-heading-dark uppercase">A CLEARER<br><span>WAY TO BUILD.</span></h2>
+        <p>308 Construction's published services cover early design and construction feedback, construction for new and renovation projects, and the coordination of architectural drawings, permitting, labor and logistics.</p>
+        <nav aria-label="Jump to a construction service" class="sv-index">
+          <a href="#sv-preconstruction"><span>01</span> PRECONSTRUCTION PLANNING <i data-lucide="arrow-down-right" class="w-4 h-4"></i></a>
+          <a href="#sv-construction"><span>02</span> CONSTRUCTION <i data-lucide="arrow-down-right" class="w-4 h-4"></i></a>
+          <a href="#sv-management"><span>03</span> CONSTRUCTION MANAGEMENT <i data-lucide="arrow-down-right" class="w-4 h-4"></i></a>
+        </nav>
+      </div>
+      <figure class="sv-intro-image sv-reveal-image" data-reveal>
+        <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1400&q=82" alt="Illustrative modern building architecture" loading="lazy" decoding="async"/>
+        <figcaption>CONCEPT IMAGE — NOT AN ACTUAL 308 CONSTRUCTION PROJECT</figcaption>
+      </figure>
+    </div>
+  </div>
 
-                <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    <div class="lg:col-span-6 lg:order-2 space-y-4">
-                        <span class="font-mono text-xs text-brand-teal uppercase tracking-widest">Service Phase 02</span>
-                        <h2 class="font-display text-4xl font-bold uppercase text-white">General Construction</h2>
-                        <p class="text-gray-300 text-sm leading-relaxed">
-                            From an initial concept or a full set of construction documents, 308 Construction handles ground-up and renovation projects, including interior and exterior scopes.
-                        </p>
-                        <ul class="text-xs font-mono text-gray-400 space-y-2 pt-2">
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-teal"></i> Ground-up construction</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-teal"></i> Interior and exterior renovations</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-teal"></i> Projects based on plans or concepts</li>
-                        </ul>
-                    </div>
-                    <div class="lg:col-span-6 lg:order-1 mask-reveal rounded-lg border border-white/10 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=1200&q=80" class="w-full h-80 object-cover" alt="General Construction Field Operations" loading="lazy"/>
-                    </div>
-                </div>
+  <!-- 01 PRECONSTRUCTION / EDITORIAL LIGHT SECTION -->
+  <section id="sv-preconstruction" class="sv-chapter sv-chapter-planning" aria-labelledby="sv-h-planning">
+    <div class="sv-frame">
+      <div class="sv-chapter-kicker" data-reveal><span>01 / PLANNING</span><span>BEFORE CONSTRUCTION</span></div>
+      <div class="sv-planning-grid">
+        <figure class="sv-planning-image sv-reveal-image" data-reveal>
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1550&q=82" alt="Illustrative architectural plans and construction design" loading="lazy" decoding="async"/>
+          <figcaption>ARCHITECTURAL PLANNING / ILLUSTRATIVE PHOTOGRAPHY</figcaption>
+        </figure>
+        <div class="sv-planning-content" data-reveal>
+          <span class="sv-overline sv-teal">SERVICE 01</span>
+          <h2 id="sv-h-planning" class="font-display sv-chapter-title uppercase">PRECONSTRUCTION<br><span>PLANNING.</span></h2>
+          <p>308 Construction can provide design and construction feedback before you're ready to put boots on the ground. The goal described on its original website is to help make the construction plan efficient and functional.</p>
+          <div class="sv-detail-lines">
+            <div><span>01</span><strong>DESIGN FEEDBACK</strong></div>
+            <div><span>02</span><strong>CONSTRUCTION FEEDBACK</strong></div>
+            <div><span>03</span><strong>EFFICIENT, FUNCTIONAL PLANNING</strong></div>
+          </div>
+          <button type="button" onclick="navigateTo('contact')" class="sv-text-link">DISCUSS PRECONSTRUCTION <i data-lucide="arrow-up-right" class="w-4 h-4"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    <div class="lg:col-span-6 space-y-4">
-                        <span class="font-mono text-xs text-brand-teal uppercase tracking-widest">Service Phase 03</span>
-                        <h2 class="font-display text-4xl font-bold uppercase text-white">Construction Management</h2>
-                        <p class="text-gray-300 text-sm leading-relaxed">
-                            308 Construction describes support for architectural drawings, permitting, labor coordination and project logistics to help make a concept a reality.
-                        </p>
-                        <ul class="text-xs font-mono text-gray-400 space-y-2 pt-2">
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-teal"></i> Architectural drawings and permitting</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-teal"></i> Labor coordination and hiring</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-teal"></i> Construction logistics</li>
-                        </ul>
-                    </div>
-                    <div class="lg:col-span-6 mask-reveal rounded-lg border border-white/10 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80" class="w-full h-80 object-cover" alt="Construction Management MEP Inspection" loading="lazy"/>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- 02 CONSTRUCTION / IMMERSIVE PHOTO WITH OVERLAP PANEL -->
+  <section id="sv-construction" class="sv-chapter sv-chapter-construction" aria-labelledby="sv-h-construction">
+    <div class="sv-construction-media" aria-hidden="true"><img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=2100&q=82" alt="" loading="lazy" decoding="async"/><div class="sv-construction-shade"></div></div>
+    <div class="sv-frame sv-construction-inner">
+      <div class="sv-chapter-kicker sv-on-dark" data-reveal><span>02 / EXECUTION</span><span>GROUND-UP & RENOVATION</span></div>
+      <div class="sv-construction-main" data-reveal>
+        <span class="sv-overline">SERVICE 02</span>
+        <h2 id="sv-h-construction" class="font-display sv-chapter-title sv-construction-title uppercase">CONSTRUCTION<span>.</span></h2>
+        <p>Whether you have a concept in mind or a full set of construction documents, 308 Construction can handle ground-up and renovation work — interior or exterior — while working with clients toward their budget and timeline goals.</p>
+        <div class="sv-construction-tags" aria-label="Published construction scopes"><span>GROUND-UP</span><span>RENOVATION</span><span>INTERIOR</span><span>EXTERIOR</span></div>
+        <button type="button" onclick="navigateTo('contact')" class="sv-btn sv-btn-primary">TALK ABOUT CONSTRUCTION <i data-lucide="arrow-up-right" class="w-4 h-4"></i></button>
+      </div>
+      <div class="sv-image-disclaimer">CONSTRUCTION PHOTOGRAPHY FOR VISUAL DEMONSTRATION ONLY</div>
+    </div>
+  </section>
+
+  <!-- 03 MANAGEMENT / ASYMMETRICAL STICKY TECHNICAL LAYOUT -->
+  <section id="sv-management" class="sv-chapter sv-chapter-management" aria-labelledby="sv-h-management">
+    <div class="sv-frame sv-management-grid">
+      <div class="sv-management-copy" data-reveal>
+        <span class="sv-overline sv-teal">03 / COORDINATION</span>
+        <h2 id="sv-h-management" class="font-display sv-chapter-title uppercase">CONSTRUCTION<br><span>MANAGEMENT.</span></h2>
+        <p>308 Construction describes coordinating architectural drawings, permitting, hiring appropriate labor and handling project logistics to make a client's concept a reality.</p>
+        <div class="sv-management-points">
+          <div><span>01</span><strong>ARCHITECTURAL DRAWINGS</strong></div>
+          <div><span>02</span><strong>PERMITTING</strong></div>
+          <div><span>03</span><strong>LABOR COORDINATION</strong></div>
+          <div><span>04</span><strong>PROJECT LOGISTICS</strong></div>
+        </div>
+        <button type="button" onclick="navigateTo('contact')" class="sv-text-link sv-text-link-light">DISCUSS PROJECT MANAGEMENT <i data-lucide="arrow-up-right" class="w-4 h-4"></i></button>
+      </div>
+      <figure class="sv-management-visual sv-reveal-image" data-reveal>
+        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1600&q=82" alt="Illustrative technical building and construction environment" loading="lazy" decoding="async"/>
+        <figcaption>TECHNICAL ENVIRONMENT / ILLUSTRATIVE PHOTOGRAPHY</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO BRIDGE / CONTENT FROM DOCUMENTED PROJECTS -->
+  <section class="sv-related" aria-labelledby="sv-h-related">
+    <div class="sv-frame">
+      <div class="sv-related-head" data-reveal>
+        <div><span class="sv-overline sv-teal">04 / PUBLISHED PROJECTS</span><h2 id="sv-h-related" class="font-display sv-heading sv-heading-dark uppercase">SEE THE<br><span>PROJECTS.</span></h2></div>
+        <div><p>Explore documented projects from the original website. Images shown here are illustrative references, not photographs of those named projects.</p><button type="button" onclick="navigateTo('projects')" class="sv-text-link">EXPLORE ALL FOUR PROJECTS <i data-lucide="arrow-up-right" class="w-4 h-4"></i></button></div>
+      </div>
+      <div class="sv-related-grid">
+        <button type="button" class="sv-project-card sv-project-large" onclick="navigateTo('unt')" data-reveal>
+          <span class="sv-project-image sv-reveal-image"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=82" alt="Illustrative office interior; not UNT Matthews Hall photography" loading="lazy" decoding="async"/><span>ILLUSTRATIVE IMAGE</span></span>
+          <span class="sv-project-caption"><span><small>01 / HIGHER EDUCATION</small><strong class="font-display">UNT MATTHEWS HALL</strong></span><i data-lucide="arrow-up-right" class="w-5 h-5"></i></span>
+        </button>
+        <button type="button" class="sv-project-card sv-project-offset" onclick="navigateTo('twu')" data-reveal>
+          <span class="sv-project-image sv-reveal-image"><img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1400&q=82" alt="Illustrative architecture; not TWU Old Main photography" loading="lazy" decoding="async"/><span>ILLUSTRATIVE IMAGE</span></span>
+          <span class="sv-project-caption"><span><small>02 / UNIVERSITY BUILDING REPAIRS</small><strong class="font-display">TWU OLD MAIN</strong></span><i data-lucide="arrow-up-right" class="w-5 h-5"></i></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- END CTA -->
+  <section class="sv-end-cta" aria-labelledby="sv-h-contact">
+    <div class="sv-end-visual" aria-hidden="true"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2200&q=82" alt="" loading="lazy" decoding="async"/><div></div></div>
+    <div class="sv-frame sv-end-content" data-reveal>
+      <span class="sv-overline sv-teal">05 / CONTACT</span>
+      <h2 id="sv-h-contact" class="font-display sv-heading uppercase">LET'S TALK ABOUT<br><span>YOUR PROJECT.</span></h2>
+      <p>Have questions about planning, construction or coordination? Get in touch with 308 Construction.</p>
+      <div class="sv-hero-actions"><button type="button" onclick="navigateTo('contact')" class="sv-btn sv-btn-primary">CONTACT 308 <i data-lucide="arrow-up-right" class="w-4 h-4"></i></button><a href="tel:9403874002" class="sv-btn sv-btn-glass">940-387-4002 <i data-lucide="phone" class="w-4 h-4"></i></a></div>
+      <small>UNOFFICIAL WEBSITE DESIGN CONCEPT · PHOTOGRAPHS ARE ILLUSTRATIVE</small>
+    </div>
+  </section>
+</section>
 
         <!-- =================================================================== -->
         <!-- 03 — PROJECTS PORTFOLIO PAGE -->
