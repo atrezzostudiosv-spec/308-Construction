@@ -10,7 +10,7 @@ Updated: 2026-10-26. Public repository is an **unofficial design demo**.
 | Gemini prototype review | CLOSED | Original HTML reviewed; factual and structural faults identified |
 | Baseline code import | CLOSED | Five files committed on main; HTML, CSS and JS fetched back and checked structurally (not browser-tested) |
 | Cinematic home redesign | IN VALIDATION | Cinematic hero, three editorial service chapters, four-project asymmetrical portfolio, clients, CTA; structural checks passed, visual sign-off pending |
-| Inner-page redesign | IN PROCESS | Services rebuilt with three image-led architectural scenes, anchored sections and related projects; Projects, details, About, Careers and Contact pending |
+| Inner-page redesign | IN PROCESS | Services and Projects implemented; About 3.0 implemented and in validation; Careers and Contact still pending |
 | Assistant and form behavior | IN VALIDATION | Scripted assistant only; submission is explicitly disabled |
 | Responsive/accessibility/functionality | IN VALIDATION | CSS breakpoints, JS syntax, HTML structural balance and Services anchor structure checked; visual checks at 375/768/1024/1440 and interactive testing still pending |
 | GitHub Pages preview | IN VALIDATION | Pages configured from main/root per connected GitHub Settings tab; public site browser tab observed, latest deployment not visually rechecked |
@@ -154,3 +154,14 @@ Concentrated follow-up corrections before closing the Home:
 - CSS/JS asset query versions bumped to `20261026-project-visuals-02`.
 - **Verified in repository:** 4 project routes × 3 photos = 12 images, each gallery placed in correct order before Continue Exploring, photo notes, sources tracked, hero layer order, mobile and desktop grid selectors, reduced-motion fallback, all 10 original page routes intact, no duplicate IDs/missing navigation destinations, syntax/brace and HTML nesting balance, original Home + Services scene counts unchanged.
 - **NOT CHECKED:** live deployed rendering / picture HTTP success, actual text contrast against dynamic image, interactive animations, performance, photo cropping at 375/768/1024/1440px. Static code validation is not a live device test.
+
+## About 3.0 — editorial company page — 2026-10-26
+
+**Status: EN VALIDACIÓN** (implemented in GitHub; visual/device QA and user acceptance pending).
+
+- Replaced only the About view with its own editorial design: light split hero and striking vertical architectural photo; source-grounded staff-experience narrative with **45+ years of experience across staff** (NOT years in business); full-width renovation-space interlude; three large clickable service rows; five source-listed markets; selected eight organizations from published client list; service-priority statement; verified Argyle corporate-office/contact CTA.
+- **Facts sourced to the official published website** `https://www.308gc.com/` ABOUT / SERVICES / CLIENTS / CONTACT. Avoided invented executives, founding date, certifications, credentials, projects, quotes, clients or services. These sources and their exact supported facts are noted in `MEDIA-SOURCES.md`.
+- Three distinct Pexels architectural stock photos (ids 18381375, 14541104 and 35548971) are illustrative. Each source is documented in `MEDIA-SOURCES.md`; a concise disclaimer is included in the About view. Never represent them as 308 Construction offices, staff or actual projects.
+- Added About-specific CSS with architectural grid, non-card client roster, editorial services rows, accessible contrast and focus states; mobile layouts/scroll at 375, 768, 1024 and 1440 target widths; CSS motion-reduction fallback. Added `.about-v3 [data-reveal]` to the existing shared IntersectionObserver. Asset query versions updated to `20261026-about-01`.
+- **VERIFIED IN GITHUB SOURCE:** all ten page-view IDs intact, exactly one H1 per view, no duplicate IDs or broken `navigateTo` targets, three About services, five markets, eight source-listed clients and three sourced images; CSS brackets/HTML tags balanced and JS parses. Previously approved Home, Services, Projects and Careers/Contact **content unchanged** except shared CSS/JS asset versions. Light paper #F3F2EF vs accent dark teal #116B76 has calculated 5.54:1 contrast for text.
+- **NO COMPROBADO:** public site's real image loads/crops, layout screenshots at 375/768/1024/1440px, keyboard/focus order in browser, live navigation and animations, full WCAG 2.2 AA audit and performance. User should visually approve prior to closing About.
