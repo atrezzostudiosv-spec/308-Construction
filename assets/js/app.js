@@ -337,7 +337,7 @@ function initCareersApplication() {
   }
   function fileValidity(input) {
     const file = input.files && input.files[0];
-    if (!file) return input.required ? 'Please attach your résumé before continuing.' : '';
+    if (!file) return input.required ? (input.id === 'career-letter' ? 'Please attach your cover letter before continuing.' : 'Please attach your résumé before continuing.') : '';
     if (!validExtension.test(file.name) || !allowedMimes.has(file.type)) {
       return 'Upload a PDF, DOC or DOCX document.';
     }
@@ -412,7 +412,7 @@ function initCareersApplication() {
     // Clear previous errors before native validity check.
     fileInputs.forEach(input => input.setCustomValidity(fileValidity(input)));
     if (!form.reportValidity()) {
-      setStatus('Please complete all required fields and attach a valid résumé (PDF, DOC or DOCX, max 10 MB).','error');
+      setStatus('Complete the required fields and attach your résumé and cover letter (PDF, DOC or DOCX, max 10 MB each).','error');
       return;
     }
     const error = fileInputs.map(fileValidity).find(Boolean);
