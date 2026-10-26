@@ -24,3 +24,14 @@ All photography and footage below is **illustrative**. None depicts a documented
 - Avoid any alt text, captions or claims that imply the illustrative media represents a project, staff, premises or equipment of 308 Construction.
 - Replace demo media only with client-approved originals after authorization.
 - For production, consider licensed self-hosted compressed video and responsive image versions; CDN media reliability and page performance are still unverified.
+
+## Home portfolio photo illustrations
+
+These four royalty-free Pexels photos illustrate relevant project **categories**, not 308 Construction's actual work. They are not to be described as photos of the named projects. The Home gallery includes one unobtrusive media note under the tiles and the site footer identifies the design as independent.
+
+- UNT Matthews Hall category illustration: Erick Ortega, “Modern Campus Building in Lerma, Mexico”, Pexels photo 36363659. https://www.pexels.com/photo/modern-campus-building-in-lerma-mexico-36363659/
+- TWU Old Main category illustration: Peter Caretta, “Interior of Historic Brick Building with Skylight”, Pexels photo 31398713. https://www.pexels.com/photo/interior-of-historic-brick-building-with-skylight-31398713/
+- Plano ISD Bleachers category illustration: Saint Papa, “Bleachers in Stadium”, Pexels photo 14663065. https://www.pexels.com/photo/bleachers-in-stadium-14663065/
+- MEP Projects category illustration: Vjanodic WERSOV, “Industrial Control Room with Electrical Panels”, Pexels photo 38217230. https://www.pexels.com/photo/industrial-control-room-with-electrical-panels-38217230/
+
+Pexels license terms: https://www.pexels.com/license/ . External CDN image availability and visual loading in live browser require final validation.
