@@ -8,12 +8,12 @@ Updated: 2026-10-26. Public repository is an **unofficial design demo**.
 | Strategy and information architecture | CLOSED | Ten approved client-side views; three services, four named project views |
 | Brand direction | CLOSED | Industrial Architectural; teal, charcoal, Inter/Barlow Condensed |
 | Gemini prototype review | CLOSED | Original HTML reviewed; factual and structural faults identified |
-| Baseline code import | IN VALIDATION | HTML/CSS/JS separated and source-based copy corrections; GitHub files to verify |
+| Baseline code import | CLOSED | Five files committed on main; HTML, CSS and JS fetched back and checked structurally (not browser-tested) |
 | Cinematic home redesign | PENDING | Requires visual preview and editorial sign-off |
 | Inner-page redesign | PENDING | Requires separate visual review |
 | Assistant and form behavior | IN VALIDATION | Scripted assistant only; submission is explicitly disabled |
 | Responsive/accessibility/functionality | PENDING | No verified tests at widths 375/768/1024/1440 yet |
-| GitHub Pages preview | PENDING | Requires enablement in repository settings, then URL verification |
+| GitHub Pages preview | BLOCKED | GitHub Pages not yet confirmed enabled; user must configure Settings → Pages → main/root |
 | Client publication | BLOCKED | Requires client consent, assets and QA |
 
 ## Outstanding decisions
