@@ -83,3 +83,15 @@ Concentrated follow-up corrections before closing the Home:
 - Updated both media conditions to support desktop viewports >=560px high, provided tighter typography/padding at 560–760px, raised the scroll-linked zoom strength modestly, and versioned both asset URLs (`20261026-home-scenes-04`).
 - Retained original content and photo assets, scroll-driven natural sticky stacking, three CTA links, mobile/touch and reduced-motion fallbacks, and all separate page views.
 - **Verify next:** opening a fresh URL with `?v=20261026-home-scenes-04`, observing the pinned sequence and image zoom on a desktop browser, and checking buttons at desktop/mobile widths. Only mark closed after visual acceptance.
+
+## Home Services — responsive cinematic effects — 2026-10-26
+
+**IN VALIDATION — implemented in GitHub (mobile and tablet, awaiting live-device review).**
+
+- Request: extend the approved Home Services sticky stacking and subtle scroll-linked background zoom beyond desktop.
+- Found prior CSS and JS explicitly restricted the effect to desktop (`min-width:1024px` and `hover:hover`); therefore it could never run on most mobile/tablet touch devices.
+- Unified sequence pinning for viewports >=560px high when `prefers-reduced-motion:no-preference`. All three service scenes rise and overlay in natural vertical scroll on phones, tablets and desktop. Mobile uses a gentler scale/pan and no photo clip-path; tablet/desktop retain reveal clipping.
+- For short landscape viewports and reduced-motion users, graceful static vertical flow. Mobile-specific text/CTA spacing avoids clipped copy, maintains tap target of at least 44px, and decorative images have pointer events disabled.
+- Added responsive `srcset` variants to the three existing illustrative Pexels photos; updated HTML asset query versions to `20261026-home-scenes-05` to avoid stale CSS/JS on reload.
+- GitHub static checks: 10 page views, 3 chapters/photos/CTAs, balanced HTML and CSS, parseable JS, matching CSS/JS media conditions and cache-busted asset URLs.
+- **NO COMPROBADO:** real scroll animation, button click test, image load, layout or smoothness at 375, 768, 1024, 1440px on the public Pages site. Public website inaccessible to automated browser verification from this environment; requires visual review before closing Home.
