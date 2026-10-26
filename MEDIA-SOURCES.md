@@ -125,3 +125,26 @@ Three **Pexels stock photos** are used only to visualize the construction indust
 - **Application CTA (construction planning):** Anamul Rezwan, "Two Man Holding White Paper", Pexels photo **1216589**. https://www.pexels.com/photo/two-man-holding-white-paper-1216589/
 
 License info: https://www.pexels.com/license/ . Original Pexels pages confirm photo IDs and stock subjects. CDN image loads/crops still need live visual verification.
+
+## Careers form + people imagery refinement — 2026-10-26
+
+**Design request:** Replace the three Careers images with more people-focused professional construction imagery compatible with an American-style jobsite presentation. **Do not claim nationality, company employment, actual 308 worksites, team membership or geographic origin from stock photos.**
+
+New photo sources (Pexels imagery; used only within Careers):
+- **Hero / construction professionals with plans:** Burst, "Construction workers in safety vests holding blueprints at a site during the day", Pexels photo **544971**. https://www.pexels.com/photo/person-holding-drafting-paper-544971/
+- **Intro / group of professionals in hard hats:** Thirdman, "People Standing Beside the White Wall Looking at the Big Sheet of Paper", Pexels photo **8470033**. https://www.pexels.com/photo/people-standing-beside-the-white-wall-looking-at-the-big-sheet-of-paper-8470033/
+- **Application / man and woman reviewing site details:** Mikael Blomkvist, "A Man and a Woman in a Construction Site", Pexels photo **8961029**. https://www.pexels.com/photo/a-man-and-a-woman-in-a-construction-site-8961029/
+
+Old Careers photo IDs **3680959**, **8961152** and **1216589** are no longer referenced in the Careers HTML, though their historical credits are kept in this file as an audit trail. Pexels terms: https://www.pexels.com/license/ .
+
+### Application workflow implemented in the independent preview
+
+Source fields: original `https://www.308gc.com/careers` lists First name, Last name, Email, Phone, Position, Start Date, Address, Resume and Photo ID, Link to CV/LinkedIn. The main page employment note mentions emailing a cover letter with a résumé to `Main@308gc.com`.
+
+The redesign provides:
+- First/last name, email, phone (required); role dropdown restricted to the three published openings; available-start date, city/state, CV/LinkedIn URL and notes optional.
+- One résumé PDF/DOC/DOCX (required) and one cover-letter PDF/DOC/DOCX (optional); drag/drop and local file name previews; 10MB maximum per file, checked client-side.
+- Native field labels, accessible messages and a review state. The site has no verified employer-authorized application backend; `data-submission-endpoint=""` therefore **cannot send any files or PII**. The submit button explicitly reads `CHECK APPLICATION · PREVIEW ONLY`.
+- **Sensitive photo identification is intentionally not collected** on this unofficial demo; the original company's photo-ID requirement must be reconciled with a proper secured, employer-approved process and privacy notice before collecting any such documents.
+- If employer authorizes collection, a dedicated verified secure Formspree form endpoint (paid plan with uploads; https://help.formspree.io/articles/building-your-form/file-uploads) can be connected to the form's `data-submission-endpoint` attribute and tested end-to-end. Avoid connecting candidate PII to an independent freelancer's personal email/form account without documented employer authorization, handling/privacy arrangements and consent.
+- This is a **client-side UI complete / transmission BLOCKED** state, not a live employment application form.
