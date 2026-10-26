@@ -10,9 +10,9 @@ Updated: 2026-10-26. Public repository is an **unofficial design demo**.
 | Gemini prototype review | CLOSED | Original HTML reviewed; factual and structural faults identified |
 | Baseline code import | CLOSED | Five files committed on main; HTML, CSS and JS fetched back and checked structurally (not browser-tested) |
 | Cinematic home redesign | IN VALIDATION | Cinematic hero, three editorial service chapters, four-project asymmetrical portfolio, clients, CTA; structural checks passed, visual sign-off pending |
-| Inner-page redesign | PENDING | Requires separate visual review |
+| Inner-page redesign | IN PROCESS | Services rebuilt with three image-led architectural scenes, anchored sections and related projects; Projects, details, About, Careers and Contact pending |
 | Assistant and form behavior | IN VALIDATION | Scripted assistant only; submission is explicitly disabled |
-| Responsive/accessibility/functionality | IN VALIDATION | CSS breakpoints and JS syntax/HTML tag balance verified in source; visual checks at 375/768/1024/1440 and interactivity still pending |
+| Responsive/accessibility/functionality | IN VALIDATION | CSS breakpoints, JS syntax, HTML structural balance and Services anchor structure checked; visual checks at 375/768/1024/1440 and interactive testing still pending |
 | GitHub Pages preview | IN VALIDATION | Pages configured from main/root per connected GitHub Settings tab; public site browser tab observed, latest deployment not visually rechecked |
 | Client publication | BLOCKED | Requires client consent, assets and QA |
 
