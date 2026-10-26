@@ -47,3 +47,7 @@ Concentrated follow-up corrections before closing the Home:
 - Added `MEDIA-SOURCES.md` with specific free-media source pages and usage notes.
 - Verified GitHub file commits, ten client-side views intact, 3 Home service scenes, HTML tag balance, CSS brace balance and video script references.
 - **NOT YET VERIFIED:** actual remote video playback, photo rendering, visual responsive layouts at 375/768/1024/1440, and media loading/performance. Test on public GitHub Pages before marking as closed.
+
+## Hero CTA pointer fix — 2026-10-26
+
+**IN VALIDATION — pushed to GitHub, live click test pending.** Fixed CSS layering after adding the decorative construction video: hero background at z-index 0 with pointer-events disabled, hero content at z-index 3, gradient pointer-events disabled. Both original `Explore Projects` and `Discuss Your Project` button handlers remain unchanged. Verified the updated CSS and button markup in GitHub. No HTML, JS, or other-page design changes.
