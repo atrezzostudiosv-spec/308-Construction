@@ -106,3 +106,22 @@ Do not infer founders, leadership identities, founding date, certifications, wor
 - This is a free Pexels **illustrative** photograph of a completed modern lobby (6000 × 4000 pixels, 3:2); it is not a building built by 308 Construction and must not be presented as a client project, company office or company personnel. Pexels terms: https://www.pexels.com/license/ .
 - The About CTA has a dedicated directional dark-gradient overlay for readable white/cyan text and a stronger mobile scrim. Its content links/contact details are unchanged.
 - External image CDN response, display, crop and legibility on live browser/devices require verification.
+
+## Careers 3.0 — source and illustrative media — 2026-10-26
+
+### Business sources (careers/employment)
+
+- **Official Careers page:** https://www.308gc.com/careers (verified 2026-10-26). Lists **three** openings: Plumber (valid Tradesman/Journeyman/Master Plumbing License, Argyle TX), Apprentice Plumber (Apprentice license and/or one year of experience) and Admin. / Personal Assistant (organization and verbal/electronic communication skills). Job descriptions and requirements were rephrased strictly within the bounds of this page.
+- **Company's main-site Employment instruction:** https://www.308gc.com/ (CONTACT > Employment). Applicants are asked to email a **cover letter and résumé** to **Main@308gc.com**. The separate Careers page displays an official application form with fields including resume and photo identification.
+- **Naming discrepancy:** some descriptions on the Careers page refer to **"308 Solutions Group"**, while the main website uses **"308 Construction"**. No corporate or legal relationship is claimed or inferred here; this unresolved difference is disclosed to visitors.
+- The independent preview **does not accept, collect or transmit** applications or photo identification. It provides a real email link and an external link to the verified Careers page. No vacancy beyond those three, salary, benefits, hiring guarantees, worksite location for unspecified roles or job application success is invented.
+
+### Careers illustrative photographs
+
+Three **Pexels stock photos** are used only to visualize the construction industry. They do not depict 308 Construction employees, candidate experiences, offices or worksites. Individual credits:
+
+- **Careers hero (planning at site):** Aleksey, "Person In A Construction site / Two construction workers discussing plans", Pexels photo **3680959**. https://www.pexels.com/photo/person-in-a-construction-site-3680959/
+- **Intro vertical worksite photography:** Mikael Blomkvist, "Construction Workers Standing at a Balcony", Pexels photo **8961152**. https://www.pexels.com/photo/construction-workers-standing-at-a-balcony-8961152/
+- **Application CTA (construction planning):** Anamul Rezwan, "Two Man Holding White Paper", Pexels photo **1216589**. https://www.pexels.com/photo/two-man-holding-white-paper-1216589/
+
+License info: https://www.pexels.com/license/ . Original Pexels pages confirm photo IDs and stock subjects. CDN image loads/crops still need live visual verification.
