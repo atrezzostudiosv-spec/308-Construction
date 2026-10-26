@@ -99,3 +99,10 @@ Do not infer founders, leadership identities, founding date, certifications, wor
 - Removed the redundant three-row Services promotion from the About page. The original three real services continue to be described on the dedicated Services page; no new commercial scope was invented.
 - The About hero CTA now scrolls to the page's substantive Company/Experience section, instead of serving as another cross-page navigation link.
 - Live CDN photo loading, layout/crop across breakpoints, and click behavior have not been visually tested.
+
+## About / contact CTA background — 2026-10-26
+
+- **CTA photographic background:** Miff Ibra, "Modern Lobby with Wooden Interior and Large Windows", Pexels **32674962**, https://www.pexels.com/photo/modern-lobby-with-wooden-interior-and-large-windows-32674962/ .
+- This is a free Pexels **illustrative** photograph of a completed modern lobby (6000 × 4000 pixels, 3:2); it is not a building built by 308 Construction and must not be presented as a client project, company office or company personnel. Pexels terms: https://www.pexels.com/license/ .
+- The About CTA has a dedicated directional dark-gradient overlay for readable white/cyan text and a stronger mobile scrim. Its content links/contact details are unchanged.
+- External image CDN response, display, crop and legibility on live browser/devices require verification.
