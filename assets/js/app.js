@@ -1,6 +1,66 @@
 // Initialize Lucide icons
         if (window.lucide?.createIcons) window.lucide.createIcons();
 
+const SEO_VIEWS = {
+  "home": [
+    "308 Construction | Planning, Construction & Management",
+    "Independent design preview of 308 Construction's published services and projects serving the DFW Metroplex and clients across the country."
+  ],
+  "services": [
+    "Construction Services | 308 Construction",
+    "Explore three published construction services: preconstruction planning, ground-up construction and renovations, and construction management."
+  ],
+  "projects": [
+    "Selected Construction Projects | 308 Construction",
+    "Explore published UNT Matthews Hall, TWU Old Main, Plano ISD bleacher upgrades and technical MEP projects by 308 Construction."
+  ],
+  "unt": [
+    "UNT Matthews Hall Renovation | 308 Construction",
+    "Published UNT Matthews Hall renovation includes office improvements, accessible restrooms, new lighting and interior finishes."
+  ],
+  "twu": [
+    "TWU Old Main Repairs | 308 Construction",
+    "Published work at TWU Old Main includes plaster repair, painting and skylight glass replacement."
+  ],
+  "plano": [
+    "Plano ISD Bleacher Upgrades | 308 Construction",
+    "Published Plano ISD improvements span six sites, with electrical work, concrete paving and bleacher upgrades."
+  ],
+  "mep": [
+    "MEP Technical Projects | 308 Construction",
+    "Published technical projects include generator troubleshooting and data center drain-pan replacements."
+  ],
+  "about": [
+    "About 308 Construction | Argyle, Texas",
+    "Learn about 308 Construction's services, markets, published clients and corporate office in Argyle, Texas."
+  ],
+  "careers": [
+    "Published Job Openings | 308 Construction",
+    "Explore published Plumber, Apprentice Plumber and Administrative/Personal Assistant roles. The online application is a non-sending demo."
+  ],
+  "contact": [
+    "Contact | 308 Construction, Argyle, Texas",
+    "Official phone, email and office location of 308 Construction. The design-demo inquiry form routes to Atrezzo Studios, not the company."
+  ],
+  "policy": [
+    "Privacy Reference | 308 Construction Design Concept",
+    "Privacy and third-party services reference for an independent website design preview; not the official company's privacy policy."
+  ]
+};
+const SEO_ROOT = 'https://atrezzostudiosv-spec.github.io/308-Construction/';
+function updatePageMetadata(pageId) {
+ const [title,description] = SEO_VIEWS[pageId] || SEO_VIEWS.home;
+ const url = SEO_ROOT + (pageId === 'home' ? '' : '?view=' + encodeURIComponent(pageId));
+ document.title = title;
+ const tags = [['name','description',description],['property','og:title',title],['property','og:description',description],['property','og:url',url],['name','twitter:title',title],['name','twitter:description',description]];
+ for (const [attr,key,value] of tags) {
+   const element=document.querySelector('meta['+attr+'="'+key+'"]');
+   if(element)element.setAttribute('content',value);
+ }
+ const canonical=document.querySelector('link[rel="canonical"]');
+ if(canonical)canonical.href=url;
+}
+
         // Multi-page Router Function
         function navigateTo(pageId, updateHistory = true) {
             // Hide all pages
@@ -20,6 +80,13 @@
                   } else heroVideo.pause();
                 }
                 if (updateHistory) history.pushState({pageId}, '', pageId === 'home' ? location.pathname : location.pathname + '?view=' + encodeURIComponent(pageId));
+                updatePageMetadata(pageId);
+                document.querySelectorAll('.nav-link').forEach(link=>{
+                  const selected=link.dataset.page===pageId || (link.dataset.page==='projects' && ['unt','twu','plano','mep'].includes(pageId));
+                  if(selected)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current');
+                });
+                document.getElementById('projectsNavGroup')?.classList.remove('is-open');
+                document.getElementById('projectsNavToggle')?.setAttribute('aria-expanded','false');
                 window.scrollTo({ top: 0, behavior: 'auto' });
             }
 
@@ -33,12 +100,31 @@
             });
         }
 
-        // Toggle Mobile Menu
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-            menu.classList.toggle('flex');
+        // Mobile menu and keyboard-accessible Projects dropdown
+        function toggleMobileMenu(forceOpen) {
+            const menu=document.getElementById('mobileMenu');if(!menu)return;
+            const open=typeof forceOpen==='boolean'?forceOpen:menu.classList.contains('hidden');
+            menu.classList.toggle('hidden',!open);menu.classList.toggle('flex',open);
+            document.body.classList.toggle('mobile-menu-open',open);
+            const trigger=document.getElementById('mobileMenuToggle');
+            trigger?.setAttribute('aria-expanded',String(open));
+            if(open)menu.querySelector('button[aria-label="Close navigation"]')?.focus();
+            else if(menu.contains(document.activeElement))trigger?.focus();
         }
+        function initProjectsDropdown() {
+            const group=document.getElementById('projectsNavGroup');
+            const toggle=document.getElementById('projectsNavToggle');
+            if(!group||!toggle)return;
+            const close=()=>{group.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');};
+            toggle.addEventListener('click',e=>{e.stopPropagation();const open=!group.classList.contains('is-open');group.classList.toggle('is-open',open);toggle.setAttribute('aria-expanded',String(open));});
+            document.addEventListener('click',e=>{if(!group.contains(e.target))close();});
+            group.addEventListener('keydown',e=>{if(e.key==='Escape'){close();toggle.focus();}});
+            document.addEventListener('keydown',e=>{
+              if(e.key!=='Escape')return;close();
+              if(document.getElementById('mobileMenu')?.classList.contains('flex'))toggleMobileMenu(false);
+            });
+        }
+        document.addEventListener('DOMContentLoaded',initProjectsDropdown);
 
         // Toggle Assistant Panel
         function toggleAssistant() {
