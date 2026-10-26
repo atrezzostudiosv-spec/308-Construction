@@ -117,3 +117,16 @@ Concentrated follow-up corrections before closing the Home:
 - **VERIFICADO:** all 10 page views and internal navigation references resolve, no duplicated IDs, all Home sections/3 service chapters/4 Portfolio tiles preserved, `h1` per view, source file syntactic checks, responsive and reduced-motion CSS paths, independent-design/media disclosures, representative static color contrasts, original third-party media source listings.
 - **NO COMPROBADO:** published site at exact 375/768/1024/1440px, dynamic scroll pinning/zoom, live clicks, video/photo HTTP success, actual visual contrast over photos, PageSpeed/console/accessibility. Live website browsing/rendering from this environment was unavailable.
 - Do not repeat approved design work or mark Home QA as closed until these live tests are completed and passed. No new layout changes made in this QA pass.
+
+## Services 2.0 — implemented cinematic scroll chapters — 2026-10-26
+
+**Implementation committed to main; status: IN VALIDATION pending live visual acceptance. Home unchanged.**
+
+- Replaced only the SPA `page-services` section with a consistent Services layout: photo hero; compact service index; three editorial full-bleed pinned service chapters (01 Planning → 02 Construction → 03 Construction Management); two image-overlay Related Projects tiles (UNT and TWU) and an aligned final CTA.
+- Each Services chapter is `position:sticky;top:0;height:100svh` under normal motion, with ascending z-indices. The next chapter naturally rises over the previous one; no wheel/touch interception or scroll snap. Lightweight JS applies a gentle photo scale/pan on scroll. Tablet/phone use the same stacking; very short phone landscapes and reduced-motion users retain static vertical sections.
+- Retained actual three confirmed services, original scopes and CTA destinations; no invented offerings or project imagery. Photos are licensed Pexels stock, **not actual 308 Construction personnel, sites or jobs**; photo pages/IDs credited in `MEDIA-SOURCES.md`. Related Projects reuse the same UNT/TWU illustrations as approved on Home.
+- Removed repeated visual-disclaimer blocks and awkward meta-copy from the Services content. One understated photo notice remains beneath related projects, with independent-design language in footer.
+- Corrected teal label contrast for light backgrounds by using #116B76. Improved interactive focus rings, legibility overlays, mobile CTA sizes, fluid headings, reduced-motion and tablet composition. The Services hero image is lazy-loaded with low fetch priority because Services is hidden on initial Home load.
+- Asset URLs in `index.html` versioned as `20261026-services-01` to invalidate cached JS/CSS.
+- **VERIFIED IN REPO:** 10 page views, one H1 per page view, no duplicate IDs or broken `navigateTo` references, three Scenes/section anchors, original Home's three scene nodes plus four Portfolio tiles preserved, balanced HTML/CSS, JS parsed, explicit mobile/tablet/reduced-motion CSS rules, links for both Related Projects.
+- **NOT CHECKED:** actual GitHub Pages media loading, sticky/zoom smoothness, tap and scroll interactions, screenshots at 375/768/1024/1440px, full accessibility or performance. Never present code checks as live QA.
