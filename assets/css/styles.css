@@ -1346,3 +1346,53 @@ html.js-motion .about-v3:not(.hidden-page) [data-reveal] {
   .about-v3 .ab-photographic img {object-position:center 50%;}
   .about-v3 .ab-profile-intro h2 {scroll-margin-top:90px;}
 }
+
+
+/* ===== ABOUT CTA / FINISHED ARCHITECTURAL PHOTO ===== */
+.about-v3 .ab-contact {
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:#151A1D;
+}
+.about-v3 .ab-contact-media,
+.about-v3 .ab-contact-scrim {
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+}
+.about-v3 .ab-contact-media {
+  z-index:0;
+  overflow:hidden;
+}
+.about-v3 .ab-contact-media img {
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 50%;
+  filter:saturate(.77) contrast(1.06) brightness(.88);
+}
+.about-v3 .ab-contact-scrim {
+  z-index:1;
+  background:
+    linear-gradient(90deg,rgba(7,16,20,.90) 0%,rgba(7,16,20,.76) 48%,rgba(7,16,20,.62) 100%),
+    linear-gradient(0deg,rgba(7,16,20,.43),transparent 39%);
+}
+.about-v3 .ab-contact-grid {
+  position:relative;
+  z-index:2;
+}
+.about-v3 .ab-contact .ab-overline {color:#8CE3E0;}
+.about-v3 .ab-contact-side>p:first-child {color:#f0f4f4;}
+.about-v3 .ab-contact-location {color:#e6eeee!important;border-top-color:rgba(255,255,255,.38);}
+.about-v3 .ab-contact-phone {background:rgba(7,16,20,.38);border-color:rgba(255,255,255,.75);}
+.about-v3 .ab-contact-phone:hover {background:rgba(7,16,20,.60);}
+@media(max-width:767px) {
+  .about-v3 .ab-contact-media img {object-position:59% center;}
+  .about-v3 .ab-contact-scrim {
+    background:
+      linear-gradient(90deg,rgba(7,16,20,.83),rgba(7,16,20,.77)),
+      linear-gradient(0deg,rgba(7,16,20,.45),transparent 55%);
+  }
+}
