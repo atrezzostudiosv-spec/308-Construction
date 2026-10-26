@@ -67,3 +67,27 @@ All twelve pictures in these galleries are **Pexels stock photo illustrations** 
 - **MEP / Portable generator reference** — Technicians Tinkering with a Power Generator; Pexels photo 18816918. https://www.pexels.com/photo/technicians-tinkering-with-a-power-generator-18816918/
 - **MEP / Industrial switchgear** — Industrial Electrical Control Room Interior; Pexels photo 33706880. https://www.pexels.com/photo/industrial-electrical-control-room-interior-33706880/
 - **MEP / Data center racks** — Server Racks on Data Center; Pexels photo 4508751. https://www.pexels.com/photo/server-racks-on-data-center-4508751/
+
+## About 3.0 — editorial architectural photography
+
+The three images added exclusively to the About view are **Pexels stock photographs**, used as architectural reference rather than 308 Construction sites, offices, staff or finished work. The About page presents a single text disclosure near the footer and understated image captions. They must not be presented as client work.
+
+- **Hero / vertical architectural space:** Joaquin Carfagna, "Inside of Modern Concrete Building with Bridge", Pexels **18381375**. https://www.pexels.com/photo/inside-of-modern-concrete-building-with-bridge-18381375/
+- **Architectural panorama / renovation space:** Alan Quirván, "Interior of a Building during the Construction", Pexels **14541104**. https://www.pexels.com/photo/interior-of-a-building-during-the-construction-14541104/
+- **Markets / unfinished building structure:** Kristine Bruzite, "Modern Unfinished Concrete Building in Sunlight", Pexels **35548971**. https://www.pexels.com/photo/modern-unfinished-concrete-building-in-sunlight-35548971/
+
+Media pages and photo IDs verified using current Pexels listings; the externally hosted images' successful browser rendering, crops and responsive variants are pending live QA. Pexels terms: https://www.pexels.com/license/.
+
+### About business-information sources
+
+Source: https://www.308gc.com/ (published **ABOUT**, **SERVICES**, **CLIENTS** and **CONTACT** sections, consulted 2026-10-26). This source specifically supports:
+
+- DFW Metroplex and customers across the country
+- Staff having over 45 years of experience **in construction, facilities and design**; not 45 years since company founding
+- Core services: preconstruction planning, construction, construction management
+- Listed markets: higher education, tenant development, residential, hospitals, data centers
+- Customer service as the number-one priority
+- Selected named roster: University of North Texas, Texas Woman's University, Plano ISD, UTA, Birdville ISD, City of Denton, City of Fort Worth and Town of Addison
+- Corporate office: 11835 Hilltop Rd., Argyle, TX 76226; phone 940-387-4002
+
+Do not infer founders, leadership identities, founding date, certifications, workforce size, awards or years in business.
