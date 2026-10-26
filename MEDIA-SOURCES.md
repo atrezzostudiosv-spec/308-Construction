@@ -73,7 +73,7 @@ All twelve pictures in these galleries are **Pexels stock photo illustrations** 
 The three images added exclusively to the About view are **Pexels stock photographs**, used as architectural reference rather than 308 Construction sites, offices, staff or finished work. The About page presents a single text disclosure near the footer and understated image captions. They must not be presented as client work.
 
 - **Hero / vertical architectural space:** Joaquin Carfagna, "Inside of Modern Concrete Building with Bridge", Pexels **18381375**. https://www.pexels.com/photo/inside-of-modern-concrete-building-with-bridge-18381375/
-- **Architectural panorama / renovation space:** Alan Quirván, "Interior of a Building during the Construction", Pexels **14541104**. https://www.pexels.com/photo/interior-of-a-building-during-the-construction-14541104/
+- **Architectural panorama / completed commercial atrium:** ddlogg, "Spacious Modern Interior of Commercial Atrium", Pexels **32967976**. https://www.pexels.com/photo/spacious-modern-interior-of-commercial-atrium-32967976/
 - **Markets / unfinished building structure:** Kristine Bruzite, "Modern Unfinished Concrete Building in Sunlight", Pexels **35548971**. https://www.pexels.com/photo/modern-unfinished-concrete-building-in-sunlight-35548971/
 
 Media pages and photo IDs verified using current Pexels listings; the externally hosted images' successful browser rendering, crops and responsive variants are pending live QA. Pexels terms: https://www.pexels.com/license/.
@@ -91,3 +91,11 @@ Source: https://www.308gc.com/ (published **ABOUT**, **SERVICES**, **CLIENTS** a
 - Corporate office: 11835 Hilltop Rd., Argyle, TX 76226; phone 940-387-4002
 
 Do not infer founders, leadership identities, founding date, certifications, workforce size, awards or years in business.
+
+
+### About visual and navigation refinement — 2026-10-26
+
+- Replaced the About full-width unfinished construction interior with a **completed commercial atrium** (Pexels 32967976) chosen for architectural finish, daylight and cinematic crop. The photograph is illustrative and is **not** a 308 Construction work sample.
+- Removed the redundant three-row Services promotion from the About page. The original three real services continue to be described on the dedicated Services page; no new commercial scope was invented.
+- The About hero CTA now scrolls to the page's substantive Company/Experience section, instead of serving as another cross-page navigation link.
+- Live CDN photo loading, layout/crop across breakpoints, and click behavior have not been visually tested.
