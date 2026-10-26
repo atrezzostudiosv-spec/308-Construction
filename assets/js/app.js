@@ -160,55 +160,78 @@ function initHomeConstructionVideo() {
 document.addEventListener('DOMContentLoaded', initHomeConstructionVideo);
 
 
-/* Home service chapters: scroll-driven image masks on supported desktop only.
-   Native scrolling is preserved; stage links remain always interactive. */
+/* HOME / SERVICES: natural pinned chapters + subtle photographic movement.
+   The next rising chapter controls outgoing image zoom; sticky remains pure CSS.
+   No wheel interception, scroll snapping, pointer overlays or forced navigation. */
 function initHomeServiceSequence() {
   const home = document.getElementById('page-home');
   const sequence = home?.querySelector('[data-scene-sequence]');
   if (!home || !sequence || !window.matchMedia || !window.requestAnimationFrame) return;
 
-  const scenes = Array.from(sequence.querySelectorAll('[data-scene]'));
+  const scenes = [...sequence.querySelectorAll('[data-scene]')];
   if (scenes.length !== 3) return;
-  const canAnimate = window.matchMedia('(min-width: 1024px) and (min-height: 700px) and (hover: hover) and (prefers-reduced-motion: no-preference)');
-  let frameRequested = false;
 
-  function paintScenes() {
-    frameRequested = false;
-    if (!canAnimate.matches || home.classList.contains('hidden-page')) return;
+  const desktopMotion = window.matchMedia(
+    '(min-width: 1024px) and (min-height: 700px) and (hover: hover) and (prefers-reduced-motion: no-preference)'
+  );
+  const clamp = value => Math.max(0, Math.min(1, value));
+  let scheduled = false;
 
-    const viewportHeight = window.innerHeight || 800;
-    for (let index = 0; index < scenes.length; index++) {
-      const scene = scenes[index];
-      const top = scene.getBoundingClientRect().top;
-      const arrival = Math.max(0, Math.min(1, (viewportHeight - top) / (viewportHeight * 0.92)));
-      const mask = index === 0 ? 0 : Math.round((1 - arrival) * 30);
-      const scale = 1.015 + (1 - arrival) * 0.025;
+  function draw() {
+    scheduled = false;
+    if (!desktopMotion.matches || home.classList.contains('hidden-page')) return;
+
+    const height = Math.max(1, window.innerHeight);
+    const sequenceRect = sequence.getBoundingClientRect();
+    // Nothing to animate when chapters are fully outside the viewport.
+    if (sequenceRect.top > height || sequenceRect.bottom < -height) return;
+
+    scenes.forEach((scene, index) => {
+      const sceneTop = scene.getBoundingClientRect().top;
+      const entrance = index === 0 ? 1 : clamp((height - sceneTop) / height);
+      // A sticky scene's top stops changing at zero; the next scene keeps moving.
+      const nextTop = index < scenes.length - 1
+        ? scenes[index + 1].getBoundingClientRect().top
+        : sequenceRect.bottom;
+      const exit = clamp((height - nextTop) / height);
+
+      // A small zoom-out as a photo enters, then zoom-in while pinned.
+      // Range approximately 1.04–1.105, deliberately below dramatic parallax.
+      const zoom = 1.04 + (1 - entrance) * 0.02 + exit * 0.065;
+      const pan = Math.round((1 - entrance) * 10 - exit * 14);
+      const mask = index === 0 ? 0 : Math.round((1 - entrance) * 9);
+
+      scene.style.setProperty('--scene-scale', zoom.toFixed(4));
+      scene.style.setProperty('--scene-pan', pan + 'px');
       scene.style.setProperty('--scene-mask', mask + '%');
-      scene.style.setProperty('--scene-scale', scale.toFixed(3));
-    }
+    });
   }
 
-  function schedulePaint() {
-    if (!canAnimate.matches || frameRequested) return;
-    frameRequested = true;
-    window.requestAnimationFrame(paintScenes);
+  function requestDraw() {
+    if (!desktopMotion.matches || scheduled) return;
+    scheduled = true;
+    window.requestAnimationFrame(draw);
   }
 
-  function syncMode() {
-    document.documentElement.classList.toggle('scene-motion', canAnimate.matches);
-    if (!canAnimate.matches) {
+  function updateMode() {
+    document.documentElement.classList.toggle('scene-motion', desktopMotion.matches);
+    if (!desktopMotion.matches) {
       scenes.forEach(scene => {
-        scene.style.removeProperty('--scene-mask');
         scene.style.removeProperty('--scene-scale');
+        scene.style.removeProperty('--scene-pan');
+        scene.style.removeProperty('--scene-mask');
       });
-    } else schedulePaint();
+    } else requestDraw();
   }
 
-  window.addEventListener('scroll', schedulePaint, {passive:true});
-  window.addEventListener('resize', schedulePaint, {passive:true});
-  window.addEventListener('popstate', schedulePaint);
-  if (typeof canAnimate.addEventListener === 'function') canAnimate.addEventListener('change', syncMode);
-  else if (typeof canAnimate.addListener === 'function') canAnimate.addListener(syncMode);
-  syncMode();
+  window.addEventListener('scroll', requestDraw, {passive: true});
+  window.addEventListener('resize', requestDraw, {passive: true});
+  window.addEventListener('popstate', requestDraw);
+  if (typeof desktopMotion.addEventListener === 'function') {
+    desktopMotion.addEventListener('change', updateMode);
+  } else if (typeof desktopMotion.addListener === 'function') {
+    desktopMotion.addListener(updateMode);
+  }
+  updateMode();
 }
 document.addEventListener('DOMContentLoaded', initHomeServiceSequence);
