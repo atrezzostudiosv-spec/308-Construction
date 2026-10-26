@@ -455,3 +455,91 @@ function initCareersApplication() {
   });
 }
 document.addEventListener('DOMContentLoaded',initCareersApplication);
+
+
+/* Contact form for GitHub Pages design preview.
+   No sender is configured by default: the form opens a prepared mailto: draft
+   after validation, and DOES NOT claim that a message has been sent.
+   Employer-authorized Formspree endpoint may be configured only with approval,
+   tested ownership, processing/privacy information and a verified recipient. */
+function initContactInquiryForm() {
+  const form = document.getElementById('contact-inquiry-form');
+  if (!form) return;
+  const status = document.getElementById('ct-form-status');
+  const explanation = document.getElementById('ct-form-explanation');
+  const button = document.getElementById('ct-submit');
+  const buttonText = button?.querySelector('span');
+  const endpoint = (form.dataset.submissionEndpoint || '').trim();
+  const verifiedEndpoint = /^https:\/\/formspree\.io\/f\/[a-zA-Z0-9]+$/.test(endpoint);
+
+  function report(message, type = '') {
+    if (!status) return;
+    status.textContent = message;
+    if (type) status.dataset.state = type;
+    else status.removeAttribute('data-state');
+  }
+
+  if (verifiedEndpoint) {
+    if (buttonText) buttonText.textContent = 'SEND MESSAGE';
+    if (explanation) explanation.textContent = 'Your message is submitted to the configured contact-form service when you press Send Message.';
+    report('Complete the required fields to send your inquiry.');
+  } else {
+    if (buttonText) buttonText.textContent = 'OPEN EMAIL DRAFT';
+    report('Complete the required fields to prepare an email for your review. This website does not send it.');
+  }
+
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (!form.reportValidity()) {
+      report('Please complete your name, a valid email address and your message.', 'error');
+      return;
+    }
+    const name = form.querySelector('#ct-name')?.value.trim() || '';
+    const email = form.querySelector('#ct-email')?.value.trim() || '';
+    const phone = form.querySelector('#ct-phone')?.value.trim() || '';
+    const subject = form.querySelector('#ct-subject')?.value.trim() || '308 Construction Inquiry';
+    const message = form.querySelector('#ct-message')?.value.trim() || '';
+    if (!name || !email || !message) {
+      report('Please complete your name, a valid email address and your message.', 'error');
+      return;
+    }
+
+    if (!verifiedEndpoint) {
+      const body = ['Name: ' + name, 'Email: ' + email, phone ? 'Phone: ' + phone : '', '', 'Message:', message]
+        .filter((line, index) => line !== '' || index === 3)
+        .join('\n');
+      const draft = 'mailto:Main@308gc.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      if (draft.length > 2400) {
+        report('Your message is too long for a reliable email draft. Please shorten it or email Main@308gc.com directly.', 'error');
+        return;
+      }
+      report('Opening a prepared email draft. Review it and press Send in your email application. No delivery is confirmed by this website.');
+      window.location.href = draft;
+      return;
+    }
+
+    if (!window.fetch || !window.FormData) {
+      report('The browser does not support this submission method. Please contact Main@308gc.com.', 'error');
+      return;
+    }
+    button.disabled = true;
+    if (buttonText) buttonText.textContent = 'SENDING...';
+    report('Submitting your message...');
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+      if (!response.ok) throw new Error('Form endpoint rejected the inquiry');
+      form.reset();
+      report('Your message was accepted by the configured form service.', 'success');
+    } catch {
+      report('The message was not confirmed as sent. Please try again or contact Main@308gc.com directly.', 'error');
+    } finally {
+      button.disabled = false;
+      if (buttonText) buttonText.textContent = 'SEND MESSAGE';
+    }
+  });
+}
+document.addEventListener('DOMContentLoaded', initContactInquiryForm);
