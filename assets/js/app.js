@@ -241,3 +241,64 @@ function initHomeServiceSequence() {
   updateMode();
 }
 document.addEventListener('DOMContentLoaded', initHomeServiceSequence);
+
+
+/* SERVICES 2.0: the same natural sticky scroll rhythm as the approved Home.
+   Each photo gently zooms while the next scene slides over it.
+   No wheel interception, scroll lock, fake timers or custom touch behavior. */
+function initServicesScrollSequence() {
+  const page = document.getElementById('page-services');
+  const sequence = page?.querySelector('[data-sv-sequence]');
+  if (!page || !sequence || !window.matchMedia || !window.requestAnimationFrame) return;
+  const scenes = [...sequence.querySelectorAll('[data-sv-scene]')];
+  if (scenes.length !== 3) return;
+  const allowed = window.matchMedia('(min-height:560px) and (prefers-reduced-motion:no-preference)');
+  let scheduled = false;
+  const clamp = value => Math.max(0, Math.min(1, value));
+
+  function draw() {
+    scheduled = false;
+    if (!allowed.matches || page.classList.contains('hidden-page')) return;
+    const height = Math.max(1,window.innerHeight);
+    const sequenceBox = sequence.getBoundingClientRect();
+    if (sequenceBox.top > height || sequenceBox.bottom < -height) return;
+    const compact = window.innerWidth < 768;
+    scenes.forEach((scene,index) => {
+      const top = scene.getBoundingClientRect().top;
+      const entrance = index === 0 ? 1 : clamp((height - top)/height);
+      const nextTop = index < scenes.length - 1
+        ? scenes[index+1].getBoundingClientRect().top
+        : sequenceBox.bottom;
+      const exit = clamp((height - nextTop)/height);
+      const scale = compact
+        ? 1.035 + (1 - entrance)*0.012 + exit*0.065
+        : 1.025 + (1 - entrance)*0.026 + exit*0.088;
+      const shift = compact
+        ? Math.round((1 - entrance)*5 - exit*10)
+        : Math.round((1 - entrance)*11 - exit*17);
+      scene.style.setProperty('--sv-image-zoom', scale.toFixed(4));
+      scene.style.setProperty('--sv-image-shift', shift+'px');
+    });
+  }
+  function queue() {
+    if (!allowed.matches || scheduled) return;
+    scheduled = true;
+    window.requestAnimationFrame(draw);
+  }
+  function updateMode() {
+    document.documentElement.classList.toggle('sv-scene-motion',allowed.matches);
+    if (!allowed.matches) {
+      scenes.forEach(scene => {
+        scene.style.removeProperty('--sv-image-zoom');
+        scene.style.removeProperty('--sv-image-shift');
+      });
+    } else queue();
+  }
+  window.addEventListener('scroll',queue,{passive:true});
+  window.addEventListener('resize',queue,{passive:true});
+  window.addEventListener('popstate',queue);
+  if (typeof allowed.addEventListener === 'function') allowed.addEventListener('change',updateMode);
+  else if (typeof allowed.addListener === 'function') allowed.addListener(updateMode);
+  updateMode();
+}
+document.addEventListener('DOMContentLoaded',initServicesScrollSequence);
