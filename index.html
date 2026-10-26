@@ -132,182 +132,120 @@
         <!-- =================================================================== -->
         <!-- 01 — HOME PAGE -->
         <!-- =================================================================== -->
-        <section id="page-home" class="page-view">
-            <!-- HERO SECTION -->
-            <div class="relative min-h-[90vh] flex flex-col justify-between p-6 md:p-16 bg-grid overflow-hidden border-b border-white/10">
-                <div class="absolute inset-0 z-0">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=2000&q=85" class="w-full h-full object-cover opacity-65" alt="Commercial Construction Structural Frame" loading="lazy"/>
-                    <div class="absolute inset-0 scrim-dark"></div>
-                </div>
 
-                <div class="relative z-10 flex flex-wrap items-center justify-between gap-4 text-xs font-mono uppercase tracking-widest text-brand-teal">
-                    <span class="px-3 py-1 bg-brand-dark/80 border border-brand-teal/40 rounded">Argyle, Texas General Contractor</span>
-                    <span class="text-gray-400">Commercial • Educational • Institutional</span>
-                </div>
-
-                <div class="relative z-10 my-auto py-12 max-w-5xl">
-                    <span class="text-brand-teal font-display font-semibold tracking-[0.3em] uppercase text-sm md:text-base block mb-3">Construction Planning & Execution</span>
-                    <h1 class="font-display text-5xl md:text-8xl font-black uppercase text-white leading-none tracking-tight">
-                        Turn-Key Construction<br/><span class="text-brand-teal">Solutions with Accuracy</span>
-                    </h1>
-                    <p class="mt-6 text-gray-300 text-base md:text-xl font-light max-w-2xl leading-relaxed">
-                        308 Construction provides preconstruction planning, construction and construction management for clients in the DFW Metroplex and across the country.
-                    </p>
-                    <div class="mt-8 flex flex-wrap items-center gap-4">
-                        <button onclick="navigateTo('projects')" class="px-8 py-4 bg-brand-teal hover:bg-brand-accent text-white font-display font-bold text-base uppercase tracking-wider rounded transition-colors shadow-xl">
-                            Explore Projects
-                        </button>
-                        <button onclick="navigateTo('services')" class="px-8 py-4 bg-brand-dark/80 border border-white/20 hover:border-brand-teal text-white font-display font-semibold text-base uppercase tracking-wider rounded transition-colors backdrop-blur-sm">
-                            Our Capabilities
-                        </button>
-                    </div>
-                </div>
-
-                <div class="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-white/10 text-xs font-mono">
-                    <div>
-                        <span class="text-gray-500 block">HEADQUARTERS</span>
-                        <span class="text-white font-medium">Argyle, TX</span>
-                    </div>
-                    <div>
-                        <span class="text-gray-500 block">SERVICES</span>
-                        <span class="text-white font-medium">Planning / Construction / Management</span>
-                    </div>
-                    <div>
-                        <span class="text-gray-500 block">PHONE</span>
-                        <span class="text-white font-medium">940-387-4002</span>
-                    </div>
-                    <div>
-                        <span class="text-gray-500 block">EMAIL</span>
-                        <span class="text-white font-medium">Main@308gc.com</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CORPORATE INTRODUCTION -->
-            <div class="py-24 px-6 md:px-16 bg-brand-dark">
-                <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    <div class="lg:col-span-5">
-                        <span class="text-brand-teal font-display font-bold uppercase tracking-widest text-sm">Corporate Statement</span>
-                        <h2 class="font-display text-4xl md:text-6xl font-bold uppercase text-white mt-2 mb-6">Planning. Construction. Management.</h2>
-                        <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-6">
-                            308 Construction serves the DFW Metroplex and clients across the country. Its published markets include higher education, tenant development, residential, hospitals and data centers.
-                        </p>
-                        <button onclick="navigateTo('about')" class="inline-flex items-center gap-2 text-brand-teal hover:text-white text-xs font-mono uppercase tracking-wider font-semibold">
-                            Learn More About Our Firm <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </button>
-                    </div>
-                    <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="mask-reveal rounded-lg border border-white/10 overflow-hidden bg-brand-gray/20">
-                            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" class="w-full h-64 object-cover" alt="Institutional Facility Renovation" loading="lazy"/>
-                            <div class="p-6">
-                                <h3 class="font-display font-bold text-xl uppercase text-white mb-2">Preconstruction Accuracy</h3>
-                                <p class="text-gray-400 text-xs leading-relaxed">Design and construction feedback before work begins to help create an efficient, functional plan.</p>
-                            </div>
-                        </div>
-                        <div class="mask-reveal rounded-lg border border-white/10 overflow-hidden bg-brand-gray/20">
-                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80" class="w-full h-64 object-cover" alt="MEP Technical Installation" loading="lazy"/>
-                            <div class="p-6">
-                                <h3 class="font-display font-bold text-xl uppercase text-white mb-2">General Contracting</h3>
-                                <p class="text-gray-400 text-xs leading-relaxed">Construction for ground-up projects and renovations, including interior and exterior work.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CORE SERVICES PREVIEW -->
-            <div class="py-24 px-6 md:px-16 bg-brand-light text-brand-dark">
-                <div class="max-w-7xl mx-auto">
-                    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-brand-dark/10 pb-6">
-                        <div>
-                            <span class="text-brand-teal font-display font-bold uppercase tracking-widest text-sm">Our Expertise</span>
-                            <h2 class="font-display text-4xl md:text-6xl font-black uppercase tracking-tight mt-1">Core Construction Services</h2>
-                        </div>
-                        <button onclick="navigateTo('services')" class="mt-4 md:mt-0 px-6 py-3 bg-brand-dark text-white font-display uppercase tracking-wider text-sm rounded hover:bg-brand-teal transition-colors">
-                            View All Services
-                        </button>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div class="p-8 bg-white border border-brand-dark/10 rounded-lg hover:border-brand-teal transition-all shadow-sm">
-                            <span class="font-mono text-xs text-brand-teal font-bold uppercase block mb-2">01 / Planning</span>
-                            <h3 class="font-display font-bold text-2xl uppercase mb-3">Preconstruction Planning</h3>
-                            <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-6">Design and construction feedback before work starts, focused on an efficient and functional plan.</p>
-                            <button onclick="navigateTo('services')" class="text-xs font-bold uppercase tracking-wider text-brand-teal hover:underline inline-flex items-center gap-1">Details <i data-lucide="chevron-right" class="w-3 h-3"></i></button>
-                        </div>
-                        <div class="p-8 bg-white border border-brand-dark/10 rounded-lg hover:border-brand-teal transition-all shadow-sm">
-                            <span class="font-mono text-xs text-brand-teal font-bold uppercase block mb-2">02 / Execution</span>
-                            <h3 class="font-display font-bold text-2xl uppercase mb-3">General Construction</h3>
-                            <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-6">Construction projects from initial concepts or completed documents, including ground-up work and renovations.</p>
-                            <button onclick="navigateTo('services')" class="text-xs font-bold uppercase tracking-wider text-brand-teal hover:underline inline-flex items-center gap-1">Details <i data-lucide="chevron-right" class="w-3 h-3"></i></button>
-                        </div>
-                        <div class="p-8 bg-white border border-brand-dark/10 rounded-lg hover:border-brand-teal transition-all shadow-sm">
-                            <span class="font-mono text-xs text-brand-teal font-bold uppercase block mb-2">03 / Oversight</span>
-                            <h3 class="font-display font-bold text-2xl uppercase mb-3">Construction Management</h3>
-                            <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-6">Support with architectural drawings, permitting, hiring the right labor, and coordinating project logistics.</p>
-                            <button onclick="navigateTo('services')" class="text-xs font-bold uppercase tracking-wider text-brand-teal hover:underline inline-flex items-center gap-1">Details <i data-lucide="chevron-right" class="w-3 h-3"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FEATURED PROJECTS SHOWCASE -->
-            <div class="py-24 px-6 md:px-16 bg-brand-dark">
-                <div class="max-w-7xl mx-auto">
-                    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
-                        <div>
-                            <span class="text-brand-teal font-display font-bold uppercase tracking-widest text-sm">Documented Portfolio</span>
-                            <h2 class="font-display text-4xl md:text-6xl font-bold uppercase text-white mt-1">Featured Projects</h2>
-                        </div>
-                        <button onclick="navigateTo('projects')" class="mt-4 md:mt-0 text-brand-teal hover:text-white text-xs font-mono uppercase tracking-wider font-semibold inline-flex items-center gap-2">
-                            View Full Portfolio <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </button>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <!-- UNT -->
-                        <div onclick="navigateTo('unt')" class="mask-reveal rounded-lg border border-white/10 bg-brand-dark/60 overflow-hidden cursor-pointer group">
-                            <div class="aspect-video relative overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="UNT Matthews Hall Office Renovation" loading="lazy"/>
-                                <div class="absolute top-4 left-4 bg-brand-teal text-white font-mono text-[10px] px-2.5 py-1 uppercase rounded">Educational</div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="font-display font-bold text-2xl text-white uppercase group-hover:text-brand-teal transition-colors">University of North Texas Matthews Hall</h3>
-                                <p class="text-gray-400 text-xs mt-2">Renovation of approx. 4,000 sq. ft., office spaces, ADA restrooms, lighting, and finishes.</p>
-                            </div>
-                        </div>
-
-                        <!-- TWU -->
-                        <div onclick="navigateTo('twu')" class="mask-reveal rounded-lg border border-white/10 bg-brand-dark/60 overflow-hidden cursor-pointer group">
-                            <div class="aspect-video relative overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="TWU Skylight Restoration" loading="lazy"/>
-                                <div class="absolute top-4 left-4 bg-brand-teal text-white font-mono text-[10px] px-2.5 py-1 uppercase rounded">Historic / Repair</div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="font-display font-bold text-2xl text-white uppercase group-hover:text-brand-teal transition-colors">Texas Woman's University Old Main</h3>
-                                <p class="text-gray-400 text-xs mt-2">Plaster repairs, painting, and architectural skylight detail restoration.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CLIENT & MARKET PRESENCE -->
-            <div class="py-16 px-6 md:px-16 bg-brand-dark border-t border-white/10 text-center">
-                <div class="max-w-7xl mx-auto">
-                    <span class="text-gray-500 font-mono text-xs uppercase tracking-widest block mb-8">Trusted Institutional & Regional Partners</span>
-                    <div class="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-70 text-gray-300 font-display font-bold text-xl md:text-2xl uppercase">
-                        <span>University of North Texas</span>
-                        <span>•</span>
-                        <span>Texas Woman's University</span>
-                        <span>•</span>
-                        <span>Plano ISD</span>
-                        <span>•</span>
-                        <span>North Texas Municipalities</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section id="page-home" class="page-view home-v2">
+  <div class="cinematic-hero">
+    <div class="hero-photo" aria-hidden="true"><img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=2200&q=82" alt="" fetchpriority="high" decoding="async"/><div class="hero-gradient"></div></div>
+    <div class="cinematic-hero-content">
+      <div class="hero-strap fine-label" data-reveal><span>308 CONSTRUCTION / ARGYLE, TEXAS</span><span>PLANNING · CONSTRUCTION · MANAGEMENT</span></div>
+      <div class="hero-center">
+        <span class="fine-label accent-label" data-reveal>GENERAL CONTRACTOR / DFW METROPLEX</span>
+        <h1 class="font-display cinematic-title" data-reveal>TURN-KEY<br>CONSTRUCTION<br><em>SOLUTIONS</em><br><strong>WITH ACCURACY.</strong></h1>
+        <p class="hero-description" data-reveal>Preconstruction planning, construction and construction management for clients across the DFW Metroplex and the country.</p>
+        <div class="hero-buttons" data-reveal>
+          <button type="button" onclick="navigateTo('projects')" class="architectural-button button-accent">EXPLORE PROJECTS <i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></button>
+          <button type="button" onclick="navigateTo('contact')" class="architectural-button button-outline">DISCUSS YOUR PROJECT <i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></button>
+        </div>
+      </div>
+      <div class="hero-foot fine-label" data-reveal><span>AN UNOFFICIAL DESIGN CONCEPT</span><span>SCROLL TO EXPLORE ↓</span></div>
+    </div>
+  </div>
+  <div class="editorial-intro pale-panel">
+    <div class="wide-frame intro-grid">
+      <div data-reveal>
+        <span class="fine-label teal-label">01 / ABOUT THE COMPANY</span>
+        <h2 class="font-display large-editorial-title">BUILT AROUND<br>THE <span>PROJECT.</span></h2>
+        <p class="editorial-copy">308 Construction serves the DFW Metroplex and clients across the country. Its published markets include higher education, tenant development, residential, hospitals and data centers.</p>
+        <p class="editorial-copy">The company describes solutions and customer service as priorities.</p>
+        <button type="button" onclick="navigateTo('about')" class="architectural-link">ABOUT 308 CONSTRUCTION <i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></button>
+      </div>
+      <div class="feature-photo image-mask" data-reveal><img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1700&q=82" alt="Illustrative contemporary architectural exterior" loading="lazy" decoding="async"/><span class="image-note">ILLUSTRATIVE ARCHITECTURE / DEMO</span></div>
+    </div>
+  </div>
+  <div class="editorial-services dark-panel">
+    <div class="wide-frame">
+      <div class="editorial-section-head" data-reveal>
+        <div><span class="fine-label teal-label">02 / WHAT WE DO</span><h2 class="font-display large-editorial-title">THREE CORE<br><span>SERVICES.</span></h2></div>
+        <p class="editorial-copy">The three service areas published on the original 308 Construction website.</p>
+      </div>
+      
+ <div class="chapter-row " data-reveal>
+  <div class="chapter-image image-mask"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=82" alt="Illustrative building plans and architectural design workspace" loading="lazy" decoding="async"/><span class="image-note">ILLUSTRATIVE IMAGE / DEMO</span></div>
+  <div class="chapter-copy">
+   <span class="fine-label">01 / PLANNING</span>
+   <h3 class="font-display chapter-heading">PRECONSTRUCTION<br>PLANNING.</h3>
+   <p class="editorial-copy">Design and construction feedback before work begins to help clients develop efficient, functional plans.</p>
+   <button type="button" onclick="navigateTo('services')" class="architectural-link">EXAMINE SERVICE <i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></button>
+  </div>
+ </div>
+ <div class="chapter-row chapter-reverse" data-reveal>
+  <div class="chapter-image image-mask"><img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=2200&q=82" alt="Illustrative large-scale construction site" loading="lazy" decoding="async"/><span class="image-note">ILLUSTRATIVE IMAGE / DEMO</span></div>
+  <div class="chapter-copy">
+   <span class="fine-label">02 / EXECUTION</span>
+   <h3 class="font-display chapter-heading">CONSTRUCTION.</h3>
+   <p class="editorial-copy">Ground-up construction and renovations for interior and exterior projects, from initial concepts or completed construction documents.</p>
+   <button type="button" onclick="navigateTo('services')" class="architectural-link">EXAMINE SERVICE <i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></button>
+  </div>
+ </div>
+ <div class="chapter-row " data-reveal>
+  <div class="chapter-image image-mask"><img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1400&q=82" alt="Illustrative construction technical equipment" loading="lazy" decoding="async"/><span class="image-note">ILLUSTRATIVE IMAGE / DEMO</span></div>
+  <div class="chapter-copy">
+   <span class="fine-label">03 / COORDINATION</span>
+   <h3 class="font-display chapter-heading">CONSTRUCTION<br>MANAGEMENT.</h3>
+   <p class="editorial-copy">Support with architectural drawings, permitting, labor coordination and the logistics needed to deliver a construction project.</p>
+   <button type="button" onclick="navigateTo('services')" class="architectural-link">EXAMINE SERVICE <i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></button>
+  </div>
+ </div>
+    </div>
+  </div>
+  <div class="editorial-portfolio pale-panel">
+    <div class="wide-frame">
+      <div class="editorial-section-head" data-reveal>
+        <div><span class="fine-label teal-label">03 / SELECTED WORK</span><h2 class="font-display large-editorial-title">THE PROJECT<br><span>PORTFOLIO.</span></h2></div>
+        <div><p class="editorial-copy">Four projects documented on the original website, illustrated here with example photography rather than real project images.</p><button type="button" onclick="navigateTo('projects')" class="architectural-link">VIEW ALL PROJECTS <i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></button></div>
+      </div>
+      <div class="editorial-project-grid">
+ <button type="button" onclick="navigateTo('unt')" class="editorial-project wide" data-reveal aria-label="Read UNT MATTHEWS HALL project details">
+  <div class="project-image image-mask"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=82" alt="Illustrative contemporary office space, not the actual UNT Matthews Hall project" loading="lazy" decoding="async"/><span class="image-note">CONCEPT IMAGE — NOT ACTUAL PROJECT PHOTOGRAPHY</span><span class="project-floating-arrow"><i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></span></div>
+  <div class="project-legend"><div><span class="fine-label">01 / HIGHER EDUCATION</span><h3 class="font-display">UNT MATTHEWS HALL</h3><p>Office, restroom, lighting and finish renovations.</p></div><i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></div>
+ </button>
+ <button type="button" onclick="navigateTo('twu')" class="editorial-project tall" data-reveal aria-label="Read TWU OLD MAIN project details">
+  <div class="project-image image-mask"><img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=82" alt="Illustrative historic-style interior, not the actual TWU Old Main project" loading="lazy" decoding="async"/><span class="image-note">CONCEPT IMAGE — NOT ACTUAL PROJECT PHOTOGRAPHY</span><span class="project-floating-arrow"><i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></span></div>
+  <div class="project-legend"><div><span class="fine-label">02 / UNIVERSITY REPAIRS</span><h3 class="font-display">TWU OLD MAIN</h3><p>Plaster repair, painting and skylight glass work.</p></div><i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></div>
+ </button>
+ <button type="button" onclick="navigateTo('plano')" class="editorial-project tall" data-reveal aria-label="Read PLANO ISD BLEACHERS project details">
+  <div class="project-image image-mask"><img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1400&q=82" alt="Illustrative sports architecture, not an actual Plano ISD project photo" loading="lazy" decoding="async"/><span class="image-note">CONCEPT IMAGE — NOT ACTUAL PROJECT PHOTOGRAPHY</span><span class="project-floating-arrow"><i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></span></div>
+  <div class="project-legend"><div><span class="fine-label">03 / ATHLETIC FACILITIES</span><h3 class="font-display">PLANO ISD BLEACHERS</h3><p>Electrical, concrete paving and bleacher work across six sites.</p></div><i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></div>
+ </button>
+ <button type="button" onclick="navigateTo('mep')" class="editorial-project wide" data-reveal aria-label="Read MEP PROJECTS project details">
+  <div class="project-image image-mask"><img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1400&q=82" alt="Illustrative technical equipment, not actual MEP project photography" loading="lazy" decoding="async"/><span class="image-note">CONCEPT IMAGE — NOT ACTUAL PROJECT PHOTOGRAPHY</span><span class="project-floating-arrow"><i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></span></div>
+  <div class="project-legend"><div><span class="fine-label">04 / MEP & INDUSTRIAL</span><h3 class="font-display">MEP PROJECTS</h3><p>Published work includes generator troubleshooting and data-center drain pans.</p></div><i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></div>
+ </button></div>
+    </div>
+  </div>
+  <div class="editorial-clients dark-panel">
+    <div class="clients-photo" aria-hidden="true"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=82" alt="" loading="lazy" decoding="async"/></div>
+    <div class="wide-frame relative">
+      <div data-reveal><span class="fine-label teal-label">04 / ORIGINAL WEBSITE CLIENT LIST</span><h2 class="font-display large-editorial-title">PUBLICLY LISTED<br><span>CLIENTS.</span></h2><p class="editorial-copy">These organizations appear on the original 308 Construction website. The background image is illustrative.</p></div>
+      <div class="client-typographic-grid" data-reveal>
+       <span>University of North Texas</span><span>Texas Woman's University</span><span>Plano ISD</span><span>City of Denton</span><span>Northwest ISD</span><span>Town of Addison</span>
+      </div>
+    </div>
+  </div>
+  <div class="editorial-last-call">
+    <div class="last-call-photo" aria-hidden="true"><img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1700&q=82" alt="" loading="lazy" decoding="async"/><div class="last-call-scrim"></div></div>
+    <div class="wide-frame relative" data-reveal>
+      <span class="fine-label teal-label">05 / START A CONVERSATION</span>
+      <h2 class="font-display large-editorial-title">HAVE A PROJECT<br>TO <span>DISCUSS?</span></h2>
+      <p class="editorial-copy">Contact 308 Construction to discuss project planning, construction or construction management.</p>
+      <div class="hero-buttons">
+        <button type="button" onclick="navigateTo('contact')" class="architectural-button button-accent">CONTACT THE OFFICE <i data-lucide="arrow-up-right" class="w-4 h-4" aria-hidden="true"></i></button>
+        <a href="tel:9403874002" class="architectural-button button-outline">940-387-4002 <i data-lucide="phone" class="w-4 h-4"></i></a>
+      </div>
+      <p class="demo-caption">Unofficial design concept · Images are illustrative, not actual project photography.</p>
+    </div>
+  </div>
+</section>
 
         <!-- =================================================================== -->
         <!-- 02 — SERVICES PAGE -->
