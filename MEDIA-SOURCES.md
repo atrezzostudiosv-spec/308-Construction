@@ -20,7 +20,7 @@ All photography and footage below is **illustrative**. None depicts a documented
 
 ## Rules
 
-- Keep `Website Design Concept — Unofficial Demo` visible.
+- Keep an unobtrusive independent-design notice in the footer and one consolidated note explaining that stock imagery is illustrative. Avoid repeated banners and project-photo labels.
 - Avoid any alt text, captions or claims that imply the illustrative media represents a project, staff, premises or equipment of 308 Construction.
 - Replace demo media only with client-approved originals after authorization.
 - For production, consider licensed self-hosted compressed video and responsive image versions; CDN media reliability and page performance are still unverified.
@@ -35,3 +35,18 @@ These four royalty-free Pexels photos illustrate relevant project **categories**
 - MEP Projects category illustration: Vjanodic WERSOV, “Industrial Control Room with Electrical Panels”, Pexels photo 38217230. https://www.pexels.com/photo/industrial-control-room-with-electrical-panels-38217230/
 
 Pexels license terms: https://www.pexels.com/license/ . External CDN image availability and visual loading in live browser require final validation.
+
+
+## Services 2.0 — illustrative media (2026-10-26)
+
+These are category-appropriate **stock photographs**, selected for the independent design concept. No photo may be attributed to 308 Construction as its personnel, project, building or equipment. The Services page contains a single small photographic clarification under Related Projects. Pexels license: https://www.pexels.com/license/
+
+- **Services hero / active construction site:** Reynaldo Elba, “Heavy Equipments on a Construction Site”, Pexels **12109677**. https://www.pexels.com/photo/heavy-equipments-on-a-construction-site-12109677/
+- **Intro / architectural discussion:** Angie Reyes, “Planning over Blueprints”, Pexels **465118**. https://www.pexels.com/photo/planning-over-blueprints-465118/
+- **01 Preconstruction Planning:** Gerzon Piñata, “Male Architect Looking at a Plan Layout”, Pexels **9405517**. https://www.pexels.com/photo/male-architect-looking-at-a-plan-layout-9405517/
+- **02 Construction:** Bingqian Li, “Construction Site with Large Crane in Operation”, Pexels **37244506**. https://www.pexels.com/photo/construction-site-with-large-crane-in-operation-37244506/
+- **03 Construction Management:** Mikael Blomkvist, “A Two Engineer Talking Together”, Pexels **8961073**. https://www.pexels.com/photo/a-two-engineer-talking-together-8961073/
+- **Related UNT and TWU:** reused their category illustrations from the approved Home Portfolio, Pexels **36363659** and **31398713** respectively (sources recorded above).
+- **Closing CTA / site inspection:** Tuấn Nguyễn Văn, “Silhouetted Engineers Inspecting Construction Site”, Pexels **35564145**. https://www.pexels.com/photo/silhouetted-engineers-inspecting-construction-site-35564145/
+
+Media source pages were located through public web search. **Live image CDN response, browser cropping and rendering have not been independently verified**; examine the deployed site at 375/768/1024/1440px before accepting final media.
