@@ -2194,3 +2194,32 @@ html.js-motion .about-v3:not(.hidden-page) [data-reveal] {
  .policy-v1 .policy-chapter h2 {font-size:57px;}
 }
 @media(prefers-reduced-motion:reduce) {.policy-v1 .policy-toc a,.footer-policy-link {transition:none!important;}}
+
+
+/* ===== HOME / RESPONSIVE USER-SUPPLIED SCENE PHOTOS =====
+   Local 2048x1152 desktop / 941x1672 mobile WebP assets.
+   Preserve scene zoom/shift applied to the img by existing CSS + JS. */
+.home-v2 .home-service-sequence .chapter-full .chapter-background .chapter-responsive-picture {
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+.home-v2 .home-service-sequence .chapter-full .chapter-background .chapter-responsive-picture > img {
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.home-v2 .home-service-sequence .chapter-full-1 .chapter-responsive-picture > img {object-position:53% center;}
+.home-v2 .home-service-sequence .chapter-full-2 .chapter-responsive-picture > img {object-position:54% center;}
+.home-v2 .home-service-sequence .chapter-full-3 .chapter-responsive-picture > img {object-position:55% center;}
+@media(max-width:767px) {
+  .home-v2 .home-service-sequence .chapter-full-1 .chapter-responsive-picture > img,
+  .home-v2 .home-service-sequence .chapter-full-2 .chapter-responsive-picture > img,
+  .home-v2 .home-service-sequence .chapter-full-3 .chapter-responsive-picture > img {
+    object-position:center center;
+  }
+}
