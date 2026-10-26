@@ -118,3 +118,35 @@ function initCinematicScenes() {
   items.forEach(el => observer.observe(el));
 }
 document.addEventListener('DOMContentLoaded', initCinematicScenes);
+
+/* Muted decorative hero video. Motion and data-saving preferences take priority.
+   A photo remains visible underneath when playback fails or is disabled. */
+function initHomeConstructionVideo() {
+  const video = document.querySelector('.home-v2 .hero-bg-video');
+  if (!video) return;
+  const motion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const compact = window.matchMedia && window.matchMedia('(max-width: 767px)').matches;
+  const saveData = navigator.connection && navigator.connection.saveData === true;
+  if (motion || compact || saveData) return;
+
+  const source = video.querySelector('source[data-src]');
+  if (!source) return;
+  video.addEventListener('playing', () => video.classList.add('is-playing'));
+  video.addEventListener('pause', () => video.classList.remove('is-playing'));
+  video.addEventListener('error', () => video.classList.remove('is-playing'));
+  source.src = source.dataset.src;
+  video.load();
+  const tryStart = () => {
+    if (document.hidden) return;
+    const result = video.play();
+    if (result && typeof result.catch === 'function') result.catch(() => {
+      video.classList.remove('is-playing');
+    });
+  };
+  tryStart();
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) video.pause();
+    else if (document.querySelector('#page-home') && !document.querySelector('#page-home').classList.contains('hidden-page')) tryStart();
+  });
+}
+document.addEventListener('DOMContentLoaded', initHomeConstructionVideo);
