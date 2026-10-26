@@ -286,3 +286,15 @@ Concentrated follow-up corrections before closing the Home:
 ## Services introduction image replacement — 2026-10-26
 
 **IMPLEMENTED IN GITHUB · EN VALIDACIÓN.** The user supplied a new cinematic commercial-interior photograph for the Services `THREE CORE SERVICES` introduction. Original PNG was converted to optimized 1374 × 1145 WebP without reframing and uploaded to `assets/images/services/three-core-services-architecture.webp`; `index.html` now uses the local asset without the former Pexels `srcset` overrides. Original intro copy, jump links, layout and other sections unchanged. Photograph remains illustrative, not a verified 308 Construction project or employee image. Live deployment, image rendering/crop and desktop/tablet/mobile QA still to verify.
+
+## Full-site technical audit / SEO / forms / navigation — 2026-10-26
+
+**IMPLEMENTED IN GITHUB · SOURCE VERIFIED · LIVE QA IN VALIDATION.** Complete source-level report: [ATREZZO-SITE-AUDIT-2026-10-26.md](./ATREZZO-SITE-AUDIT-2026-10-26.md).
+
+- Fixed Projects dropdown mouse-traversal gap and added keyboard/button/touch toggling and Escape-close. Mobile menu now has focus/expanded and scroll-lock handling.
+- Added initial Open Graph/Twitter tags with a 1200×630 targeted illustrative JPEG, canonical and favicon; 11 page-specific titles/descriptions update when navigating the SPA. Preserved `noindex` on this unofficial demo; **true separate crawlable URLs require a later multi-page implementation and official approval**.
+- Converted placeholder `href="#"` navigation items to fallback `?view=` URLs; structural audit found 11 H1s, 92 unique IDs, all in-page anchors and 11 internal routes valid, and all local image/file paths present.
+- Atrezzo demo Contact now targets `atrezzostudiosv@gmail.com` via FormSubmit with clear non-308 disclosure and required acknowledgment. **The receiver needs email confirmation and an actual inbox test; cannot claim messages delivered yet.**
+- Careers attachment submission remains **BLOCKED** without company authorization and secure privacy handling. Preserved photo and project disclaimers and legal policy reference draft.
+- Added measured editorial entrance animation to Contact/Careers/Policy with reduced-motion fallback. JS parse and CSS brace checks pass.
+- Remote public screenshot tests, PageSpeed/WCAG and backend email delivery remain **NO COMPROBADO**. Not marked production-ready. The linked source QA report documents every remaining gate.
